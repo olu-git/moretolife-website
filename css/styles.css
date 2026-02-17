@@ -513,3 +513,39 @@ body {
 }
 
 
+
+.book-now-row,
+.villa-book-row {
+  margin-top: 28px;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-book-now {
+  display: inline-block;
+  background: #7b3fa6;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 14px 44px;
+  border-radius: 4px;
+  box-shadow: 0 6px 16px rgba(123, 63, 166, 0.35);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.btn-book-now:hover {
+  background: #5a2d7d;
+  transform: translateY(-2px);
+}
+
+.villa-hero-right .btn-book-now {
+  padding: 12px 34px;
+}
+
+@media (max-width: 768px) {
+  .btn-book-now {
+    padding: 12px 30px;
+  }
+}
