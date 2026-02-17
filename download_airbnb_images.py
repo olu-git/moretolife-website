@@ -11,8 +11,8 @@ from pathlib import Path
 
 # Villa info: (name for internal use, listing_id)
 villas = [
-    ("Trendy 3BR Berawa Villa | Walk Beach & Restaurants", "1526528069625327523"),
-    ("ANINDIRA CANGGU LUXURY VILLA", "53611420"),
+    ("Villa 1", "1618561498271930890"),
+    ("Villa 2", "1582993290173349509"),
 ]
 
 output_dir = Path(__file__).parent / "images"
@@ -107,3 +107,4 @@ if success:
 else:
     print("\n[WARNING] Some images could not be downloaded.")
     print("   You can manually paste image URLs by editing this script or uploading files.")
+

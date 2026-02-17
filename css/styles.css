@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&display=swap');
+
 * {
   box-sizing: border-box;
 }
@@ -7,7 +9,7 @@ html {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Barlow Condensed", "Arial Narrow", Arial, sans-serif;
   line-height: 1.6;
   margin: 0;
   color: #1a1a1a;
@@ -423,3 +425,91 @@ body {
     font-size: 1.8rem;
   }
 }
+/* Countdown */
+.countdown-banner {
+  background: #7b3fa6;
+  padding: 6px 20px 7px;
+  border: 0;
+}
+
+.countdown-inner {
+  max-width: 360px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.countdown-label {
+  display: none;
+}
+
+.countdown-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  align-items: end;
+}
+
+.time-box {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+}
+
+.time-value {
+  display: block;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
+  color: #ffffff;
+}
+
+.time-unit {
+  display: block;
+  margin-top: 4px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+@media (max-width: 768px) {
+  .countdown-banner {
+    padding: 5px 12px 6px;
+  }
+
+  .countdown-inner {
+    max-width: 320px;
+  }
+
+  .countdown-grid {
+    gap: 6px;
+  }
+
+  .time-value {
+    font-size: 24px;
+  }
+
+  .time-unit {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .countdown-inner {
+    max-width: 300px;
+  }
+
+  .time-value {
+    font-size: 21px;
+  }
+
+  .time-unit {
+    font-size: 9px;
+    letter-spacing: 0.6px;
+  }
+}
+
+
