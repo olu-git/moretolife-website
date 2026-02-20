@@ -1,0 +1,18 @@
+[
+  {
+    "title": "VILLA 1",
+    "href": "villa-1.html",
+    "image": "images/airbnbs/villa1-6.jpg",
+    "bedrooms": 3,
+    "bathrooms": 3.5,
+    "description": "3 BEDROOMS. 3.5 BATHROOMS"
+  },
+  {
+    "title": "VILLA 2",
+    "href": "villa-2.html",
+    "image": "images/airbnbs/villa2-1.jpg",
+    "bedrooms": 4,
+    "bathrooms": 4,
+    "description": "4 BEDROOMS. 4 BATHROOMS"
+  }
+]

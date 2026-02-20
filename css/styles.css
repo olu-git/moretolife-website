@@ -14,6 +14,14 @@ body {
   margin: 0;
   color: #1a1a1a;
   background: #fafafa;
+  text-transform: uppercase;
+}
+
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
 }
 
 .wrap {
@@ -123,12 +131,115 @@ body {
   font-weight: 400;
 }
 
+.filters-wrap {
+  max-width: 1000px;
+  margin: 0 auto 28px;
+}
+
+.filters-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #7b3fa6;
+  background: #fff;
+  color: #1a1a1a;
+  font-family: "Barlow Condensed", "Arial Narrow", Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  padding: 11px 22px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.filters-btn:hover {
+  background: #f5effa;
+}
+
+.filters-btn svg {
+  width: 16px;
+  height: 16px;
+  stroke: #7b3fa6;
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+}
+
+.filters-panel {
+  margin-top: 16px;
+  padding: 22px;
+  border: 1px solid #e7dcf2;
+  background: #fff;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  gap: 28px;
+}
+
+.filters-panel[hidden] {
+  display: none;
+}
+
+.filter-group h3 {
+  margin: 0 0 10px;
+  font-size: 1.4rem;
+  color: #1a1a1a;
+}
+
+.filter-group label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  font-size: 1.3rem;
+  color: #2f2f2f;
+}
+
+.filter-group input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1.5px solid #bbbbbb;
+  border-radius: 4px;
+  background: #fff;
+  margin: 0;
+  cursor: pointer;
+  position: relative;
+}
+
+.filter-group input[type="checkbox"]:checked {
+  background: #7b3fa6;
+  border-color: #7b3fa6;
+}
+
+.filter-group input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
 .villas-showcase {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 40px;
   max-width: 1000px;
   margin: 0 auto;
+}
+
+.filters-empty {
+  max-width: 1000px;
+  margin: 16px auto 0;
+  text-align: center;
+  color: #5a2d7d;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 
 .villa-option {
@@ -282,6 +393,19 @@ body {
   color: #555;
 }
 
+.villa-text-area {
+  max-width: 900px;
+  margin: 24px auto 30px;
+  padding: 22px 24px;
+  border: 1px solid #e8ddf2;
+  border-left: 4px solid #7b3fa6;
+  border-radius: 10px;
+  background: #ffffff;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #303030;
+}
+
 .back-link {
   display: inline-block;
   margin-bottom: 20px;
@@ -370,6 +494,11 @@ body {
     height: 50vh;
   }
 
+  .filters-panel {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
   .villa-options h1 {
     font-size: 2.2rem;
   }
@@ -401,6 +530,11 @@ body {
 
   .villa-gallery {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .villa-text-area {
+    font-size: 1.05rem;
+    padding: 18px 18px;
   }
 }
 

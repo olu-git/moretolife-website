@@ -14,8 +14,8 @@
         <img src="images/MTL-2026.png" alt="MORE TO LIFE" class="logo">
       </a>
       <nav class="nav">
-        <a href="index.html" class="active">Home</a>
-        <a href="#villas">Villas</a>
+        <a href="index.html" class="active">HOME</a>
+        <a href="#villas">VILLAS</a>
       </nav>
     </div>
   </header>
@@ -56,30 +56,39 @@
     <div class="wrap">
       <div class="section-header">
         <h1>VILLA OPTIONS</h1>
-        <p class="section-subtitle">Discover Our Curated Selection</p>
+        <p class="section-subtitle">OUR ALL-INCLUSIVE PACKAGES COME WITH ACCOMMODATION, A PERSONAL DRIVER, AND ENTRY TO ALL DAYTIME ACTIVITIES AND PARTY EVENTS.</p>
       </div>
-      <div class="villas-showcase">
-        <a href="villa-1.html" class="villa-option">
-          <img src="images/airbnbs/villa1-6.jpg" alt="VILLA 1">
-          <div class="villa-option-overlay">
-            <div class="villa-option-content">
-              <h2>VILLA 1</h2>
-              <p class="villa-desc">3 Bedrooms. 3.5 Bathrooms</p>
-              <p class="villa-cta">Explore →</p>
-            </div>
+      <div class="filters-wrap">
+        <button class="filters-btn" type="button" aria-expanded="false" aria-controls="filters-panel" id="filters-toggle">
+          <span>FILTERS</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M4 7h10M18 7h2M13 17H4M20 17h-3M9 12H4M20 12h-7" />
+            <circle cx="16" cy="7" r="2" />
+            <circle cx="10" cy="12" r="2" />
+            <circle cx="16" cy="17" r="2" />
+          </svg>
+        </button>
+        <div class="filters-panel" id="filters-panel" hidden>
+          <div class="filter-group">
+            <h3>Bedrooms</h3>
+            <label><input type="checkbox" name="bedrooms" value="any" checked> ANY</label>
+            <label><input type="checkbox" name="bedrooms" value="1"> 1</label>
+            <label><input type="checkbox" name="bedrooms" value="2"> 2</label>
+            <label><input type="checkbox" name="bedrooms" value="3"> 3</label>
+            <label><input type="checkbox" name="bedrooms" value="4"> 4</label>
           </div>
-        </a>
-        <a href="villa-2.html" class="villa-option">
-          <img src="images/airbnbs/villa2-1.jpg" alt="VILLA 2">
-          <div class="villa-option-overlay">
-            <div class="villa-option-content">
-              <h2>VILLA 2</h2>
-              <p class="villa-desc">4 Bedrooms. 4 Bathrooms</p>
-              <p class="villa-cta">Explore →</p>
-            </div>
+          <div class="filter-group">
+            <h3>Bathrooms</h3>
+            <label><input type="checkbox" name="bathrooms" value="any" checked> ANY</label>
+            <label><input type="checkbox" name="bathrooms" value="1"> 1</label>
+            <label><input type="checkbox" name="bathrooms" value="2"> 2</label>
+            <label><input type="checkbox" name="bathrooms" value="3"> 3</label>
+            <label><input type="checkbox" name="bathrooms" value="4"> 4</label>
           </div>
-        </a>
+        </div>
       </div>
+      <div class="villas-showcase" id="villas-showcase"></div>
+      <p class="filters-empty" id="filters-empty" hidden>NO VILLAS MATCH THOSE FILTERS YET.</p>
       <div class="book-now-row">
         <a class="btn-book-now" href="https://moretolife.wetravel.com/trips/more-to-life-bali-2026-more-to-life-2643705496" target="_blank" rel="noreferrer">BOOK NOW</a>
       </div>
@@ -92,41 +101,6 @@
     </div>
   </footer>
 
-  <script>
-    (function () {
-      const countdownRoot = document.getElementById("countdown");
-      if (!countdownRoot) return;
-
-      const targetDate = new Date(countdownRoot.dataset.targetDate).getTime();
-      const fields = {
-        days: countdownRoot.querySelector('[data-unit="days"]'),
-        hours: countdownRoot.querySelector('[data-unit="hours"]'),
-        minutes: countdownRoot.querySelector('[data-unit="minutes"]'),
-        seconds: countdownRoot.querySelector('[data-unit="seconds"]')
-      };
-
-      function pad(value) {
-        return String(value).padStart(2, "0");
-      }
-
-      function render() {
-        const now = Date.now();
-        const diff = Math.max(targetDate - now, 0);
-
-        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-        const minutes = Math.floor((diff / (1000 * 60)) % 60);
-        const seconds = Math.floor((diff / 1000) % 60);
-
-        fields.days.textContent = pad(days);
-        fields.hours.textContent = pad(hours);
-        fields.minutes.textContent = pad(minutes);
-        fields.seconds.textContent = pad(seconds);
-      }
-
-      render();
-      setInterval(render, 1000);
-    })();
-  </script>
+  <script src="js/index.js"></script>
 </body>
 </html>
