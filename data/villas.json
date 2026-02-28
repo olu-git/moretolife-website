@@ -2,17 +2,46 @@
   {
     "title": "VILLA 1",
     "href": "villa-1.html",
-    "image": "images/airbnbs/villa1-6.jpg",
-    "bedrooms": 3,
-    "bathrooms": 3.5,
-    "description": "3 BEDROOMS. 3.5 BATHROOMS"
+    "image": "images/villas/1bed-2.png",
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "description": "1 BEDROOM. 1 BATHROOM",
+    "priceFrom": "$1,299"
   },
   {
     "title": "VILLA 2",
     "href": "villa-2.html",
+    "image": "images/villas/2bed-1.jpg",
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "description": "2 BEDROOMS. 2 BATHROOMS",
+    "priceFrom": "$1,199"
+  },
+  {
+    "title": "VILLA 3",
+    "href": "villa-3.html",
+    "image": "images/villas/3bed-1.jpg",
+    "bedrooms": 3,
+    "bathrooms": 3.5,
+    "description": "3 BEDROOMS. 3.5 BATHROOMS",
+    "priceFrom": "$1,149"
+  },
+  {
+    "title": "VILLA 4",
+    "href": "villa-4.html",
+    "image": "images/airbnbs/villa1-6.jpg",
+    "bedrooms": 3,
+    "bathrooms": 3.5,
+    "description": "3 BEDROOMS. 3.5 BATHROOMS",
+    "priceFrom": "$1,149"
+  },
+  {
+    "title": "VILLA 5",
+    "href": "villa-5.html",
     "image": "images/airbnbs/villa2-1.jpg",
     "bedrooms": 4,
     "bathrooms": 4,
-    "description": "4 BEDROOMS. 4 BATHROOMS"
+    "description": "4 BEDROOMS. 4 BATHROOMS",
+    "priceFrom": "$1,199"
   }
 ]

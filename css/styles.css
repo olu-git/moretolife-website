@@ -285,7 +285,9 @@ textarea {
 }
 
 .villa-option-content {
+  position: relative;
   width: 100%;
+  min-height: 170px;
 }
 
 .villa-option-overlay h2 {
@@ -301,6 +303,28 @@ textarea {
   color: rgba(255,255,255,0.9);
   margin: 0 0 12px;
   font-weight: 500;
+}
+
+.villa-price {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  color: #ff8a00;
+  text-align: right;
+  line-height: 1;
+}
+
+.price-label {
+  font-size: 0.75rem;
+  letter-spacing: 1.2px;
+  opacity: 0.92;
+}
+
+.price-value {
+  font-size: 1.55rem;
+  font-weight: 800;
+  letter-spacing: 0.3px;
 }
 
 .villa-cta {
@@ -346,11 +370,43 @@ textarea {
   border-radius: 12px;
 }
 
+.villa-hero-left,
+.villa-hero-center,
+.villa-hero-right {
+  flex: 1;
+}
+
 .villa-hero-left h1{margin:0;font-size:2.4rem}
 .villa-meta{display:flex;gap:18px;margin-top:10px;align-items:center}
 .meta-item{display:inline-flex;gap:8px;align-items:center;color:#fff;font-weight:600}
 .meta-icon{width:24px;height:24px;filter:brightness(0) invert(1);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.villa-hero-right{display:flex;align-items:center;gap:12px}
+.villa-hero-center {
+  display: flex;
+  justify-content: center;
+}
+.villa-hero-right{display:flex;align-items:center;justify-content:flex-end;gap:12px}
+
+.hero-price {
+  margin: 0;
+  color: #ff8a00;
+  text-align: center;
+  line-height: 1;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+}
+
+.hero-price-label {
+  display: block;
+  font-size: 0.8rem;
+  letter-spacing: 1.8px;
+}
+
+.hero-price-value {
+  display: block;
+  margin-top: 3px;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+}
 
 .btn-book{background:#7b3fa6;color:#fff;padding:12px 22px;border-radius:28px;text-decoration:none;font-weight:700;box-shadow:0 6px 18px rgba(123,63,166,0.28);transition:transform .2s}
 .btn-book:hover{transform:translateY(-3px);background:#5a2d7d}
@@ -528,6 +584,14 @@ textarea {
     font-size: 2rem;
   }
 
+  .villa-hero-overlay {
+    gap: 10px;
+  }
+
+  .hero-price-value {
+    font-size: 1.6rem;
+  }
+
   .villa-gallery {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -557,6 +621,35 @@ textarea {
 
   .villa-option-overlay h2 {
     font-size: 1.8rem;
+  }
+
+  .villa-hero-overlay {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .villa-hero-left,
+  .villa-hero-center,
+  .villa-hero-right {
+    width: 100%;
+    flex: unset;
+  }
+
+  .villa-hero-center {
+    justify-content: flex-start;
+  }
+
+  .hero-price {
+    text-align: left;
+  }
+
+  .villa-option-content {
+    min-height: 150px;
+  }
+
+  .price-value {
+    font-size: 1.35rem;
   }
 }
 /* Countdown */

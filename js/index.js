@@ -86,6 +86,9 @@
 
   function renderVillas(villas) {
     showcase.innerHTML = villas.map(function (villa) {
+      const priceMarkup = villa.priceFrom
+        ? '<p class="villa-price"><span class="price-label">FROM</span> <span class="price-value">' + villa.priceFrom + '</span></p>'
+        : "";
       return (
         '<a href="' + villa.href + '" class="villa-option" data-bedrooms="' + villa.bedrooms + '" data-bathrooms="' + villa.bathrooms + '">' +
           '<img src="' + villa.image + '" alt="' + villa.title + '">' +
@@ -93,6 +96,7 @@
             '<div class="villa-option-content">' +
               '<h2>' + villa.title + '</h2>' +
               '<p class="villa-desc">' + villa.description + '</p>' +
+              priceMarkup +
               '<p class="villa-cta">EXPLORE &rarr;</p>' +
             '</div>' +
           '</div>' +
