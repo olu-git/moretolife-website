@@ -624,6 +624,16 @@ textarea {
     background: linear-gradient(135deg, rgba(123, 63, 166, 0.52) 0%, rgba(90, 45, 125, 0.52) 100%);
   }
 
+  .villa-price {
+    left: auto;
+    top: auto;
+    right: 20px;
+    bottom: 20px;
+    transform: none;
+    text-align: right;
+    z-index: 2;
+  }
+
   .villa-cta {
     opacity: 1;
     transform: translateY(0);
@@ -715,6 +725,11 @@ textarea {
 
   .price-value {
     font-size: 2rem;
+  }
+
+  .villa-price {
+    right: 16px;
+    bottom: 16px;
   }
 }
 /* Countdown */

@@ -6,7 +6,7 @@
     "bedrooms": 1,
     "bathrooms": 1,
     "description": "1 BEDROOM. 1 BATHROOM",
-    "priceFrom": "$1,299pp"
+    "priceFrom": "$1,299 pp"
   },
   {
     "title": "VILLA 2",
@@ -15,7 +15,7 @@
     "bedrooms": 2,
     "bathrooms": 2,
     "description": "2 BEDROOMS. 2 BATHROOMS",
-    "priceFrom": "$1,199pp"
+    "priceFrom": "$1,199 pp"
   },
   {
     "title": "VILLA 3",
@@ -24,7 +24,7 @@
     "bedrooms": 3,
     "bathrooms": 3.5,
     "description": "3 BEDROOMS. 3.5 BATHROOMS",
-    "priceFrom": "$1,149pp"
+    "priceFrom": "$1,149 pp"
   },
   {
     "title": "VILLA 4",
@@ -33,7 +33,7 @@
     "bedrooms": 3,
     "bathrooms": 3.5,
     "description": "3 BEDROOMS. 3.5 BATHROOMS",
-    "priceFrom": "$1,149pp"
+    "priceFrom": "$1,149 pp"
   },
   {
     "title": "VILLA 5",
@@ -42,7 +42,8 @@
     "bedrooms": 4,
     "bathrooms": 4,
     "description": "4 BEDROOMS. 4 BATHROOMS",
-    "priceFrom": "$1,199pp"
+    "priceFrom": "$1,199 pp"
   }
 ]
+
 
