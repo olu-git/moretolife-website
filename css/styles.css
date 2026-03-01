@@ -329,6 +329,7 @@ textarea {
   font-size: 2.5rem;
   font-weight: 800;
   letter-spacing: 0.5px;
+  text-transform: none;
 }
 
 .villa-cta {
@@ -455,6 +456,7 @@ textarea {
   font-size: 2rem;
   font-weight: 800;
   letter-spacing: 0.4px;
+  text-transform: none;
 }
 
 .btn-book{background:#7b3fa6;color:#fff;padding:12px 22px;border-radius:28px;text-decoration:none;font-weight:700;box-shadow:0 6px 18px rgba(123,63,166,0.28);transition:transform .2s}
