@@ -121,10 +121,51 @@ textarea {
   max-width: 420px;
 }
 
-.home-nav-spacer {
+.header-actions {
   justify-self: end;
-  width: 1px;
-  height: 1px;
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header-book-now {
+  padding: 11px 26px;
+  font-size: 0.9rem;
+  letter-spacing: 0.6px;
+}
+
+.mobile-nav-toggle {
+  display: none;
+  width: 46px;
+  height: 42px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 8px;
+  background: transparent;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.mobile-nav-toggle span {
+  width: 22px;
+  height: 2px;
+  background: #fff8f1;
+  border-radius: 2px;
+}
+
+.home-header-inner.has-mobile-menu.menu-open .mobile-nav-toggle span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.home-header-inner.has-mobile-menu.menu-open .mobile-nav-toggle span:nth-child(2) {
+  opacity: 0;
+}
+
+.home-header-inner.has-mobile-menu.menu-open .mobile-nav-toggle span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 /* Hero Section - Full screen video */
@@ -747,32 +788,9 @@ textarea {
     font-size: 2rem;
   }
 
-  .home-header-inner {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-
-  .home-logo-link {
-    order: 1;
-  }
-
-  .home-nav {
-    order: 2;
-    justify-content: flex-start;
-    gap: 18px;
-  }
-
-  .home-nav a {
-    font-size: 1rem;
-    letter-spacing: 0.3px;
-  }
-
-  .home-nav-spacer {
-    display: none;
-  }
-
   .home-logo-date {
-    height: 76px;
+    height: 78px;
+    max-width: 290px;
   }
 }
 
@@ -959,7 +977,7 @@ textarea {
 
 .flights-page {
   padding: 56px 20px 90px;
-  background: #6e2ea2;
+  background: #fafafa;
 }
 
 .flights-panel {
@@ -997,6 +1015,59 @@ textarea {
 
   .flights-content h1 {
     font-size: 2rem;
+  }
+}
+
+@media (max-width: 960px) {
+  .home-header-inner.has-mobile-menu {
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas:
+      "logo . actions"
+      "menu menu menu";
+    align-items: center;
+    gap: 8px 12px;
+  }
+
+  .home-header-inner.has-mobile-menu .home-logo-link {
+    grid-area: logo;
+    justify-self: start;
+  }
+
+  .home-header-inner.has-mobile-menu .home-logo-date {
+    height: 66px;
+    max-width: 210px;
+  }
+
+  .home-header-inner.has-mobile-menu .header-actions {
+    grid-area: actions;
+  }
+
+  .home-header-inner.has-mobile-menu .header-book-now {
+    display: none;
+  }
+
+  .home-header-inner.has-mobile-menu .mobile-nav-toggle {
+    display: inline-flex;
+  }
+
+  .home-header-inner.has-mobile-menu .home-nav {
+    grid-area: menu;
+    display: none;
+    width: 100%;
+    gap: 14px;
+    padding: 10px 0 2px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .home-header-inner.has-mobile-menu.menu-open .home-nav {
+    display: flex;
+  }
+
+  .home-header-inner.has-mobile-menu .home-nav a {
+    font-size: 1rem;
+    letter-spacing: 0.3px;
   }
 }
 

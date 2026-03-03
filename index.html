@@ -47,8 +47,8 @@
   </section>
 
   <header class="site-header home-site-header">
-    <div class="wrap header-inner home-header-inner">
-      <nav class="nav home-nav" aria-label="Primary">
+    <div class="wrap header-inner home-header-inner has-mobile-menu">
+      <nav class="nav home-nav" id="home-nav-menu" aria-label="Primary">
         <a href="index.html" class="active">HOME</a>
         <a href="#villas">ACCOMMODATION</a>
         <a href="flights.html">FLIGHTS</a>
@@ -56,7 +56,14 @@
       <a href="index.html" class="logo-link home-logo-link">
         <img src="images/more2life-logo-date.png" alt="MORE TO LIFE 2026" class="logo home-logo-date">
       </a>
-      <div class="home-nav-spacer" aria-hidden="true"></div>
+      <div class="header-actions">
+        <a class="btn-book-now header-book-now" href="https://moretolife.wetravel.com/users/more-to-life" target="_blank" rel="noreferrer">BOOK NOW</a>
+        <button class="mobile-nav-toggle" type="button" aria-expanded="false" aria-controls="home-nav-menu" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -105,9 +112,6 @@
       </div>
       <div class="villas-showcase" id="villas-showcase"></div>
       <p class="filters-empty" id="filters-empty" hidden>NO VILLAS MATCH THOSE FILTERS YET.</p>
-      <div class="book-now-row">
-        <a class="btn-book-now" href="https://moretolife.wetravel.com/users/more-to-life" target="_blank" rel="noreferrer">BOOK NOW</a>
-      </div>
     </div>
   </section>
 

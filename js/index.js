@@ -1,4 +1,34 @@
 (function () {
+  const headerInner = document.querySelector(".home-header-inner.has-mobile-menu");
+  const navToggle = document.querySelector(".mobile-nav-toggle");
+  const navMenu = document.getElementById("home-nav-menu");
+  if (!headerInner || !navToggle || !navMenu) return;
+
+  function closeMenu() {
+    headerInner.classList.remove("menu-open");
+    navToggle.setAttribute("aria-expanded", "false");
+  }
+
+  navToggle.addEventListener("click", function () {
+    const willOpen = !headerInner.classList.contains("menu-open");
+    if (willOpen) {
+      headerInner.classList.add("menu-open");
+      navToggle.setAttribute("aria-expanded", "true");
+    } else {
+      closeMenu();
+    }
+  });
+
+  navMenu.querySelectorAll("a").forEach(function (link) {
+    link.addEventListener("click", closeMenu);
+  });
+
+  window.addEventListener("resize", function () {
+    if (window.innerWidth > 960) closeMenu();
+  });
+})();
+
+(function () {
   const countdownRoot = document.getElementById("countdown");
   if (!countdownRoot) return;
 

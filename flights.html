@@ -24,8 +24,8 @@
 </head>
 <body>
   <header class="site-header home-site-header">
-    <div class="wrap header-inner home-header-inner">
-      <nav class="nav home-nav" aria-label="Primary">
+    <div class="wrap header-inner home-header-inner has-mobile-menu">
+      <nav class="nav home-nav" id="home-nav-menu" aria-label="Primary">
         <a href="index.html">HOME</a>
         <a href="index.html#villas">ACCOMMODATION</a>
         <a href="flights.html" class="active">FLIGHTS</a>
@@ -33,7 +33,13 @@
       <a href="index.html" class="logo-link home-logo-link">
         <img src="images/more2life-logo-date.png" alt="MORE TO LIFE 2026" class="logo home-logo-date">
       </a>
-      <div class="home-nav-spacer" aria-hidden="true"></div>
+      <div class="header-actions">
+        <button class="mobile-nav-toggle" type="button" aria-expanded="false" aria-controls="home-nav-menu" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -54,6 +60,8 @@
       <p>&copy; MORE TO LIFE 2026. ALL RIGHTS RESERVED.</p>
     </div>
   </footer>
+
+  <script src="js/index.js"></script>
 </body>
 </html>
 
