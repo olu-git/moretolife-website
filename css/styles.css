@@ -160,7 +160,7 @@ textarea {
 /* Villa Options Section */
 .villa-options {
   padding: 100px 20px;
-  background: #fafafa;
+  background: #ff6a00;
 }
 
 .section-header {
@@ -173,15 +173,16 @@ textarea {
   margin: 0 0 12px;
   font-weight: 700;
   letter-spacing: -0.5px;
-  color: #1a1a1a;
+  color: #fff8f1;
 }
 
 .section-subtitle {
   font-size: 1rem;
-  color: #7b7b7b;
+  color: rgba(255, 248, 241, 0.92);
   margin: 0;
   font-weight: 400;
 }
+
 
 .filters-wrap {
   max-width: 1000px;
@@ -400,7 +401,20 @@ textarea {
 }
 
 .flights-teaser {
-  padding: 50px 20px 12px;
+  padding: 70px 20px 40px;
+  background: #ff6a00;
+}
+
+.flight-section-header {
+  margin-bottom: 36px;
+}
+
+.flight-section-header h1 {
+  color: #fff8f1;
+}
+
+.flight-section-header .section-subtitle {
+  color: rgba(255, 248, 241, 0.92);
 }
 
 .flights-teaser-card {
@@ -635,11 +649,11 @@ textarea {
 
 /* Footer */
 .site-footer {
-  background: #1a1a1a;
+  background: #6e2ea2;
   color: #fff;
   padding: 40px 20px;
   text-align: center;
-  margin-top: 80px;
+  margin-top: 0;
 }
 
 .site-footer p {
@@ -945,6 +959,7 @@ textarea {
 
 .flights-page {
   padding: 56px 20px 90px;
+  background: #6e2ea2;
 }
 
 .flights-panel {
@@ -984,3 +999,11 @@ textarea {
     font-size: 2rem;
   }
 }
+
+
+
+
+
+
+
+
