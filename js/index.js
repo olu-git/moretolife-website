@@ -127,7 +127,7 @@
               '<h2>' + villa.title + '</h2>' +
               '<p class="villa-desc">' + villa.description + '</p>' +
               priceMarkup +
-              '<p class="villa-cta">EXPLORE &rarr;</p>' +
+              '<p class="villa-cta">ALL INCLUSIVE PACKAGE</p>' +
             '</div>' +
           '</div>' +
         '</a>'
