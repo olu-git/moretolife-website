@@ -738,12 +738,12 @@ textarea {
   }
 
   .villa-price {
-    left: auto;
-    top: auto;
-    right: 20px;
-    bottom: 20px;
-    transform: none;
-    text-align: right;
+    left: 50%;
+    top: 50%;
+    right: auto;
+    bottom: auto;
+    transform: translate(-50%, -50%);
+    text-align: center;
     z-index: 2;
   }
 
@@ -825,6 +825,10 @@ textarea {
     font-size: 1.8rem;
   }
 
+  .villa-cta {
+    font-size: 0.95rem;
+  }
+
   .villa-hero-overlay {
     flex-direction: column;
     align-items: flex-start;
@@ -851,8 +855,11 @@ textarea {
   }
 
   .villa-price {
-    right: 16px;
-    bottom: 16px;
+    left: 50%;
+    top: 50%;
+    right: auto;
+    bottom: auto;
+    transform: translate(-50%, -50%);
   }
 }
 /* Countdown */
