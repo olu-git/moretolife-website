@@ -119,9 +119,18 @@
       const priceMarkup = villa.priceFrom
         ? '<p class="villa-price"><span class="price-label">FROM</span> <span class="price-value">' + villa.priceFrom + '</span></p>'
         : "";
+      const soldOutBadge = villa.soldOut
+        ? '<span class="villa-status-ribbon" aria-label="Sold out">SOLD OUT</span>'
+        : "";
+      const soldOutClass = villa.soldOut ? " villa-option-sold-out" : "";
+      const openTag = villa.soldOut
+        ? '<div class="villa-option' + soldOutClass + '" data-bedrooms="' + villa.bedrooms + '" data-bathrooms="' + villa.bathrooms + '" aria-label="' + villa.title + ' sold out">'
+        : '<a href="' + villa.href + '" class="villa-option' + soldOutClass + '" data-bedrooms="' + villa.bedrooms + '" data-bathrooms="' + villa.bathrooms + '">';
+      const closeTag = villa.soldOut ? "</div>" : "</a>";
       return (
-        '<a href="' + villa.href + '" class="villa-option" data-bedrooms="' + villa.bedrooms + '" data-bathrooms="' + villa.bathrooms + '">' +
+        openTag +
           '<img src="' + villa.image + '" alt="' + villa.title + '">' +
+          soldOutBadge +
           '<div class="villa-option-overlay">' +
             '<div class="villa-option-content">' +
               '<h2>' + villa.title + '</h2>' +
@@ -130,7 +139,7 @@
               '<p class="villa-cta">ALL INCLUSIVE PACKAGE</p>' +
             '</div>' +
           '</div>' +
-        '</a>'
+        closeTag
       );
     }).join("");
     villaCards = Array.from(showcase.querySelectorAll(".villa-option"));
