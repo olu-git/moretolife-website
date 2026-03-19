@@ -24,7 +24,8 @@
     "bedrooms": 3,
     "bathrooms": 3.5,
     "description": "3 BEDROOMS. 3.5 BATHROOMS",
-    "priceFrom": "$1,149 pp"
+    "priceFrom": "$1,149 pp",
+    "soldOut": true
   },
   {
     "title": "VILLA D",

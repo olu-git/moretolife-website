@@ -424,8 +424,45 @@ textarea {
   transition: transform 0.4s;
 }
 
+.villa-option-sold-out img {
+  filter: saturate(0.8) brightness(0.8);
+}
+
+.villa-option-sold-out,
+.villa-option-sold-out:hover {
+  cursor: default;
+  transform: none;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.14);
+}
+
 .villa-option:hover img {
   transform: scale(1.08);
+}
+
+.villa-option-sold-out:hover img {
+  transform: none;
+}
+
+.villa-status-ribbon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  width: 135%;
+  padding: 14px 0;
+  background: linear-gradient(135deg, #8f49c8 0%, #6e2ea2 55%, #4f1d7c 100%);
+  color: #fff8f1;
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: 3px;
+  line-height: 1;
+  text-align: center;
+  transform: translate(-50%, -50%) rotate(-10deg);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.28);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+  border-top: 2px solid rgba(255, 248, 241, 0.45);
+  border-bottom: 2px solid rgba(255, 248, 241, 0.28);
+  pointer-events: none;
 }
 
 .villa-option-overlay {
@@ -473,6 +510,10 @@ textarea {
   line-height: 1;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
   pointer-events: none;
+}
+
+.villa-option-sold-out .villa-price {
+  display: none;
 }
 
 .price-label {
@@ -758,14 +799,69 @@ textarea {
 .site-footer {
   background: #6e2ea2;
   color: #fff;
-  padding: 40px 20px;
+  padding: 34px 20px 40px;
   text-align: center;
   margin-top: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 26px;
+}
+
+.social-link {
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: #6e2ea2;
+  color: #fff;
+  border: 2px solid #fff;
+  text-decoration: none;
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 8px 20px rgba(24, 6, 39, 0.26);
+}
+
+.social-link:hover {
+  transform: translateY(-2px);
+  background: #55217f;
+  box-shadow: 0 12px 24px rgba(24, 6, 39, 0.3);
+}
+
+.social-link:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, 0.4);
+  outline-offset: 3px;
+}
+
+.social-link svg {
+  width: 21px;
+  height: 21px;
+  display: block;
+}
+
+.social-link svg * {
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.social-link:last-child svg * {
+  fill: currentColor;
+  stroke: none;
 }
 
 .site-footer p {
   margin: 0;
-  opacity: 0.8;
+  opacity: 1;
+  font-weight: 600;
+  letter-spacing: 0.6px;
 }
 
 /* Responsive */
@@ -795,6 +891,13 @@ textarea {
 
   .villa-option {
     height: 400px;
+  }
+
+  .villa-status-ribbon {
+    width: 142%;
+    padding: 12px 0;
+    font-size: 1.3rem;
+    letter-spacing: 2.4px;
   }
 
   .villa-option-overlay {
@@ -862,6 +965,20 @@ textarea {
     height: 78px;
     max-width: 290px;
   }
+
+  .site-footer {
+    padding: 30px 16px 36px;
+  }
+
+  .footer-socials {
+    gap: 12px;
+    margin-bottom: 22px;
+  }
+
+  .social-link {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -903,6 +1020,13 @@ textarea {
 
   .villa-option-overlay h2 {
     font-size: 1.8rem;
+  }
+
+  .villa-status-ribbon {
+    width: 150%;
+    padding: 10px 0;
+    font-size: 1.02rem;
+    letter-spacing: 1.8px;
   }
 
   .villa-cta {
