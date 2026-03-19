@@ -799,14 +799,69 @@ textarea {
 .site-footer {
   background: #6e2ea2;
   color: #fff;
-  padding: 40px 20px;
+  padding: 34px 20px 40px;
   text-align: center;
   margin-top: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 26px;
+}
+
+.social-link {
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: #6e2ea2;
+  color: #fff;
+  border: 2px solid #fff;
+  text-decoration: none;
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 8px 20px rgba(24, 6, 39, 0.26);
+}
+
+.social-link:hover {
+  transform: translateY(-2px);
+  background: #55217f;
+  box-shadow: 0 12px 24px rgba(24, 6, 39, 0.3);
+}
+
+.social-link:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, 0.4);
+  outline-offset: 3px;
+}
+
+.social-link svg {
+  width: 21px;
+  height: 21px;
+  display: block;
+}
+
+.social-link svg * {
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.social-link:last-child svg * {
+  fill: currentColor;
+  stroke: none;
 }
 
 .site-footer p {
   margin: 0;
-  opacity: 0.8;
+  opacity: 1;
+  font-weight: 600;
+  letter-spacing: 0.6px;
 }
 
 /* Responsive */
@@ -909,6 +964,20 @@ textarea {
   .home-logo-date {
     height: 78px;
     max-width: 290px;
+  }
+
+  .site-footer {
+    padding: 30px 16px 36px;
+  }
+
+  .footer-socials {
+    gap: 12px;
+    margin-bottom: 22px;
+  }
+
+  .social-link {
+    width: 40px;
+    height: 40px;
   }
 }
 
