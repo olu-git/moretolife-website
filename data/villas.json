@@ -43,7 +43,8 @@
     "bedrooms": 4,
     "bathrooms": 4,
     "description": "4 BEDROOMS. 4 BATHROOMS",
-    "priceFrom": "$1,199 pp"
+    "priceFrom": "$1,199 pp",
+    "soldOut": true
   }
 ]
 
