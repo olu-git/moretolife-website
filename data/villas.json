@@ -52,7 +52,8 @@
     "image": "images/airbnbs/villa-f-1.jpg",
     "bedrooms": 6,
     "bathrooms": 5,
-    "description": "6 BEDROOMS. 5 BATHROOMS"
+    "description": "6 BEDROOMS. 5 BATHROOMS",
+    "priceFrom": "$1,249 pp"
   }
 ]
 
