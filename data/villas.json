@@ -45,6 +45,14 @@
     "description": "4 BEDROOMS. 4 BATHROOMS",
     "priceFrom": "$1,199 pp",
     "soldOut": true
+  },
+  {
+    "title": "VILLA F",
+    "href": "villa-f.html",
+    "image": "images/airbnbs/villa-f-1.jpg",
+    "bedrooms": 6,
+    "bathrooms": 5,
+    "description": "6 BEDROOMS. 5 BATHROOMS"
   }
 ]
 
