@@ -54,6 +54,15 @@
     "bathrooms": 5,
     "description": "6 BEDROOMS. 5 BATHROOMS",
     "priceFrom": "$1,249 pp"
+  },
+  {
+    "title": "VILLA G",
+    "href": "villa-g.html",
+    "image": "images/airbnbs/villa-g-1.jpg",
+    "bedrooms": 4,
+    "bathrooms": 5,
+    "description": "4 BEDROOMS. 5 BATHROOMS",
+    "priceFrom": "$1,199 pp"
   }
 ]
 
