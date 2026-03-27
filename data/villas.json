@@ -15,7 +15,7 @@
     "bedrooms": 2,
     "bathrooms": 2,
     "description": "2 BEDROOMS. 2 BATHROOMS",
-    "priceFrom": "$1,199 pp"
+    "priceFrom": "$1,299 pp"
   },
   {
     "title": "VILLA C",
@@ -54,7 +54,7 @@
     "bedrooms": 6,
     "bathrooms": 5,
     "description": "6 BEDROOMS. 5 BATHROOMS",
-    "priceFrom": "$1,249 pp"
+    "priceFrom": "$1,299 pp"
   },
   {
     "title": "VILLA G",
@@ -70,6 +70,15 @@
     "title": "VILLA H",
     "href": "villa-h.html",
     "image": "images/airbnbs/villa-h-1.jpg",
+    "bedrooms": 4,
+    "bathrooms": 4,
+    "description": "4 BEDROOMS. 4 BATHROOMS",
+    "priceFrom": "$1,249 pp"
+  },
+  {
+    "title": "VILLA I",
+    "href": "villa-i.html",
+    "image": "images/airbnbs/villa-i-1.avif",
     "bedrooms": 5,
     "bathrooms": 5,
     "description": "5 BEDROOMS. 5 BATHROOMS",
