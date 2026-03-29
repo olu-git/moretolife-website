@@ -73,7 +73,8 @@
     "bedrooms": 4,
     "bathrooms": 4,
     "description": "4 BEDROOMS. 4 BATHROOMS",
-    "priceFrom": "$1,249 pp"
+    "priceFrom": "$1,249 pp",
+    "soldOut": true
   },
   {
     "title": "VILLA I",
@@ -83,6 +84,15 @@
     "bathrooms": 5,
     "description": "5 BEDROOMS. 5 BATHROOMS",
     "priceFrom": "$1,299 pp"
+  },
+  {
+    "title": "VILLA J",
+    "href": "villa-j.html",
+    "image": "images/airbnbs/villa-j-1.jpg",
+    "bedrooms": 4,
+    "bathrooms": 4,
+    "description": "4 BEDROOMS. 4 BATHROOMS",
+    "priceFrom": "$1,249 pp"
   }
 ]
 
