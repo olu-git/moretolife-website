@@ -617,6 +617,31 @@ textarea {
   padding: 20px;
 }
 
+.villa-hero-sold-out {
+  position: relative;
+  overflow: hidden;
+}
+
+.villa-hero-sold-out::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.villa-hero-sold-out .villa-hero-overlay {
+  position: relative;
+  z-index: 1;
+}
+
+.villa-detail-sold-out .btn-book-now,
+.villa-detail-sold-out .btn-book-now:hover {
+  background: linear-gradient(135deg, #8f49c8 0%, #6e2ea2 55%, #4f1d7c 100%);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+  cursor: default;
+  transform: none;
+}
+
 .villa-hero h1 {
   font-size: 3rem;
   margin: 0;

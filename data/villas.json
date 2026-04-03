@@ -83,7 +83,8 @@
     "bedrooms": 5,
     "bathrooms": 5,
     "description": "5 BEDROOMS. 5 BATHROOMS",
-    "priceFrom": "$1,299 pp"
+    "priceFrom": "$1,299 pp",
+    "soldOut": true
   },
   {
     "title": "VILLA J",
