@@ -94,6 +94,15 @@
     "bathrooms": 4,
     "description": "4 BEDROOMS. 4 BATHROOMS",
     "priceFrom": "$1,249 pp"
+  },
+  {
+    "title": "VILLA K",
+    "href": "villa-k.html",
+    "image": "images/airbnbs/villa-k-1.jpg",
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "description": "3 BEDROOMS. 3 BATHROOMS",
+    "priceFrom": "$1,299 pp"
   }
 ]
 
