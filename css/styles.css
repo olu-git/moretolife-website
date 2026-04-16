@@ -465,6 +465,24 @@ textarea {
   pointer-events: none;
 }
 
+.villa-units-left-tab {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  z-index: 2;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(255, 248, 241, 0.94);
+  color: #5a2d7d;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+  line-height: 1;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18);
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
 .villa-option-overlay {
   inset: 0;
   background: linear-gradient(135deg, rgba(123, 63, 166, 0.8) 0%, rgba(90, 45, 125, 0.8) 100%);

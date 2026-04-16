@@ -122,6 +122,9 @@
       const soldOutBadge = villa.soldOut
         ? '<span class="villa-status-ribbon" aria-label="Sold out">SOLD OUT</span>'
         : "";
+      const unitsLeftBadge = villa.unitsLeftLabel
+        ? '<span class="villa-units-left-tab" aria-label="' + villa.unitsLeftLabel + '">' + villa.unitsLeftLabel + '</span>'
+        : "";
       const soldOutClass = villa.soldOut ? " villa-option-sold-out" : "";
       const openTag = villa.soldOut
         ? '<div class="villa-option' + soldOutClass + '" data-bedrooms="' + villa.bedrooms + '" data-bathrooms="' + villa.bathrooms + '" aria-label="' + villa.title + ' sold out">'
@@ -130,6 +133,7 @@
       return (
         openTag +
           '<img src="' + villa.image + '" alt="' + villa.title + '">' +
+          unitsLeftBadge +
           soldOutBadge +
           '<div class="villa-option-overlay">' +
             '<div class="villa-option-content">' +

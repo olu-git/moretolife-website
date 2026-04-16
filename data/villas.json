@@ -6,7 +6,8 @@
     "bedrooms": 1,
     "bathrooms": 1,
     "description": "1 BEDROOM. 1 BATHROOM",
-    "priceFrom": "$1,299 pp"
+    "priceFrom": "$1,299 pp",
+    "unitsLeftLabel": "2 UNITS LEFT"
   },
   {
     "title": "VILLA B",
@@ -15,7 +16,8 @@
     "bedrooms": 2,
     "bathrooms": 2,
     "description": "2 BEDROOMS. 2 BATHROOMS",
-    "priceFrom": "$1,299 pp"
+    "priceFrom": "$1,299 pp",
+    "unitsLeftLabel": "3 UNITS LEFT"
   },
   {
     "title": "VILLA C",
@@ -102,7 +104,8 @@
     "bedrooms": 3,
     "bathrooms": 3,
     "description": "3 BEDROOMS. 3 BATHROOMS",
-    "priceFrom": "$1,299 pp"
+    "priceFrom": "$1,299 pp",
+    "soldOut": true
   }
 ]
 
