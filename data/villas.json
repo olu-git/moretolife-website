@@ -116,6 +116,16 @@
     "description": "2 BEDROOMS. 2 BATHROOMS",
     "priceFrom": "$1,299 pp",
     "soldOut": true
+  },
+  {
+    "title": "VILLA M",
+    "href": "villa-m.html",
+    "image": "images/airbnbs/villa-m-1.jpg",
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "description": "1 BEDROOM. 1 BATHROOM",
+    "priceFrom": "$1,299 pp",
+    "soldOut": true
   }
 ]
 
