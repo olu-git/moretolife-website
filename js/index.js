@@ -190,7 +190,7 @@
 
     let markup = availableVillas.map(renderCard).join("");
     if (availableVillas.length && soldOutVillas.length) {
-      const soldCount = 12 + metrics.soldOutVillaCount;
+      const soldCount = 13 + metrics.soldOutVillaCount;
       const soldLabel = soldCount === 1 ? "VILLA SOLD" : "VILLAS SOLD";
       markup += (
         '<p class="villa-group-divider" data-group-divider="sold" role="separator" aria-label="' + soldCount + ' ' + soldLabel + '">' +
