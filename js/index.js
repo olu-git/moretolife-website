@@ -68,7 +68,7 @@
   const panel = document.getElementById("filters-panel");
   const showcase = document.getElementById("villas-showcase");
   const availableCountEl = document.getElementById("availability-available-count");
-  const soldCountEl = document.getElementById("availability-sold-count");
+  const availableLabelEl = document.getElementById("availability-available-label");
   if (!toggleBtn || !panel || !showcase) return;
 
   function closeFilters() {
@@ -152,22 +152,54 @@
       );
   }
 
-  function updateAvailabilitySnapshot(villas) {
-    const soldCount = villas.filter(function (villa) {
-      return Boolean(villa.soldOut);
-    }).length;
-    const availableCount = villas.length - soldCount;
-    if (availableCountEl) availableCountEl.textContent = String(availableCount);
-    if (soldCountEl) soldCountEl.textContent = String(soldCount);
+  function parseUnitsFromLabel(label) {
+    if (typeof label !== "string") return null;
+    const match = label.match(/(\d+)/);
+    if (!match) return null;
+    const value = Number(match[1]);
+    return Number.isFinite(value) ? value : null;
   }
 
-  function renderVillas(villas) {
+  function getAvailabilityMetrics(villas) {
+    return villas.reduce(function (metrics, villa) {
+      const unitsLeft = parseUnitsFromLabel(villa.unitsLeftLabel);
+
+      if (villa.soldOut) {
+        metrics.soldOutVillaCount += 1;
+        return metrics;
+      }
+
+      metrics.available += unitsLeft !== null ? unitsLeft : 1;
+      return metrics;
+    }, { available: 0, soldOutVillaCount: 0 });
+  }
+
+  function updateAvailabilitySnapshot(villas) {
+    const metrics = getAvailabilityMetrics(villas);
+    const availableCount = metrics.available;
+    if (availableCountEl) availableCountEl.textContent = String(availableCount);
+    if (availableLabelEl) {
+      availableLabelEl.textContent = availableCount === 1 ? "VILLA AVAILABLE" : "VILLAS AVAILABLE";
+    }
+    return metrics;
+  }
+
+  function renderVillas(villas, metrics) {
     const availableVillas = villas.filter(function (villa) { return !villa.soldOut; });
     const soldOutVillas = villas.filter(function (villa) { return villa.soldOut; });
 
     let markup = availableVillas.map(renderCard).join("");
     if (availableVillas.length && soldOutVillas.length) {
-      markup += '<p class="villa-group-divider" data-group-divider="sold" role="separator" aria-label="Sold out villas">SOLD OUT VILLAS</p>';
+      const soldCount = 12 + metrics.soldOutVillaCount;
+      const soldLabel = soldCount === 1 ? "VILLA SOLD" : "VILLAS SOLD";
+      markup += (
+        '<p class="villa-group-divider" data-group-divider="sold" role="separator" aria-label="' + soldCount + ' ' + soldLabel + '">' +
+          '<span class="availability-item">' +
+            '<span class="availability-value">' + soldCount + '</span>' +
+            '<span class="availability-label">' + soldLabel + '</span>' +
+          '</span>' +
+        '</p>'
+      );
     }
     markup += soldOutVillas.map(renderCard).join("");
 
@@ -262,11 +294,11 @@
     if (!response.ok) throw new Error("Failed to load villa data");
     const villas = await response.json();
     if (!Array.isArray(villas)) throw new Error("Invalid villa data format");
-    updateAvailabilitySnapshot(villas);
+    const metrics = updateAvailabilitySnapshot(villas);
     const sortedVillas = villas.slice().sort(function (a, b) {
       return Number(Boolean(a.soldOut)) - Number(Boolean(b.soldOut));
     });
-    renderVillas(sortedVillas);
+    renderVillas(sortedVillas, metrics);
   } catch (error) {
     showcase.innerHTML = "";
     if (emptyState) {

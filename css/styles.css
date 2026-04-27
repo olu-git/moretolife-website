@@ -410,20 +410,23 @@ textarea {
   background: rgba(255, 248, 241, 0.16);
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 16px;
 }
 
 .availability-item {
   margin: 0;
   display: inline-flex;
-  align-items: baseline;
+  align-items: center;
+  justify-content: center;
   gap: 8px;
   color: #fff8f1;
   font-size: 1.6rem;
   font-weight: 800;
   letter-spacing: 0.6px;
   line-height: 1;
+  text-align: center;
+  width: 100%;
 }
 
 .availability-item-available .availability-value {
@@ -456,12 +459,16 @@ textarea {
   grid-column: 1 / -1;
   text-align: center;
   color: rgba(255, 248, 241, 0.94);
-  font-size: 0.92rem;
+  font-size: 1.6rem;
   font-weight: 800;
-  letter-spacing: 2.2px;
+  letter-spacing: 0.6px;
+  line-height: 1;
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.38);
   background: rgba(255, 248, 241, 0.16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .villa-option {
@@ -1016,6 +1023,10 @@ textarea {
   }
 
   .availability-item {
+    font-size: 1.35rem;
+  }
+
+  .villa-group-divider {
     font-size: 1.35rem;
   }
 
