@@ -160,18 +160,26 @@
     return Number.isFinite(value) ? value : null;
   }
 
+  function toPositiveNumber(value) {
+    const parsed = Number(value);
+    if (!Number.isFinite(parsed)) return null;
+    return parsed > 0 ? parsed : null;
+  }
+
   function getAvailabilityMetrics(villas) {
     return villas.reduce(function (metrics, villa) {
       const unitsLeft = parseUnitsFromLabel(villa.unitsLeftLabel);
+      const unitsSold = toPositiveNumber(villa.unitsSold);
 
       if (villa.soldOut) {
-        metrics.soldOutVillaCount += 1;
+        metrics.sold += unitsSold !== null ? unitsSold : 1;
         return metrics;
       }
 
       metrics.available += unitsLeft !== null ? unitsLeft : 1;
+      metrics.sold += unitsSold !== null ? unitsSold : 0;
       return metrics;
-    }, { available: 0, soldOutVillaCount: 0 });
+    }, { available: 0, sold: 0 });
   }
 
   function updateAvailabilitySnapshot(villas) {
@@ -190,7 +198,7 @@
 
     let markup = availableVillas.map(renderCard).join("");
     if (availableVillas.length && soldOutVillas.length) {
-      const soldCount = 13 + metrics.soldOutVillaCount;
+      const soldCount = metrics.sold;
       const soldLabel = soldCount === 1 ? "VILLA SOLD" : "VILLAS SOLD";
       markup += (
         '<p class="villa-group-divider" data-group-divider="sold" role="separator" aria-label="' + soldCount + ' ' + soldLabel + '">' +

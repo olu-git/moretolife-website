@@ -7,8 +7,8 @@
     "bathrooms": 1,
     "description": "1 BEDROOM. 1 BATHROOM",
     "priceFrom": "$1,299 pp",
-    "unitsLeftLabel": "1 UNIT LEFT",
-    "unitsSold": 6
+    "unitsLeftLabel": "3 UNITS LEFT",
+    "unitsSold": 8
   },
   {
     "title": "VILLA B",
@@ -18,8 +18,8 @@
     "bathrooms": 2,
     "description": "2 BEDROOMS. 2 BATHROOMS",
     "priceFrom": "$1,299 pp",
-    "unitsLeftLabel": "2 UNITS LEFT",
-    "unitsSold": 6
+    "unitsLeftLabel": "3 UNITS LEFT",
+    "unitsSold": 8
   },
   {
     "title": "VILLA C",
