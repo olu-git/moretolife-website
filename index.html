@@ -19,7 +19,7 @@
   <meta name="twitter:description" content="Join us for a 7 days and 6 nights of enjoyment.">
   <meta name="twitter:image" content="https://more2life.com.au/images/search-preview.jpg">
   <title>MORE TO LIFE 2026 - BALI</title>
-  <link rel="stylesheet" href="css/styles.css?v=20260318">
+  <link rel="stylesheet" href="css/styles.css?v=20260505">
   <link rel="icon" type="image/png" href="images/MTL-BW-2.png">
 </head>
 <body>
@@ -50,8 +50,9 @@
     <div class="wrap header-inner home-header-inner has-mobile-menu has-desktop-cta">
       <nav class="nav home-nav" id="home-nav-menu" aria-label="Primary">
         <a href="index.html" class="active">HOME</a>
-        <a href="#villas">PACKAGES</a>
-        <a href="#flights">FLIGHTS</a>
+        <a href="#" data-booking-key="partyPassUrl">PARTY PASS</a>
+        <a href="all-inclusive.html">ALL-INCLUSIVE</a>
+        <a href="#" data-booking-key="flightsUrl">FLIGHTS</a>
       </nav>
       <button class="mobile-nav-toggle" type="button" aria-expanded="false" aria-controls="home-nav-menu" aria-label="Toggle navigation menu">
         <span></span>
@@ -62,7 +63,7 @@
         <img src="images/more2life-logo-date.png" alt="MORE TO LIFE 2026" class="logo home-logo-date">
       </a>
       <div class="header-actions">
-        <a class="btn-book-now header-book-now" href="https://moretolife.wetravel.com/users/more-to-life" target="_blank" rel="noreferrer">BOOK NOW</a>
+        <a class="btn-book-now header-book-now" href="#" data-booking-key="allInclusiveHubUrl">BOOK NOW</a>
       </div>
     </div>
   </header>
@@ -75,81 +76,34 @@
     </div>
   </section>
 
-  <section class="villa-options" id="villas">
+  <section class="offer-cards" id="offers">
     <div class="wrap">
-      <div class="section-header">
-        <h1>ALL INCLUSIVE ACCOMMODATION PACKAGES</h1>
-        <p class="section-subtitle">ACCOMMODATION, ENTRY TO ALL DAYTIME ACTIVITIES. BEACH CLUBS, AND PARTY EVENTS, A PRIVATE DRIVER, AIRPORT TRANSFER, OUR WELCOME DINNER, BREAKFAST, AND MORE ALL THROUGH THE BELOW PACKAGES.<br><br>SECURE YOUR SPOT WITH ONLY $100.<br><br>NOTE: ALL PRICES SHOWN BELOW ARE FOR THE ALL INCLUSIVE ACCOMMODATION PACKAGE</p>
-      </div>
-      <div class="filters-wrap">
-        <button class="filters-btn" type="button" aria-expanded="false" aria-controls="filters-panel" id="filters-toggle">
-          <span>FILTERS</span>
-          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <path d="M4 7h10M18 7h2M13 17H4M20 17h-3M9 12H4M20 12h-7" />
-            <circle cx="16" cy="7" r="2" />
-            <circle cx="10" cy="12" r="2" />
-            <circle cx="16" cy="17" r="2" />
-          </svg>
-        </button>
-        <div class="filters-panel" id="filters-panel" hidden>
-          <div class="filter-group">
-            <h3>Bedrooms</h3>
-            <label><input type="checkbox" name="bedrooms" value="any" checked> ANY</label>
-            <label><input type="checkbox" name="bedrooms" value="1"> 1</label>
-            <label><input type="checkbox" name="bedrooms" value="2"> 2</label>
-            <label><input type="checkbox" name="bedrooms" value="3"> 3</label>
-            <label><input type="checkbox" name="bedrooms" value="4"> 4</label>
-            <label><input type="checkbox" name="bedrooms" value="5"> 5</label>
-            <label><input type="checkbox" name="bedrooms" value="6"> 6</label>
+      <div class="offer-cards-grid">
+        <a class="offer-image-card" href="#" data-booking-key="partyPassUrl" aria-label="Book Party Pass">
+          <img src="images/party-pass-page.jpg" alt="Party Pass">
+          <div class="offer-image-overlay">
+            <h2>PARTY PASS</h2>
+            <span class="offer-image-cta">ALREADY SORTED YOUR STAY?<br>JOIN EVERY PARTY &amp; BEACH CLUB EVENT</span>
+            <p class="offer-image-deposit"><span class="offer-image-deposit-value">DEPOSIT FROM $49</span></p>
           </div>
-          <div class="filter-group">
-            <h3>Bathrooms</h3>
-            <label><input type="checkbox" name="bathrooms" value="any" checked> ANY</label>
-            <label><input type="checkbox" name="bathrooms" value="1"> 1</label>
-            <label><input type="checkbox" name="bathrooms" value="2"> 2</label>
-            <label><input type="checkbox" name="bathrooms" value="3"> 3</label>
-            <label><input type="checkbox" name="bathrooms" value="4"> 4</label>
-            <label><input type="checkbox" name="bathrooms" value="5"> 5</label>
+        </a>
+        <a class="offer-image-card" href="all-inclusive.html" aria-label="Browse all inclusive packages">
+          <img src="images/all-inclusive-page.jpg" alt="All inclusive package">
+          <div class="offer-image-overlay">
+            <h2>ALL INCLUSIVE PACKAGE</h2>
+            <span class="offer-image-cta">VILLA, DAYTIME ACTIVITIES, NIGHT PARTIES, <br>BEACH CLUBS, PRIVATE DRIVER, BREAKFAST, DINNER &amp; MORE</span>
+            <p class="offer-image-deposit"><span class="offer-image-deposit-value">DEPOSIT FROM $99</span></p>
           </div>
-        </div>
-      </div>
-      <div class="availability-snapshot" id="availability-snapshot" aria-live="polite">
-        <p class="availability-item availability-item-available">
-          <span class="availability-value" id="availability-available-count">0</span>
-          <span class="availability-label" id="availability-available-label">VILLAS AVAILABLE</span>
-        </p>
-      </div>
-      <div class="villas-showcase" id="villas-showcase"></div>
-      <p class="filters-empty" id="filters-empty" hidden>NO VILLAS MATCH THOSE FILTERS YET.</p>
-      <div class="package-assets" aria-label="Accommodation package pricing and options">
-        <div class="package-assets-grid">
-          <div class="package-asset package-asset-wide">
-            <img src="images/PRICE%20TABLE.png" alt="All inclusive accommodation price table by group size and bedroom count" loading="lazy">
+        </a>
+        <a class="offer-image-card" href="#" data-booking-key="flightsUrl" aria-label="Book flights only">
+          <img src="images/flight-page.jpg" alt="Flights only">
+          <div class="offer-image-overlay">
+            <h2>FLIGHT PASS</h2>
+            <span class="offer-image-cta">FLY WITH US. <br> MELBOURNE ONLY.</span>
+            <p class="offer-image-deposit"><span class="offer-image-deposit-value">DEPOSIT FROM $49</span></p>
           </div>
-          <a class="package-asset package-asset-link" href="https://moretolife.wetravel.com/users/more-to-life" target="_blank" rel="noreferrer" aria-label="View solo package booking options">
-            <img src="images/SOLO%20PACKAGE.png" alt="Solo package" loading="lazy">
-          </a>
-          <a class="package-asset package-asset-link" href="https://ig.me/m/moretolife.au" target="_blank" rel="noreferrer" aria-label="Message on Instagram for bigger villas">
-            <img src="images/BIGGER%20VILLAS.png" alt="Bigger villas inquiry" loading="lazy">
-          </a>
-        </div>
+        </a>
       </div>
-    </div>
-  </section>
-
-    <section class="flights-teaser" id="flights">
-    <div class="wrap">
-      <div class="section-header flight-section-header">
-        <h1>FLIGHTS</h1>
-        <p class="section-subtitle">A time was had on last year's flights so we had to run it back.<br>Our flight packages can be purchased as an add-on or just on their own.</p>
-      </div>
-      <a class="flights-teaser-card" href="https://moretolife.wetravel.com/trips/flights-only-mtl-2026-more-to-life-9753725518" target="_blank" rel="noreferrer">
-        <img src="images/flight-page.jpg" alt="Fly with MORE TO LIFE">
-        <div class="flights-teaser-overlay">
-          <h2>FLIGHTS?</h2>
-          <span class="flights-teaser-cta">ONLY $49 TO RESERVE YOUR SPOT</span>
-        </div>
-      </a>
     </div>
   </section>
 
