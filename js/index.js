@@ -1,4 +1,27 @@
 (function () {
+  const BOOKING_LINKS = {
+    partyPassUrl: "https://moretolife.wetravel.com/users/more-to-life",
+    flightsUrl: "https://moretolife.wetravel.com/trips/flights-only-mtl-2026-more-to-life-9753725518",
+    group1Url: "https://moretolife.wetravel.com/trips/more-to-life-2026-bali-group-1-more-to-life-2643705496",
+    group2Url: "https://moretolife.wetravel.com/trips/more-to-life-2026-bali-group-2-more-to-life-3994628236",
+    allInclusiveHubUrl: "all-inclusive.html"
+  };
+
+  window.MTL_BOOKING_LINKS = BOOKING_LINKS;
+
+  document.querySelectorAll("[data-booking-key]").forEach(function (node) {
+    const key = node.getAttribute("data-booking-key");
+    const href = key ? BOOKING_LINKS[key] : null;
+    if (!href) return;
+    node.setAttribute("href", href);
+    if (href.indexOf("http") === 0) {
+      node.setAttribute("target", "_blank");
+      node.setAttribute("rel", "noreferrer");
+    }
+  });
+})();
+
+(function () {
   const headerInner = document.querySelector(".home-header-inner.has-mobile-menu");
   const navToggle = document.querySelector(".mobile-nav-toggle");
   const navMenu = document.getElementById("home-nav-menu");
