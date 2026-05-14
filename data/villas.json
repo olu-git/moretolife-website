@@ -128,6 +128,15 @@
     "description": "1 BEDROOM. 1 BATHROOM",
     "priceFrom": "$1,299 pp",
     "soldOut": true
+  },
+  {
+    "title": "VILLA N",
+    "href": "villa-n.html",
+    "image": "images/airbnbs/villa-n-1.jpg",
+    "bedrooms": 3,
+    "bathrooms": 3.5,
+    "description": "3 BEDROOMS. 3.5 BATHROOMS",
+    "priceFrom": "$1,299 pp"
   }
 ]
 
