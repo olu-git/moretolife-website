@@ -1091,16 +1091,25 @@ textarea {
 }
 
 .social-link-email svg {
+  width: 48px;
+  height: 48px;
   transform: translateY(1px);
 }
 
 .social-link-instagram svg {
+  width: 48px;
+  height: 48px;
   transform: translateY(0.5px);
 }
 
 .social-link-whatsapp svg {
   width: 32px;
   height: 32px;
+}
+
+.social-link-tiktok svg {
+  width: 42px;
+  height: 42px;
 }
 
 .site-footer p {
@@ -1255,6 +1264,22 @@ textarea {
     --footer-social-icon-size: 26px;
     gap: clamp(10px, 3vw, 18px);
     margin-bottom: 30px;
+  }
+
+  .social-link-email svg,
+  .social-link-instagram svg {
+    width: 34px;
+    height: 34px;
+  }
+
+  .social-link-tiktok svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .social-link-whatsapp svg {
+    width: 25px;
+    height: 25px;
   }
 }
 
