@@ -1018,32 +1018,37 @@ textarea {
 .site-footer {
   background: #6e2ea2;
   color: #fff;
-  padding: 34px 20px 40px;
+  padding: 64px 20px 56px;
   text-align: center;
   margin-top: 0;
   border-top: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .footer-socials {
-  display: flex;
+  --footer-social-size: clamp(70px, 8.2vw, 96px);
+  --footer-social-icon-size: 34px;
+  display: grid;
+  grid-template-columns: repeat(4, var(--footer-social-size));
   justify-content: center;
-  gap: 14px;
-  margin-bottom: 26px;
+  align-items: center;
+  gap: clamp(18px, 4vw, 56px);
+  margin-bottom: 46px;
 }
 
 .social-link {
-  width: 42px;
-  height: 42px;
-  display: inline-flex;
+  width: var(--footer-social-size);
+  height: var(--footer-social-size);
+  display: grid;
+  place-items: center;
   align-items: center;
   justify-content: center;
   border-radius: 999px;
   background: #6e2ea2;
   color: #fff;
-  border: 2px solid #fff;
+  border: clamp(3px, 0.42vw, 5px) solid #fff;
   text-decoration: none;
   transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 0 8px 20px rgba(24, 6, 39, 0.26);
+  box-shadow: 0 14px 30px rgba(24, 6, 39, 0.22);
 }
 
 .social-link:hover {
@@ -1058,29 +1063,52 @@ textarea {
 }
 
 .social-link svg {
-  width: 21px;
-  height: 21px;
+  width: var(--footer-social-icon-size);
+  height: var(--footer-social-icon-size);
   display: block;
+  overflow: visible;
+  transform-origin: center;
 }
 
 .social-link svg * {
   stroke: currentColor;
   fill: none;
-  stroke-width: 1.8;
+  stroke-width: 2.25;
   stroke-linecap: round;
   stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
 }
 
-.social-link:last-child svg * {
+.social-link-tiktok svg,
+.social-link-whatsapp svg {
+  transform: translate(1px, -1px);
+}
+
+.social-link-tiktok svg *,
+.social-link-whatsapp svg * {
   fill: currentColor;
   stroke: none;
+}
+
+.social-link-email svg {
+  transform: translateY(1px);
+}
+
+.social-link-instagram svg {
+  transform: translateY(0.5px);
+}
+
+.social-link-whatsapp svg {
+  width: 32px;
+  height: 32px;
 }
 
 .site-footer p {
   margin: 0;
   opacity: 1;
   font-weight: 600;
-  letter-spacing: 0.6px;
+  letter-spacing: 1.2px;
+  line-height: 1.35;
 }
 
 /* Responsive */
@@ -1219,17 +1247,14 @@ textarea {
   }
 
   .site-footer {
-    padding: 30px 16px 36px;
+    padding: 44px 16px 42px;
   }
 
   .footer-socials {
-    gap: 12px;
-    margin-bottom: 22px;
-  }
-
-  .social-link {
-    width: 40px;
-    height: 40px;
+    --footer-social-size: clamp(54px, 16vw, 68px);
+    --footer-social-icon-size: 26px;
+    gap: clamp(10px, 3vw, 18px);
+    margin-bottom: 30px;
   }
 }
 
