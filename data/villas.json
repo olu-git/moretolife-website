@@ -7,7 +7,7 @@
     "bathrooms": 1,
     "description": "1 BEDROOM. 1 BATHROOM",
     "priceFrom": "$1,299 pp",
-    "unitsLeftLabel": "3 UNITS LEFT",
+    "unitsLeftLabel": "1 UNIT LEFT",
     "unitsSold": 8
   },
   {
@@ -18,7 +18,7 @@
     "bathrooms": 2,
     "description": "2 BEDROOMS. 2 BATHROOMS",
     "priceFrom": "$1,299 pp",
-    "unitsLeftLabel": "3 UNITS LEFT",
+    "unitsLeftLabel": "2 UNITS LEFT",
     "unitsSold": 8
   },
   {
@@ -136,7 +136,8 @@
     "bedrooms": 3,
     "bathrooms": 3.5,
     "description": "3 BEDROOMS. 3.5 BATHROOMS",
-    "priceFrom": "$1,299 pp"
+    "priceFrom": "$1,299 pp",
+    "soldOut": true
   }
 ]
 
