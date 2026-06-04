@@ -138,6 +138,15 @@
     "description": "3 BEDROOMS. 3.5 BATHROOMS",
     "priceFrom": "$1,299 pp",
     "soldOut": true
+  },
+  {
+    "title": "VILLA O",
+    "href": "villa-o.html",
+    "image": "images/airbnbs/villa-o-1.jpg",
+    "bedrooms": 5,
+    "bathrooms": 4,
+    "description": "5 BEDROOMS. 4 BATHROOMS",
+    "priceFrom": "$1,399 pp"
   }
 ]
 
