@@ -639,6 +639,27 @@ textarea {
   pointer-events: none;
 }
 
+.villa-new-tag {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  z-index: 2;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: #ff1f2d;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 1.75px;
+  line-height: 1;
+  box-shadow:
+    0 14px 28px rgba(255, 31, 45, 0.36),
+    0 10px 22px rgba(0, 0, 0, 0.22),
+    0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
 .villa-available-badge {
   position: absolute;
   top: 18px;

@@ -149,6 +149,9 @@
       const unitsLeftBadge = villa.unitsLeftLabel
         ? '<span class="villa-units-left-tab" aria-label="' + villa.unitsLeftLabel + '">' + villa.unitsLeftLabel + '</span>'
         : "";
+      const newBadge = villa.newTag
+        ? '<span class="villa-new-tag" aria-label="New villa">NEW</span>'
+        : "";
       const availableBadge = !villa.soldOut && !villa.unitsLeftLabel
         ? '<span class="villa-available-badge" aria-label="Available">AVAILABLE</span>'
         : "";
@@ -160,6 +163,7 @@
       return (
         openTag +
           '<img src="' + villa.image + '" alt="' + villa.title + '">' +
+          newBadge +
           unitsLeftBadge +
           availableBadge +
           soldOutBadge +

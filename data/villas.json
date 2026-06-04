@@ -7,8 +7,8 @@
     "bathrooms": 1,
     "description": "1 BEDROOM. 1 BATHROOM",
     "priceFrom": "$1,299 pp",
-    "unitsLeftLabel": "1 UNIT LEFT",
-    "unitsSold": 8
+    "unitsSold": 8,
+    "soldOut": true
   },
   {
     "title": "VILLA B",
@@ -58,7 +58,8 @@
     "bedrooms": 6,
     "bathrooms": 5,
     "description": "6 BEDROOMS. 5 BATHROOMS",
-    "priceFrom": "$1,299 pp"
+    "priceFrom": "$1,299 pp",
+    "newTag": true
   },
   {
     "title": "VILLA G",
@@ -97,7 +98,8 @@
     "bedrooms": 4,
     "bathrooms": 4,
     "description": "4 BEDROOMS. 4 BATHROOMS",
-    "priceFrom": "$1,249 pp"
+    "priceFrom": "$1,249 pp",
+    "newTag": true
   },
   {
     "title": "VILLA K",
@@ -146,7 +148,8 @@
     "bedrooms": 5,
     "bathrooms": 4,
     "description": "5 BEDROOMS. 4 BATHROOMS",
-    "priceFrom": "$1,399 pp"
+    "priceFrom": "$1,399 pp",
+    "newTag": true
   }
 ]
 
