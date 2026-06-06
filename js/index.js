@@ -3,6 +3,7 @@
     partyPassUrl: "https://moretolife.wetravel.com/trips/more-to-life-2026-bali-party-pass-more-to-life-9406941741",
     flightsUrl: "https://moretolife.wetravel.com/trips/flights-only-mtl-2026-more-to-life-9753725518",
     group1Url: "https://moretolife.wetravel.com/trips/more-to-life-2026-bali-group-1-more-to-life-2643705496",
+    soloPackageUrl: "https://moretolife.wetravel.com/trips/more-to-life-2026-bali-group-1-more-to-life-2643705496#about-this-trip",
     group2Url: "https://moretolife.wetravel.com/trips/more-to-life-2026-bali-group-2-more-to-life-3994628236",
     allInclusiveHubUrl: "all-inclusive.html"
   };
