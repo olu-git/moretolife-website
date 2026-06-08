@@ -59,7 +59,7 @@
     "bathrooms": 5,
     "description": "6 BEDROOMS. 5 BATHROOMS",
     "priceFrom": "$1,299 pp",
-    "newTag": true
+    "soldOut": true
   },
   {
     "title": "VILLA G",
