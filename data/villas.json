@@ -98,7 +98,7 @@
     "bedrooms": 4,
     "bathrooms": 4,
     "description": "4 BEDROOMS. 4 BATHROOMS",
-    "priceFrom": "$1,249 pp",
+    "priceFrom": "$1,499 pp",
     "newTag": true
   },
   {
@@ -148,7 +148,7 @@
     "bedrooms": 5,
     "bathrooms": 4,
     "description": "5 BEDROOMS. 4 BATHROOMS",
-    "priceFrom": "$1,399 pp",
+    "priceFrom": "$1,499 pp",
     "newTag": true
   }
 ]
