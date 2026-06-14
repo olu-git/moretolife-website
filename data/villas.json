@@ -7,7 +7,7 @@
     "bathrooms": 1,
     "description": "1 BEDROOM. 1 BATHROOM",
     "priceFrom": "$1,499 pp",
-    "unitsLeftLabel": "1 UNIT LEFT",
+    "unitsLeftLabel": "2 UNITS LEFT",
     "unitsSold": 8
   },
   {
@@ -28,7 +28,7 @@
     "bedrooms": 3,
     "bathrooms": 3.5,
     "description": "3 BEDROOMS. 3.5 BATHROOMS",
-    "priceFrom": "$1,149 pp",
+    "priceFrom": "$1,499 pp",
     "soldOut": true
   },
   {
@@ -38,8 +38,7 @@
     "bedrooms": 3,
     "bathrooms": 3.5,
     "description": "3 BEDROOMS. 3.5 BATHROOMS",
-    "priceFrom": "$1,149 pp",
-    "soldOut": true
+    "priceFrom": "$1,499 pp"
   },
   {
     "title": "VILLA E",
@@ -48,7 +47,7 @@
     "bedrooms": 4,
     "bathrooms": 4,
     "description": "4 BEDROOMS. 4 BATHROOMS",
-    "priceFrom": "$1,199 pp",
+    "priceFrom": "$1,499 pp",
     "soldOut": true
   },
   {
@@ -58,7 +57,7 @@
     "bedrooms": 6,
     "bathrooms": 5,
     "description": "6 BEDROOMS. 5 BATHROOMS",
-    "priceFrom": "$1,299 pp",
+    "priceFrom": "$1,599 pp",
     "soldOut": true
   },
   {
@@ -68,7 +67,7 @@
     "bedrooms": 4,
     "bathrooms": 5,
     "description": "4 BEDROOMS. 5 BATHROOMS",
-    "priceFrom": "$1,199 pp",
+    "priceFrom": "$1,499 pp",
     "soldOut": true
   },
   {
@@ -78,7 +77,7 @@
     "bedrooms": 4,
     "bathrooms": 4,
     "description": "4 BEDROOMS. 4 BATHROOMS",
-    "priceFrom": "$1,249 pp",
+    "priceFrom": "$1,499 pp",
     "soldOut": true
   },
   {
@@ -88,7 +87,7 @@
     "bedrooms": 5,
     "bathrooms": 5,
     "description": "5 BEDROOMS. 5 BATHROOMS",
-    "priceFrom": "$1,299 pp",
+    "priceFrom": "$1,499 pp",
     "soldOut": true
   },
   {
@@ -108,7 +107,7 @@
     "bedrooms": 3,
     "bathrooms": 3,
     "description": "3 BEDROOMS. 3 BATHROOMS",
-    "priceFrom": "$1,299 pp",
+    "priceFrom": "$1,499 pp",
     "soldOut": true
   },
   {
@@ -118,7 +117,7 @@
     "bedrooms": 2,
     "bathrooms": 2,
     "description": "2 BEDROOMS. 2 BATHROOMS",
-    "priceFrom": "$1,299 pp",
+    "priceFrom": "$1,499 pp",
     "soldOut": true
   },
   {
@@ -128,7 +127,7 @@
     "bedrooms": 1,
     "bathrooms": 1,
     "description": "1 BEDROOM. 1 BATHROOM",
-    "priceFrom": "$1,299 pp",
+    "priceFrom": "$1,499 pp",
     "soldOut": true
   },
   {
@@ -138,16 +137,16 @@
     "bedrooms": 3,
     "bathrooms": 3.5,
     "description": "3 BEDROOMS. 3.5 BATHROOMS",
-    "priceFrom": "$1,299 pp",
+    "priceFrom": "$1,499 pp",
     "soldOut": true
   },
   {
     "title": "VILLA O",
     "href": "villa-o.html",
     "image": "images/airbnbs/villa-o-1.jpg",
-    "bedrooms": 5,
-    "bathrooms": 4,
-    "description": "5 BEDROOMS. 4 BATHROOMS",
+    "bedrooms": 3,
+    "bathrooms": 3.5,
+    "description": "3 BEDROOMS. 3.5 BATHROOMS",
     "priceFrom": "$1,499 pp",
     "newTag": true
   }
