@@ -149,6 +149,16 @@
     "description": "3 BEDROOMS. 3.5 BATHROOMS",
     "priceFrom": "$1,499 pp",
     "newTag": true
+  },
+  {
+    "title": "VILLA P",
+    "href": "villa-p.html",
+    "image": "images/airbnbs/villa-p-1.jpg",
+    "bedrooms": 3,
+    "bathrooms": 3.5,
+    "description": "3 BEDROOMS. 3.5 BATHROOMS",
+    "priceFrom": "$1,499 pp",
+    "newTag": true
   }
 ]
 
