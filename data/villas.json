@@ -47,8 +47,7 @@
     "bedrooms": 4,
     "bathrooms": 4,
     "description": "4 BEDROOMS. 4 BATHROOMS",
-    "priceFrom": "$1,499 pp",
-    "soldOut": true
+    "priceFrom": "$1,499 pp"
   },
   {
     "title": "VILLA F",
@@ -144,9 +143,9 @@
     "title": "VILLA O",
     "href": "villa-o.html",
     "image": "images/airbnbs/villa-o-1.jpg",
-    "bedrooms": 3,
-    "bathrooms": 3.5,
-    "description": "3 BEDROOMS. 3.5 BATHROOMS",
+    "bedrooms": 5,
+    "bathrooms": 4,
+    "description": "5 BEDROOMS. 4 BATHROOMS",
     "priceFrom": "$1,499 pp",
     "newTag": true
   },
@@ -158,7 +157,8 @@
     "bathrooms": 3.5,
     "description": "3 BEDROOMS. 3.5 BATHROOMS",
     "priceFrom": "$1,499 pp",
-    "newTag": true
+    "newTag": true,
+    "soldOut": true
   }
 ]
 
