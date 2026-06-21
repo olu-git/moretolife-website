@@ -96,7 +96,8 @@
     "bathrooms": 4,
     "description": "4 BEDROOMS. 4 BATHROOMS",
     "priceFrom": "$1,499 pp",
-    "newTag": true
+    "newTag": true,
+    "soldOut": true
   },
   {
     "title": "VILLA K",
@@ -156,8 +157,7 @@
     "bathrooms": 3.5,
     "description": "3 BEDROOMS. 3.5 BATHROOMS",
     "priceFrom": "$1,499 pp",
-    "newTag": true,
-    "soldOut": true
+    "newTag": true
   }
 ]
 
