@@ -96,7 +96,6 @@
     "bathrooms": 4,
     "description": "4 BEDROOMS. 4 BATHROOMS",
     "priceFrom": "$1,499 pp",
-    "newTag": true,
     "soldOut": true
   },
   {
@@ -157,6 +156,16 @@
     "bathrooms": 3.5,
     "description": "3 BEDROOMS. 3.5 BATHROOMS",
     "priceFrom": "$1,499 pp",
+    "newTag": true
+  },
+  {
+    "title": "VILLA Q",
+    "href": "villa-q.html",
+    "image": "images/airbnbs/villa-q-1.jpg",
+    "bedrooms": 6,
+    "bathrooms": 6.5,
+    "description": "6 BEDROOMS. 6.5 BATHROOMS",
+    "priceFrom": "$1,599 pp",
     "newTag": true
   }
 ]
