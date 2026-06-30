@@ -47,7 +47,8 @@
     "bedrooms": 4,
     "bathrooms": 4,
     "description": "4 BEDROOMS. 4 BATHROOMS",
-    "priceFrom": "$1,499 pp"
+    "priceFrom": "$1,499 pp",
+    "soldOut": true
   },
   {
     "title": "VILLA F",
@@ -95,8 +96,7 @@
     "bedrooms": 4,
     "bathrooms": 4,
     "description": "4 BEDROOMS. 4 BATHROOMS",
-    "priceFrom": "$1,499 pp",
-    "soldOut": true
+    "priceFrom": "$1,499 pp"
   },
   {
     "title": "VILLA K",
@@ -146,7 +146,7 @@
     "bathrooms": 4,
     "description": "5 BEDROOMS. 4 BATHROOMS",
     "priceFrom": "$1,499 pp",
-    "newTag": true
+    "soldOut": true
   },
   {
     "title": "VILLA P",
