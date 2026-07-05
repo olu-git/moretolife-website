@@ -87,6 +87,111 @@
   setInterval(render, 1000);
 })();
 
+(function () {
+  const track = document.getElementById("recap-track");
+  const fill = document.getElementById("recap-progress-fill");
+  const current = document.getElementById("recap-current");
+  const total = document.getElementById("recap-total");
+  const prevBtn = document.getElementById("recap-prev");
+  const nextBtn = document.getElementById("recap-next");
+  if (!track || !fill || !current || !total || !prevBtn || !nextBtn) return;
+
+  const cards = Array.from(track.querySelectorAll(".recap-card"));
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const displayTotal = Number(total.closest(".recap-counter")?.dataset.displayTotal || cards.length);
+  if (!cards.length) return;
+
+  function pad(value) {
+    return String(value).padStart(2, "0");
+  }
+
+  function scrollBehavior() {
+    return reduceMotion.matches ? "auto" : "smooth";
+  }
+
+  function cardStep() {
+    if (cards.length < 2) return cards[0].offsetWidth;
+    return cards[1].offsetLeft - cards[0].offsetLeft;
+  }
+
+  function activeIndex() {
+    return Math.min(cards.length - 1, Math.max(0, Math.round(track.scrollLeft / cardStep())));
+  }
+
+  function update() {
+    current.textContent = pad(Math.min(activeIndex() + 1, displayTotal));
+    total.textContent = pad(displayTotal);
+
+    const maxScroll = track.scrollWidth - track.clientWidth;
+    const progress = maxScroll > 0 ? track.scrollLeft / maxScroll : 0;
+    const minProgress = 1 / cards.length;
+    fill.style.width = ((minProgress + progress * (1 - minProgress)) * 100) + "%";
+  }
+
+  function scrollCards(direction) {
+    track.scrollBy({
+      left: direction * cardStep(),
+      behavior: scrollBehavior()
+    });
+  }
+
+  track.addEventListener("scroll", update, { passive: true });
+  window.addEventListener("resize", update);
+
+  prevBtn.addEventListener("click", function () {
+    scrollCards(-1);
+  });
+
+  nextBtn.addEventListener("click", function () {
+    scrollCards(1);
+  });
+
+  track.addEventListener("keydown", function (event) {
+    if (event.key === "ArrowRight") {
+      event.preventDefault();
+      scrollCards(1);
+    }
+
+    if (event.key === "ArrowLeft") {
+      event.preventDefault();
+      scrollCards(-1);
+    }
+  });
+
+  let isPointerDown = false;
+  let startX = 0;
+  let startScroll = 0;
+
+  track.addEventListener("pointerdown", function (event) {
+    isPointerDown = true;
+    startX = event.clientX;
+    startScroll = track.scrollLeft;
+    track.classList.add("dragging");
+    track.setPointerCapture(event.pointerId);
+  });
+
+  track.addEventListener("pointermove", function (event) {
+    if (!isPointerDown) return;
+    track.scrollLeft = startScroll - (event.clientX - startX);
+  });
+
+  function endDrag() {
+    if (!isPointerDown) return;
+    isPointerDown = false;
+    track.classList.remove("dragging");
+    track.scrollTo({
+      left: activeIndex() * cardStep(),
+      behavior: scrollBehavior()
+    });
+  }
+
+  track.addEventListener("pointerup", endDrag);
+  track.addEventListener("pointercancel", endDrag);
+  track.addEventListener("lostpointercapture", endDrag);
+
+  update();
+})();
+
 (async function () {
   const toggleBtn = document.getElementById("filters-toggle");
   const panel = document.getElementById("filters-panel");
