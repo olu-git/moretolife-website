@@ -98,7 +98,6 @@
 
   const cards = Array.from(track.querySelectorAll(".recap-card"));
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-  const displayTotal = Number(total.closest(".recap-counter")?.dataset.displayTotal || cards.length);
   if (!cards.length) return;
 
   function pad(value) {
@@ -119,8 +118,11 @@
   }
 
   function update() {
-    current.textContent = pad(Math.min(activeIndex() + 1, displayTotal));
-    total.textContent = pad(displayTotal);
+    const index = activeIndex();
+    current.textContent = pad(index + 1);
+    total.textContent = pad(cards.length);
+    prevBtn.disabled = index === 0;
+    nextBtn.disabled = index === cards.length - 1;
 
     const maxScroll = track.scrollWidth - track.clientWidth;
     const progress = maxScroll > 0 ? track.scrollLeft / maxScroll : 0;
@@ -129,8 +131,9 @@
   }
 
   function scrollCards(direction) {
-    track.scrollBy({
-      left: direction * cardStep(),
+    const nextIndex = Math.min(cards.length - 1, Math.max(0, activeIndex() + direction));
+    track.scrollTo({
+      left: nextIndex * cardStep(),
       behavior: scrollBehavior()
     });
   }

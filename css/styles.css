@@ -298,6 +298,17 @@ textarea {
   transform: scale(1.08);
 }
 
+.recap-arrow:disabled {
+  cursor: default;
+  opacity: 0.42;
+  transform: none;
+}
+
+.recap-arrow:disabled:hover {
+  background: transparent;
+  color: var(--recap-cream);
+}
+
 .recap-arrow:focus-visible,
 .recap-track:focus-visible {
   outline: 2px solid var(--recap-purple);
@@ -348,12 +359,6 @@ textarea {
   cursor: grabbing;
   scroll-behavior: auto;
   scroll-snap-type: none;
-}
-
-.recap-track::before {
-  content: "";
-  display: none;
-  flex: 0 0 clamp(28px, 7vw, 56px);
 }
 
 .recap-card {
@@ -1373,11 +1378,15 @@ textarea {
   }
 
   .recap-track {
-    padding: 0 20px;
+    padding: 0 20px 0 0;
   }
 
-  .recap-track::before {
-    display: block;
+  .recap-track-wrap {
+    padding-left: 0;
+  }
+
+  .recap-card:first-child {
+    margin-left: 20px;
   }
 
   .recap-card {
