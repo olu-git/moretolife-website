@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Booth Booking — MTL Bali 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  /* ============================================================
+     MTL BOOTH BOOKING PAGE
+     Edit CONFIG block at bottom of file to update WhatsApp number,
+     Instagram handle, and booth prices.
+     ============================================================ */
+
+  :root {
+    --bg: #050505;
+    --bg-elev: #0e0e0e;
+    --bg-card: #131313;
+    --line: #262626;
+    --line-strong: #404040;
+    --text: #f5f5f5;
+    --text-dim: #a3a3a3;
+    --text-mute: #737373;
+
+    --mtl-orange: #D85A30;
+    --mtl-orange-hi: #E86B41;
+    --mtl-purple: #534AB7;
+
+    --wa-green: #25D366;
+    --ig-grad: linear-gradient(135deg, #F58529 0%, #DD2A7B 50%, #8134AF 100%);
+
+    --event-1: #EA6A2A;   /* Welcome Party — MTL orange */
+    --event-2: #8747B8;   /* No Signal — MTL purple (lifted for legibility on black) */
+    --event-3: #3D9B4A;   /* Nights in Bali — forest green (lifted for legibility on black) */
+    --event-4: #F5A6C5;   /* The Send-Off — Du Coeur pink */
+
+    --radius: 4px;
+    --radius-lg: 12px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Barlow Condensed", "Arial Narrow", Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-transform: uppercase;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  /* ---------- Sticky nav ---------- */
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(5, 5, 5, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .brand {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+  }
+  .brand span { color: var(--mtl-orange); }
+  .nav-cta { display: flex; gap: 8px; }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border-radius: var(--radius);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.15s ease, filter 0.15s ease;
+    font-family: inherit;
+  }
+  .btn:hover { transform: translateY(-1px); filter: brightness(1.1); }
+  .btn:active { transform: translateY(0); }
+  .btn svg { width: 16px; height: 16px; flex-shrink: 0; }
+
+  .btn-wa { background: var(--wa-green); color: #05261a; }
+  .btn-ig { background: var(--ig-grad); }
+  .btn-ghost { background: transparent; border: 1px solid var(--line-strong); color: var(--text); }
+  .btn-lg { padding: 14px 22px; font-size: 14px; }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    padding: 88px 24px 64px;
+    max-width: 1280px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .hero-eyebrow {
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.22em;
+    color: var(--mtl-orange);
+    margin-bottom: 20px;
+  }
+  .hero-title {
+    font-size: clamp(64px, 11vw, 144px);
+    font-weight: 800;
+    line-height: 0.92;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+  }
+  .hero-title .accent {
+    display: block;
+    color: var(--mtl-orange);
+  }
+  .hero-lede {
+    max-width: 620px;
+    font-size: 19px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: var(--text-dim);
+    margin-bottom: 32px;
+    line-height: 1.45;
+  }
+  .hero-lede strong { color: var(--text); font-weight: 700; }
+
+  .hero-cta { display: flex; gap: 12px; flex-wrap: wrap; }
+
+  /* ---------- Programme strip ---------- */
+  .programme {
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    background: var(--bg-elev);
+  }
+  .programme-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 24px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+  .prog-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-decoration: none;
+    color: inherit;
+    padding: 12px 0;
+    border-left: 3px solid var(--evt);
+    padding-left: 16px;
+    transition: transform 0.2s ease;
+  }
+  .prog-item:hover { transform: translateX(4px); }
+  .prog-num {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-mute);
+    letter-spacing: 0.15em;
+  }
+  .prog-name {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    line-height: 1;
+    color: var(--evt);
+  }
+  .prog-date {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-dim);
+    letter-spacing: 0.12em;
+  }
+
+  /* ---------- Event sections ---------- */
+  .event {
+    padding: 96px 24px 64px;
+    max-width: 1280px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .event-header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 24px;
+    align-items: end;
+    margin-bottom: 40px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--line);
+  }
+  .event-num {
+    font-size: 14px;
+    font-weight: 800;
+    color: var(--evt);
+    letter-spacing: 0.22em;
+  }
+  .event-title {
+    font-size: clamp(48px, 7vw, 84px);
+    font-weight: 800;
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+    margin-top: 8px;
+    color: var(--evt);
+  }
+  .event-date {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-dim);
+    letter-spacing: 0.15em;
+    text-align: right;
+  }
+
+  .event-body {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+
+  .map-wrap {
+    background: #000;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    padding: 12px;
+    position: sticky;
+    top: 84px;
+  }
+  .map-wrap img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+  }
+  .map-caption {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 4px 4px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-mute);
+    letter-spacing: 0.15em;
+  }
+
+  /* ---------- Booth panel ---------- */
+  .panel {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .selected-pill {
+    display: none;
+    background: var(--evt);
+    color: #000;
+    padding: 12px 16px;
+    border-radius: var(--radius);
+    font-weight: 600;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    animation: pillIn 0.25s ease;
+  }
+  .selected-pill.active { display: flex; }
+  @keyframes pillIn {
+    from { opacity: 0; transform: translateY(-4px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .selected-pill .label {
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    opacity: 0.7;
+  }
+  .selected-pill .value {
+    flex: 1;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+  }
+  .selected-pill button {
+    background: rgba(0,0,0,0.2);
+    border: none;
+    color: #000;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1;
+  }
+
+  .category {
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+  }
+  .cat-head {
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1px solid var(--line);
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+  }
+  .cat-name {
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+  }
+  .cat-meta {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-mute);
+    letter-spacing: 0.12em;
+  }
+  .booths {
+    padding: 14px 14px 16px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(84px, 1fr));
+    gap: 6px;
+  }
+  .booth {
+    padding: 10px 8px 8px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    color: var(--text);
+    cursor: pointer;
+    transition: all 0.15s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    text-align: center;
+    font-family: inherit;
+  }
+  .booth .code {
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    line-height: 1.1;
+    white-space: nowrap;
+  }
+  .booth .price {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-mute);
+    letter-spacing: 0.06em;
+    transition: color 0.15s ease;
+  }
+  .booth:hover {
+    border-color: var(--evt);
+    background: rgba(255,255,255,0.08);
+    transform: translateY(-1px);
+  }
+  .booth:hover .price { color: var(--evt); }
+  .booth.selected {
+    background: var(--evt);
+    color: #000;
+    border-color: var(--evt);
+    font-weight: 700;
+  }
+  .booth.selected .price { color: rgba(0,0,0,0.7); }
+
+  .event-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    padding-top: 8px;
+  }
+  .event-actions .btn { flex: 1; min-width: 140px; justify-content: center; }
+
+  /* ---------- Divider between events ---------- */
+  .divider {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  .divider hr {
+    border: none;
+    border-top: 1px solid var(--line);
+  }
+
+  /* ---------- Footer CTA ---------- */
+  .footer-cta {
+    padding: 96px 24px 40px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .footer-cta h2 {
+    font-size: clamp(40px, 5.5vw, 64px);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1;
+    margin-bottom: 16px;
+  }
+  .footer-cta p {
+    color: var(--text-dim);
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    margin-bottom: 32px;
+  }
+  .footer-cta .hero-cta { justify-content: center; }
+
+  .footer {
+    padding: 48px 24px;
+    text-align: center;
+    border-top: 1px solid var(--line);
+    color: var(--text-mute);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+  }
+
+  /* ---------- Toast ---------- */
+  .toast {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%) translateY(120%);
+    background: var(--text);
+    color: #000;
+    padding: 14px 22px;
+    border-radius: var(--radius);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.04em;
+    z-index: 200;
+    transition: transform 0.3s ease;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+    max-width: calc(100vw - 48px);
+  }
+  .toast.show { transform: translateX(-50%) translateY(0); }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 900px) {
+    .programme-inner { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .event-body { grid-template-columns: 1fr; gap: 24px; }
+    .map-wrap { position: static; }
+    .event-header { grid-template-columns: 1fr; gap: 8px; }
+    .event-date { text-align: left; }
+    .nav-cta .btn-ghost { display: none; }
+    .nav-cta .btn { padding: 8px 12px; font-size: 12px; }
+    .brand { font-size: 16px; }
+    .hero { padding: 56px 20px 40px; }
+    .event { padding: 64px 20px 40px; }
+    .footer-cta { padding: 64px 20px 32px; }
+  }
+  @media (max-width: 500px) {
+    .programme-inner { grid-template-columns: 1fr; }
+    .btn svg { display: none; }
+    .nav-cta { gap: 6px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="brand">MORE<span>2</span>LIFE</div>
+    <div class="nav-cta">
+      <a href="#events" class="btn btn-ghost">Events</a>
+      <button class="btn btn-wa" data-enquire="whatsapp" data-event="" data-booth="">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.6-.8-1.9-.9-.2-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.5.1-1.6-.8-2.6-1.4-3.7-3.2-.3-.5.3-.4.8-1.4.1-.2 0-.3 0-.5-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4 0-.6.2s-.9.8-.9 2.1c0 1.2.9 2.4 1 2.6.1.2 1.8 2.7 4.3 3.8 1.6.7 2.2.7 3 .6.5-.1 1.6-.6 1.8-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3zm-5.5 7.6c-1.8 0-3.5-.5-5-1.4l-3.6 1.2 1.2-3.5c-1-1.6-1.6-3.4-1.6-5.4C3 7 7 3 12 3s9 4 9 9-4 9-9 9zm0-19.7C5.9 2.3 1 7.2 1 13.3c0 1.9.5 3.8 1.5 5.5L1 24l5.4-1.4c1.6.9 3.4 1.4 5.3 1.4h.1c6.1 0 11-4.9 11-11 0-2.9-1.1-5.7-3.2-7.7-2-2.1-4.8-3.3-7.6-3.3z"/></svg>
+        WhatsApp
+      </button>
+      <button class="btn btn-ig" data-enquire="instagram" data-event="" data-booth="">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.9.9 1.4.2.4.4 1 .4 2.2.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.9.7-1.4.9-.4.2-1 .4-2.2.4-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.9-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.9-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.2-.1 1.6-.1 4.8-.1M12 0C8.7 0 8.3 0 7.1.1 5.8.1 5 .3 4.2.6c-.8.3-1.5.8-2.2 1.4C1.4 2.7.9 3.4.6 4.2.3 5 .1 5.8.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.1 1.3.3 2.1.6 2.9.3.8.8 1.5 1.4 2.2.7.6 1.4 1.1 2.2 1.4.8.3 1.6.5 2.9.6 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c1.3-.1 2.1-.3 2.9-.6.8-.3 1.5-.8 2.2-1.4.6-.7 1.1-1.4 1.4-2.2.3-.8.5-1.6.6-2.9.1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.1-1.3-.3-2.1-.6-2.9-.3-.8-.8-1.5-1.4-2.2C21.3 1.4 20.6.9 19.8.6 19 .3 18.2.1 16.9.1 15.7 0 15.3 0 12 0zm0 5.8c-3.4 0-6.2 2.8-6.2 6.2s2.8 6.2 6.2 6.2 6.2-2.8 6.2-6.2S15.4 5.8 12 5.8zm0 10.2c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4zm7.8-10.4c0 .8-.6 1.4-1.4 1.4-.8 0-1.4-.6-1.4-1.4 0-.8.6-1.4 1.4-1.4.8 0 1.4.7 1.4 1.4z"/></svg>
+        Instagram
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-eyebrow">MTL Bali 2026 · 12–18 August</div>
+  <h1 class="hero-title">
+    Booth
+    <span class="accent">Booking.</span>
+  </h1>
+  <p class="hero-lede">
+    Four nights. Four venues. Pick your table and message us — <strong>we'll hold your spot with a $100 deposit per person.</strong>
+    Booth allocations are first come, first served.
+  </p>
+  <div class="hero-cta">
+    <button class="btn btn-wa btn-lg" data-enquire="whatsapp" data-event="" data-booth="">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.5 14.4c-.3-.1-1.6-.8-1.9-.9-.2-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.5.1-1.6-.8-2.6-1.4-3.7-3.2-.3-.5.3-.4.8-1.4.1-.2 0-.3 0-.5-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4 0-.6.2s-.9.8-.9 2.1c0 1.2.9 2.4 1 2.6.1.2 1.8 2.7 4.3 3.8 1.6.7 2.2.7 3 .6.5-.1 1.6-.6 1.8-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3zm-5.5 7.6c-1.8 0-3.5-.5-5-1.4l-3.6 1.2 1.2-3.5c-1-1.6-1.6-3.4-1.6-5.4C3 7 7 3 12 3s9 4 9 9-4 9-9 9zm0-19.7C5.9 2.3 1 7.2 1 13.3c0 1.9.5 3.8 1.5 5.5L1 24l5.4-1.4c1.6.9 3.4 1.4 5.3 1.4h.1c6.1 0 11-4.9 11-11 0-2.9-1.1-5.7-3.2-7.7-2-2.1-4.8-3.3-7.6-3.3z"/></svg>
+      Enquire on WhatsApp
+    </button>
+    <button class="btn btn-ig btn-lg" data-enquire="instagram" data-event="" data-booth="">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.9.9 1.4.2.4.4 1 .4 2.2.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.9.7-1.4.9-.4.2-1 .4-2.2.4-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.9-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.9-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.2-.1 1.6-.1 4.8-.1M12 0C8.7 0 8.3 0 7.1.1 5.8.1 5 .3 4.2.6c-.8.3-1.5.8-2.2 1.4C1.4 2.7.9 3.4.6 4.2.3 5 .1 5.8.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.1 1.3.3 2.1.6 2.9.3.8.8 1.5 1.4 2.2.7.6 1.4 1.1 2.2 1.4.8.3 1.6.5 2.9.6 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c1.3-.1 2.1-.3 2.9-.6.8-.3 1.5-.8 2.2-1.4.6-.7 1.1-1.4 1.4-2.2.3-.8.5-1.6.6-2.9.1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.1-1.3-.3-2.1-.6-2.9-.3-.8-.8-1.5-1.4-2.2C21.3 1.4 20.6.9 19.8.6 19 .3 18.2.1 16.9.1 15.7 0 15.3 0 12 0zm0 5.8c-3.4 0-6.2 2.8-6.2 6.2s2.8 6.2 6.2 6.2 6.2-2.8 6.2-6.2S15.4 5.8 12 5.8zm0 10.2c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4zm7.8-10.4c0 .8-.6 1.4-1.4 1.4-.8 0-1.4-.6-1.4-1.4 0-.8.6-1.4 1.4-1.4.8 0 1.4.7 1.4 1.4z"/></svg>
+      Enquire on Instagram
+    </button>
+  </div>
+</section>
+
+<!-- ============ PROGRAMME ============ -->
+<section class="programme" id="events">
+  <div class="programme-inner">
+    <a class="prog-item" href="#event-1" style="--evt: var(--event-1)">
+      <span class="prog-num">01 / TUE</span>
+      <span class="prog-name">Welcome Party</span>
+      <span class="prog-date">12 AUG · NIGHT ONE</span>
+    </a>
+    <a class="prog-item" href="#event-2" style="--evt: var(--event-2)">
+      <span class="prog-num">02 / WED</span>
+      <span class="prog-name">No Signal</span>
+      <span class="prog-date">13 AUG · MIDWEEK</span>
+    </a>
+    <a class="prog-item" href="#event-3" style="--evt: var(--event-3)">
+      <span class="prog-num">03 / FRI</span>
+      <span class="prog-name">Nights in Bali</span>
+      <span class="prog-date">15 AUG · POOL DAY</span>
+    </a>
+    <a class="prog-item" href="#event-4" style="--evt: var(--event-4)">
+      <span class="prog-num">04 / SUN</span>
+      <span class="prog-name">The Send-Off</span>
+      <span class="prog-date">17 AUG · FINALE</span>
+    </a>
+  </div>
+</section>
+
+<!-- ============ EVENT 1: WELCOME PARTY ============ -->
+<section class="event" id="event-1" style="--evt: var(--event-1)">
+  <div class="event-header">
+    <div>
+      <div class="event-num">01 / NIGHT ONE</div>
+      <h2 class="event-title">Welcome Party</h2>
+    </div>
+    <div></div>
+    <div class="event-date">TUE · 12 AUG 2026</div>
+  </div>
+
+  <div class="event-body">
+    <div class="map-wrap">
+      <img src="WELCOME_PARTY_-_Table_Map.png" alt="Welcome Party table map">
+      <div class="map-caption"><span>WELCOME PARTY · TABLE MAP</span><span>12 AUG</span></div>
+    </div>
+
+    <div class="panel" data-event="Welcome Party (12 Aug)">
+      <div class="selected-pill">
+        <span class="label">Selected</span>
+        <span class="value"></span>
+        <button aria-label="Clear selection">×</button>
+      </div>
+
+      <!-- Categories rendered from CONFIG -->
+      <div class="cats"></div>
+
+      <div class="event-actions">
+        <button class="btn btn-wa" data-enquire="whatsapp" data-event="Welcome Party (12 Aug)" data-booth="">
+          Enquire · WhatsApp
+        </button>
+        <button class="btn btn-ig" data-enquire="instagram" data-event="Welcome Party (12 Aug)" data-booth="">
+          Enquire · Instagram
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><hr></div>
+
+<!-- ============ EVENT 2: NO SIGNAL ============ -->
+<section class="event" id="event-2" style="--evt: var(--event-2)">
+  <div class="event-header">
+    <div>
+      <div class="event-num">02 / MIDWEEK</div>
+      <h2 class="event-title">No Signal</h2>
+    </div>
+    <div></div>
+    <div class="event-date">WED · 13 AUG 2026</div>
+  </div>
+
+  <div class="event-body">
+    <div class="map-wrap">
+      <img src="NO_SIGNAL_-_Table_Map.png" alt="No Signal table map">
+      <div class="map-caption"><span>NO SIGNAL · TABLE MAP</span><span>13 AUG</span></div>
+    </div>
+
+    <div class="panel" data-event="No Signal (13 Aug)">
+      <div class="selected-pill">
+        <span class="label">Selected</span>
+        <span class="value"></span>
+        <button aria-label="Clear selection">×</button>
+      </div>
+
+      <div class="cats"></div>
+
+      <div class="event-actions">
+        <button class="btn btn-wa" data-enquire="whatsapp" data-event="No Signal (13 Aug)" data-booth="">
+          Enquire · WhatsApp
+        </button>
+        <button class="btn btn-ig" data-enquire="instagram" data-event="No Signal (13 Aug)" data-booth="">
+          Enquire · Instagram
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><hr></div>
+
+<!-- ============ EVENT 3: NIGHTS IN BALI ============ -->
+<section class="event" id="event-3" style="--evt: var(--event-3)">
+  <div class="event-header">
+    <div>
+      <div class="event-num">03 / POOL DAY</div>
+      <h2 class="event-title">Nights in Bali</h2>
+    </div>
+    <div></div>
+    <div class="event-date">FRI · 15 AUG 2026</div>
+  </div>
+
+  <div class="event-body">
+    <div class="map-wrap">
+      <img src="NIGHTS_IN_BALI_-_Table_Map.png" alt="Nights in Bali table map">
+      <div class="map-caption"><span>NIGHTS IN BALI · TABLE MAP</span><span>15 AUG</span></div>
+    </div>
+
+    <div class="panel" data-event="Nights in Bali (15 Aug)">
+      <div class="selected-pill">
+        <span class="label">Selected</span>
+        <span class="value"></span>
+        <button aria-label="Clear selection">×</button>
+      </div>
+
+      <div class="cats"></div>
+
+      <div class="event-actions">
+        <button class="btn btn-wa" data-enquire="whatsapp" data-event="Nights in Bali (15 Aug)" data-booth="">
+          Enquire · WhatsApp
+        </button>
+        <button class="btn btn-ig" data-enquire="instagram" data-event="Nights in Bali (15 Aug)" data-booth="">
+          Enquire · Instagram
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><hr></div>
+
+<!-- ============ EVENT 4: THE SEND-OFF ============ -->
+<section class="event" id="event-4" style="--evt: var(--event-4)">
+  <div class="event-header">
+    <div>
+      <div class="event-num">04 / FINALE</div>
+      <h2 class="event-title">The Send-Off</h2>
+    </div>
+    <div></div>
+    <div class="event-date">SUN · 17 AUG 2026</div>
+  </div>
+
+  <div class="event-body">
+    <div class="map-wrap">
+      <img src="THE_SEND-OFF_-_Table_Map.png" alt="The Send-Off table map">
+      <div class="map-caption"><span>THE SEND-OFF · TABLE MAP</span><span>17 AUG</span></div>
+    </div>
+
+    <div class="panel" data-event="The Send-Off (17 Aug)">
+      <div class="selected-pill">
+        <span class="label">Selected</span>
+        <span class="value"></span>
+        <button aria-label="Clear selection">×</button>
+      </div>
+
+      <div class="cats"></div>
+
+      <div class="event-actions">
+        <button class="btn btn-wa" data-enquire="whatsapp" data-event="The Send-Off (17 Aug)" data-booth="">
+          Enquire · WhatsApp
+        </button>
+        <button class="btn btn-ig" data-enquire="instagram" data-event="The Send-Off (17 Aug)" data-booth="">
+          Enquire · Instagram
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER CTA ============ -->
+<section class="footer-cta">
+  <h2>Not sure which table?</h2>
+  <p>Message us — we'll walk you through what's still available and match you to the right vibe for your group.</p>
+  <div class="hero-cta">
+    <button class="btn btn-wa btn-lg" data-enquire="whatsapp" data-event="" data-booth="">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.5 14.4c-.3-.1-1.6-.8-1.9-.9-.2-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.5.1-1.6-.8-2.6-1.4-3.7-3.2-.3-.5.3-.4.8-1.4.1-.2 0-.3 0-.5-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4 0-.6.2s-.9.8-.9 2.1c0 1.2.9 2.4 1 2.6.1.2 1.8 2.7 4.3 3.8 1.6.7 2.2.7 3 .6.5-.1 1.6-.6 1.8-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3zm-5.5 7.6c-1.8 0-3.5-.5-5-1.4l-3.6 1.2 1.2-3.5c-1-1.6-1.6-3.4-1.6-5.4C3 7 7 3 12 3s9 4 9 9-4 9-9 9zm0-19.7C5.9 2.3 1 7.2 1 13.3c0 1.9.5 3.8 1.5 5.5L1 24l5.4-1.4c1.6.9 3.4 1.4 5.3 1.4h.1c6.1 0 11-4.9 11-11 0-2.9-1.1-5.7-3.2-7.7-2-2.1-4.8-3.3-7.6-3.3z"/></svg>
+      WhatsApp
+    </button>
+    <button class="btn btn-ig btn-lg" data-enquire="instagram" data-event="" data-booth="">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.9.9 1.4.2.4.4 1 .4 2.2.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.9.7-1.4.9-.4.2-1 .4-2.2.4-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.9-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.9-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.2-.1 1.6-.1 4.8-.1M12 0C8.7 0 8.3 0 7.1.1 5.8.1 5 .3 4.2.6c-.8.3-1.5.8-2.2 1.4C1.4 2.7.9 3.4.6 4.2.3 5 .1 5.8.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.1 1.3.3 2.1.6 2.9.3.8.8 1.5 1.4 2.2.7.6 1.4 1.1 2.2 1.4.8.3 1.6.5 2.9.6 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c1.3-.1 2.1-.3 2.9-.6.8-.3 1.5-.8 2.2-1.4.6-.7 1.1-1.4 1.4-2.2.3-.8.5-1.6.6-2.9.1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.1-1.3-.3-2.1-.6-2.9-.3-.8-.8-1.5-1.4-2.2C21.3 1.4 20.6.9 19.8.6 19 .3 18.2.1 16.9.1 15.7 0 15.3 0 12 0zm0 5.8c-3.4 0-6.2 2.8-6.2 6.2s2.8 6.2 6.2 6.2 6.2-2.8 6.2-6.2S15.4 5.8 12 5.8zm0 10.2c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4zm7.8-10.4c0 .8-.6 1.4-1.4 1.4-.8 0-1.4-.6-1.4-1.4 0-.8.6-1.4 1.4-1.4.8 0 1.4.7 1.4 1.4z"/></svg>
+      Instagram
+    </button>
+  </div>
+</section>
+
+<footer class="footer">
+  MORE TO LIFE AU PTY LTD · MTL BALI 2026 · 12–18 AUGUST
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* ============================================================
+   CONFIG — EDIT HERE
+   ============================================================ */
+const CONFIG = {
+  whatsappNumber: '61423939210',           // +61 423 939 210
+  instagramHandle: 'moretolife.au',         // @moretolife.au
+
+  /* Per-booth pricing.
+     - To mark a booth as SOLD, just delete it from the list.
+     - Prices show as-is (include the currency symbol, e.g. '$850 AUD').
+     - Use '' (empty string) if a specific booth's price is TBC.
+  */
+
+  events: {
+    'Welcome Party (12 Aug)': [
+      { name: 'VIP Bottle Service',   capacity: '12 pax',   booths: [
+        { code: '200', price: '$TBC' },
+        { code: '201', price: '$TBC' }
+      ]},
+      { name: 'Dance Floor Tables',   capacity: '6–8 pax',  booths: [
+        { code: '40',  price: '$TBC' },
+        { code: '50',  price: '$TBC' },
+        { code: '600', price: '$TBC' },
+        { code: '700', price: '$TBC' },
+        { code: '500', price: '$TBC' }
+      ]},
+      { name: 'Lounge Booths',        capacity: '4–6 pax',  booths: [
+        { code: '100', price: '$TBC' },
+        { code: '101', price: '$TBC' },
+        { code: '300', price: '$TBC' },
+        { code: '301', price: '$TBC' },
+        { code: '302', price: '$TBC' },
+        { code: '303', price: '$TBC' }
+      ]},
+      { name: 'Shisha Lounge',        capacity: '4 pax',    booths: [
+        { code: '11', price: '$TBC' }, { code: '12', price: '$TBC' },
+        { code: '13', price: '$TBC' }, { code: '14', price: '$TBC' },
+        { code: '15', price: '$TBC' }, { code: '16', price: '$TBC' },
+        { code: '21', price: '$TBC' }, { code: '22', price: '$TBC' },
+        { code: '23', price: '$TBC' }, { code: '24', price: '$TBC' },
+        { code: '25', price: '$TBC' }, { code: '26', price: '$TBC' }
+      ]},
+      { name: 'Dining Tables',        capacity: '2 pax',    booths: [
+        { code: '01', price: '$TBC' }, { code: '02', price: '$TBC' },
+        { code: '03', price: '$TBC' }, { code: '04', price: '$TBC' },
+        { code: '05', price: '$TBC' }, { code: '06', price: '$TBC' }
+      ]}
+    ],
+
+    'No Signal (13 Aug)': [
+      { name: 'VVIP XL',              capacity: '12 pax',   booths: [
+        { code: 'VVIP XL', price: '$TBC' }
+      ]},
+      { name: 'VVIP L (Large)',       capacity: '10 pax',   booths: [
+        { code: 'VVIP L1', price: '$TBC' },
+        { code: 'VVIP L2', price: '$TBC' }
+      ]},
+      { name: 'VIP Private Lounge',   capacity: '10 pax',   booths: [
+        { code: 'VIP Private Lounge 1', price: '$TBC' },
+        { code: 'VIP Private Lounge 2', price: '$TBC' },
+        { code: 'VIP Private Lounge 3', price: '$TBC' },
+        { code: 'VIP Private Lounge 4', price: '$TBC' },
+        { code: 'VIP Private Lounge 5', price: '$TBC' },
+        { code: 'VIP Private Lounge 6', price: '$TBC' }
+      ]},
+      { name: 'VVIP M (Medium)',      capacity: '8 pax',    booths: [
+        { code: 'VVIP M1', price: '$TBC' },
+        { code: 'VVIP M2', price: '$TBC' },
+        { code: 'VVIP M3', price: '$TBC' },
+        { code: 'VVIP M4', price: '$TBC' },
+        { code: 'VVIP M5', price: '$TBC' }
+      ]},
+      { name: 'VIP',                  capacity: '7 pax',    booths: [
+        { code: 'VIP 1', price: '$TBC' },
+        { code: 'VIP 2', price: '$TBC' },
+        { code: 'VIP 3', price: '$TBC' },
+        { code: 'VIP 4', price: '$TBC' },
+        { code: 'VIP 5', price: '$TBC' },
+        { code: 'VIP 6', price: '$TBC' }
+      ]},
+      { name: 'Standard Tables',      capacity: '4 pax',    booths: [
+        { code: 'STD Table 1', price: '$TBC' },
+        { code: 'STD Table 2', price: '$TBC' },
+        { code: 'STD Table 3', price: '$TBC' },
+        { code: 'STD Table 4', price: '$TBC' }
+      ]}
+    ],
+
+    'Nights in Bali (15 Aug)': [
+      { name: 'Canopy Beds',          capacity: 'Poolside', booths: [
+        { code: 'CB1', price: '$TBC' }, { code: 'CB2', price: '$TBC' },
+        { code: 'CB3', price: '$TBC' }, { code: 'CB5', price: '$TBC' },
+        { code: 'CB6', price: '$TBC' }
+      ]},
+      { name: 'Cabanas',              capacity: 'Private',  booths: [
+        { code: 'C1', price: '$TBC' }, { code: 'C2', price: '$TBC' },
+        { code: 'C3', price: '$TBC' }, { code: 'C5', price: '$TBC' },
+        { code: 'C6', price: '$TBC' }, { code: 'C7', price: '$TBC' }
+      ]},
+      { name: 'Daybed Sofas',         capacity: 'Poolside', booths: [
+        { code: 'D1', price: '$TBC' }, { code: 'D2', price: '$TBC' },
+        { code: 'D3', price: '$TBC' }, { code: 'D5', price: '$TBC' },
+        { code: 'D6', price: '$TBC' }, { code: 'D7', price: '$TBC' },
+        { code: 'D8', price: '$TBC' }, { code: 'D9', price: '$TBC' },
+        { code: 'D10', price: '$TBC' }
+      ]},
+      { name: 'DJ Sofas',             capacity: 'Booth-side', booths: [
+        { code: 'DJ1', price: '$TBC' },
+        { code: 'DJ2', price: '$TBC' },
+        { code: 'DJ3', price: '$TBC' }
+      ]},
+      { name: 'Backstage Sofas',      capacity: 'Terrace',  booths: [
+        { code: 'BS1', price: '$TBC' },
+        { code: 'BS2', price: '$TBC' }
+      ]},
+      { name: 'Backstage Tables',     capacity: 'Terrace',  booths: [
+        { code: 'T1', price: '$TBC' }, { code: 'T2', price: '$TBC' },
+        { code: 'T3', price: '$TBC' }, { code: 'T5', price: '$TBC' },
+        { code: 'T6', price: '$TBC' }, { code: 'T7', price: '$TBC' },
+        { code: 'T8', price: '$TBC' }, { code: 'T9', price: '$TBC' }
+      ]},
+      { name: 'Dance Floor Sofas',    capacity: 'Front',    booths: [
+        { code: 'S1', price: '$TBC' }, { code: 'S2', price: '$TBC' },
+        { code: 'S3', price: '$TBC' }, { code: 'S5', price: '$TBC' },
+        { code: 'S6', price: '$TBC' }, { code: 'S7', price: '$TBC' },
+        { code: 'S9', price: '$TBC' }
+      ]}
+    ],
+
+    'The Send-Off (17 Aug)': [
+      { name: 'VVIP XL',              capacity: '12 pax',   booths: [
+        { code: 'VVIP XL', price: '$TBC' }
+      ]},
+      { name: 'VVIP L (Large)',       capacity: '10 pax',   booths: [
+        { code: 'VVIP L1', price: '$TBC' },
+        { code: 'VVIP L2', price: '$TBC' }
+      ]},
+      { name: 'VIP Private Lounge',   capacity: '10 pax',   booths: [
+        { code: 'VIP Private Lounge 1', price: '$TBC' },
+        { code: 'VIP Private Lounge 2', price: '$TBC' },
+        { code: 'VIP Private Lounge 3', price: '$TBC' },
+        { code: 'VIP Private Lounge 4', price: '$TBC' },
+        { code: 'VIP Private Lounge 5', price: '$TBC' },
+        { code: 'VIP Private Lounge 6', price: '$TBC' }
+      ]},
+      { name: 'VVIP M (Medium)',      capacity: '8 pax',    booths: [
+        { code: 'VVIP M1', price: '$TBC' },
+        { code: 'VVIP M2', price: '$TBC' },
+        { code: 'VVIP M3', price: '$TBC' },
+        { code: 'VVIP M4', price: '$TBC' },
+        { code: 'VVIP M5', price: '$TBC' }
+      ]},
+      { name: 'VIP',                  capacity: '7 pax',    booths: [
+        { code: 'VIP 1', price: '$TBC' },
+        { code: 'VIP 2', price: '$TBC' },
+        { code: 'VIP 3', price: '$TBC' },
+        { code: 'VIP 4', price: '$TBC' },
+        { code: 'VIP 5', price: '$TBC' },
+        { code: 'VIP 6', price: '$TBC' }
+      ]},
+      { name: 'High Tables',          capacity: '4 pax',    booths: [
+        { code: 'High Table 1', price: '$TBC' },
+        { code: 'High Table 2', price: '$TBC' },
+        { code: 'High Table 3', price: '$TBC' },
+        { code: 'High Table 4', price: '$TBC' }
+      ]}
+    ]
+  }
+};
+
+/* ============================================================
+   Message template
+   ============================================================ */
+function buildMessage(eventName, boothName) {
+  return `Hi MTL! I'd like to enquire about a booth for MTL Bali 2026 ✨
+
+Name:
+Event Name: ${eventName || ''}
+Booth Selection: ${boothName || ''}
+MTL Pass/Package Type:
+Number of people:
+
+Thanks!`;
+}
+
+/* ============================================================
+   Render booth categories
+   ============================================================ */
+document.querySelectorAll('.panel').forEach(panel => {
+  const eventName = panel.dataset.event;
+  const cats = CONFIG.events[eventName];
+  const catsContainer = panel.querySelector('.cats');
+  if (!cats) return;
+
+  cats.forEach(cat => {
+    if (!cat.booths || cat.booths.length === 0) return; // skip empty categories (all sold)
+
+    const catEl = document.createElement('div');
+    catEl.className = 'category';
+    catEl.innerHTML = `
+      <div class="cat-head">
+        <span class="cat-name">${cat.name}</span>
+        <span class="cat-meta">${cat.capacity} · ${cat.booths.length} available</span>
+      </div>
+      <div class="booths"></div>
+    `;
+    const boothsEl = catEl.querySelector('.booths');
+    cat.booths.forEach(b => {
+      const btn = document.createElement('button');
+      btn.className = 'booth';
+      const priceDisplay = b.price ? b.price : 'Enquire';
+      btn.innerHTML = `<span class="code">${b.code}</span><span class="price">${priceDisplay}</span>`;
+      const priceForMsg = b.price ? ` (${b.price})` : '';
+      btn.dataset.booth = `${cat.name} — ${b.code}${priceForMsg}`;
+      btn.addEventListener('click', () => selectBooth(panel, btn));
+      boothsEl.appendChild(btn);
+    });
+    catsContainer.appendChild(catEl);
+  });
+});
+
+/* ============================================================
+   Selection logic
+   ============================================================ */
+function selectBooth(panel, btn) {
+  const isSelected = btn.classList.contains('selected');
+  // Clear all in panel
+  panel.querySelectorAll('.booth.selected').forEach(b => b.classList.remove('selected'));
+  const pill = panel.querySelector('.selected-pill');
+  const pillValue = pill.querySelector('.value');
+  const actions = panel.querySelectorAll('[data-enquire]');
+
+  if (isSelected) {
+    // Deselect
+    pill.classList.remove('active');
+    actions.forEach(a => a.dataset.booth = '');
+  } else {
+    btn.classList.add('selected');
+    pill.classList.add('active');
+    pillValue.textContent = btn.dataset.booth;
+    actions.forEach(a => a.dataset.booth = btn.dataset.booth);
+  }
+}
+
+// Pill dismiss button
+document.querySelectorAll('.selected-pill button').forEach(x => {
+  x.addEventListener('click', () => {
+    const panel = x.closest('.panel');
+    panel.querySelectorAll('.booth.selected').forEach(b => b.classList.remove('selected'));
+    panel.querySelector('.selected-pill').classList.remove('active');
+    panel.querySelectorAll('[data-enquire]').forEach(a => a.dataset.booth = '');
+  });
+});
+
+/* ============================================================
+   WhatsApp / Instagram button handlers
+   ============================================================ */
+document.querySelectorAll('[data-enquire]').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const type = btn.dataset.enquire;
+    const eventName = btn.dataset.event || '';
+    const boothName = btn.dataset.booth || '';
+    const message = buildMessage(eventName, boothName);
+
+    if (type === 'whatsapp') {
+      const url = `https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(message)}`;
+      window.open(url, '_blank');
+    } else if (type === 'instagram') {
+      // Instagram doesn't support prefill via URL — copy to clipboard, then open DM
+      copyToClipboard(message);
+      const url = `https://ig.me/m/${CONFIG.instagramHandle}`;
+      showToast('Message copied — paste it in the Instagram DM');
+      setTimeout(() => window.open(url, '_blank'), 400);
+    }
+  });
+});
+
+/* ============================================================
+   Utilities
+   ============================================================ */
+function copyToClipboard(text) {
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(text).catch(() => fallbackCopy(text));
+  } else {
+    fallbackCopy(text);
+  }
+}
+function fallbackCopy(text) {
+  const ta = document.createElement('textarea');
+  ta.value = text;
+  ta.style.position = 'fixed';
+  ta.style.opacity = '0';
+  document.body.appendChild(ta);
+  ta.select();
+  try { document.execCommand('copy'); } catch(e) {}
+  document.body.removeChild(ta);
+}
+
+let toastTimer;
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove('show'), 2600);
+}
+</script>
+
+</body>
+</html>

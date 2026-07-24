@@ -1,0 +1,141 @@
+/* ============================================================
+   MTL TABLE MAPS — shared styles
+   Used by the four live maps embedded in booths.html.
+   ============================================================ */
+
+.mtl-map * { box-sizing: border-box; }
+
+.event-body > .map-wrap,
+.event-body > .panel {
+  min-width: 0;
+}
+
+.mtl-title {
+  font-family: 'Ranchers', cursive;
+  color: var(--mtl-green);
+  -webkit-text-stroke: 3px var(--mtl-orange);
+  text-shadow:
+    3px 3px 0 var(--mtl-orange), -3px -3px 0 var(--mtl-orange),
+    3px -3px 0 var(--mtl-orange), -3px 3px 0 var(--mtl-orange),
+    5px 5px 0 rgba(20,10,0,0.25);
+}
+
+.mtl-zone {
+  position: absolute;
+  border: 3px solid #1a1206;
+  box-sizing: border-box;
+}
+
+.mtl-zone-label {
+  position: absolute;
+  font-family: 'Ranchers', cursive;
+  color: #1a1206;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  text-align: center;
+}
+
+.mtl-zone-label:has(+ .mtl-chip[data-code^="VIP Private Lounge"]) {
+  display: none;
+}
+
+.mtl-chip[data-code^="VIP Private Lounge"] {
+  color: var(--mtl-yellow);
+  font-size: 17px !important;
+  line-height: 1.05;
+}
+
+.mtl-bracket {
+  position: absolute;
+  border: 2px solid #1a1206;
+  border-radius: 8px;
+}
+
+.mtl-chip {
+  box-sizing: border-box;
+  position: absolute;
+  border: 3px solid #1a1206;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 900;
+  box-shadow: 3px 3px 0 rgba(20,10,0,0.25);
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  transition: transform 0.15s ease, filter 0.15s ease, box-shadow 0.15s ease;
+}
+
+/* Non-bookable fixed elements (DJ booth, bar) — not clickable, no hover state */
+.mtl-chip--fixed {
+  cursor: default;
+}
+
+/* Hover state — only on real bookable chips */
+.mtl-chip:not(.mtl-chip--fixed):not(.mtl-chip--sold):hover {
+  transform: translate(-50%, -50%) scale(1.06);
+  filter: brightness(1.08);
+  box-shadow: 4px 4px 0 rgba(20,10,0,0.35);
+}
+
+/* Selected state — synced with the booking pane. JS adds this class. */
+.mtl-chip--selected {
+  outline: 4px solid #fff;
+  outline-offset: 2px;
+  z-index: 5;
+}
+
+.mtl-chip[role="button"]:focus-visible {
+  outline: 4px solid #fff;
+  outline-offset: 2px;
+  z-index: 5;
+}
+
+/* ============================================================
+   SOLD-OUT STATE — Option A: grey + red X
+   JS adds/removes .mtl-chip--sold based on CONFIG's `sold: true`
+   flag per booth (see booth-maps.js + booths.js integration).
+   ============================================================ */
+.mtl-chip--sold {
+  filter: grayscale(1) brightness(0.55);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.mtl-chip--sold::after {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  pointer-events: none;
+  border-radius: inherit;
+  background:
+    linear-gradient(to top right,
+      transparent calc(50% - 1.5px), #ff3b30 calc(50% - 1.5px),
+      #ff3b30 calc(50% + 1.5px), transparent calc(50% + 1.5px)),
+    linear-gradient(to top left,
+      transparent calc(50% - 1.5px), #ff3b30 calc(50% - 1.5px),
+      #ff3b30 calc(50% + 1.5px), transparent calc(50% + 1.5px));
+}
+
+/* ============================================================
+   Responsive scaling
+   Maps are built at a fixed pixel canvas (matches original poster
+   dimensions). On small screens, scale the whole map down rather
+   than reflow it — reflowing would require re-deriving every
+   chip coordinate.
+   ============================================================ */
+.mtl-map-scale-wrap {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+@media (max-width: 900px) {
+  .event-body {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

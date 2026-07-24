@@ -1,3 +1,10 @@
 images/.git_backup_nested/
+.agents/
 .claude/
+.codex/
 .venv/
+admin/
+
+.DS_Store
+Thumbs.db
+desktop.ini

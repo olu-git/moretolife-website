@@ -186,7 +186,7 @@ textarea {
   position: relative;
   width: 100%;
   height: 100%;
-  background: #000 url('video/backup-image.png') center center / cover no-repeat;
+  background: #000 url('../video/backup-image.png') center center / cover no-repeat;
 }
 
 .video-container iframe {
