@@ -195,6 +195,19 @@ Number of people:
 Thanks!`;
 }
 
+function getBoothButtonLabel(categoryName, boothCode) {
+  const repeatedPrefix = `${categoryName} `;
+  return boothCode.startsWith(repeatedPrefix)
+    ? boothCode.slice(repeatedPrefix.length)
+    : boothCode;
+}
+
+function getFullBoothName(categoryName, boothCode) {
+  return boothCode === categoryName || boothCode.startsWith(`${categoryName} `)
+    ? boothCode
+    : `${categoryName} \u2014 ${boothCode}`;
+}
+
 document.querySelectorAll('.panel').forEach(panel => {
   const eventName = panel.dataset.event;
   const cats = CONFIG.events[eventName];
@@ -220,9 +233,12 @@ document.querySelectorAll('.panel').forEach(panel => {
       button.className = 'booth';
       button.type = 'button';
       const priceDisplay = booth.price ? booth.price : 'Enquire';
-      button.innerHTML = `<span class="code">${booth.code}</span><span class="price">${priceDisplay}</span>`;
+      const buttonLabel = getBoothButtonLabel(cat.name, booth.code);
+      const fullBoothName = getFullBoothName(cat.name, booth.code);
+      button.innerHTML = `<span class="code">${buttonLabel}</span><span class="price">${priceDisplay}</span>`;
       const priceForMessage = booth.price ? ` (${booth.price})` : '';
-      button.dataset.booth = `${cat.name} — ${booth.code}${priceForMessage}`;
+      button.dataset.booth = `${fullBoothName}${priceForMessage}`;
+      button.setAttribute('aria-label', `${fullBoothName}, ${priceDisplay}`);
       button.setAttribute('aria-pressed', 'false');
       button.addEventListener('click', () => selectBooth(panel, button));
       boothsEl.appendChild(button);
