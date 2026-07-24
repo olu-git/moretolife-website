@@ -47,41 +47,43 @@ const CONFIG = {
     ],
 
     'No Signal (13 Aug)': [
-      { name: 'VVIP XL', capacity: '12 pax', booths: [
-        { code: 'VVIP XL', price: '$TBC' }
+      { name: 'VVIP Lounges', groups: [
+        { name: 'XL', capacity: '12 pax', selectionPrefix: 'VVIP', booths: [
+          { code: 'XL', price: '$TBC' }
+        ]},
+        { name: 'Large (L)', capacity: '10 pax', selectionPrefix: 'VVIP', booths: [
+          { code: 'L1', price: '$TBC' },
+          { code: 'L2', price: '$TBC' }
+        ]},
+        { name: 'Medium (M)', capacity: '8 pax', selectionPrefix: 'VVIP', booths: [
+          { code: 'M1', price: '$TBC' },
+          { code: 'M2', price: '$TBC' },
+          { code: 'M3', price: '$TBC' },
+          { code: 'M4', price: '$TBC' },
+          { code: 'M5', price: '$TBC' }
+        ]}
       ]},
-      { name: 'VVIP L (Large)', capacity: '10 pax', booths: [
-        { code: 'VVIP L1', price: '$TBC' },
-        { code: 'VVIP L2', price: '$TBC' }
+      { name: 'VIP Private Lounges', capacity: '10 pax', selectionPrefix: 'VIP Private Lounge', booths: [
+        { code: '1', price: '$TBC' },
+        { code: '2', price: '$TBC' },
+        { code: '3', price: '$TBC' },
+        { code: '4', price: '$TBC' },
+        { code: '5', price: '$TBC' },
+        { code: '6', price: '$TBC' }
       ]},
-      { name: 'VIP Private Lounge', capacity: '10 pax', booths: [
-        { code: 'VIP Private Lounge 1', price: '$TBC' },
-        { code: 'VIP Private Lounge 2', price: '$TBC' },
-        { code: 'VIP Private Lounge 3', price: '$TBC' },
-        { code: 'VIP Private Lounge 4', price: '$TBC' },
-        { code: 'VIP Private Lounge 5', price: '$TBC' },
-        { code: 'VIP Private Lounge 6', price: '$TBC' }
+      { name: 'VIP Booths', capacity: '7 pax', selectionPrefix: 'VIP', booths: [
+        { code: '1', price: '$TBC' },
+        { code: '2', price: '$TBC' },
+        { code: '3', price: '$TBC' },
+        { code: '4', price: '$TBC' },
+        { code: '5', price: '$TBC' },
+        { code: '6', price: '$TBC' }
       ]},
-      { name: 'VVIP M (Medium)', capacity: '8 pax', booths: [
-        { code: 'VVIP M1', price: '$TBC' },
-        { code: 'VVIP M2', price: '$TBC' },
-        { code: 'VVIP M3', price: '$TBC' },
-        { code: 'VVIP M4', price: '$TBC' },
-        { code: 'VVIP M5', price: '$TBC' }
-      ]},
-      { name: 'VIP', capacity: '7 pax', booths: [
-        { code: 'VIP 1', price: '$TBC' },
-        { code: 'VIP 2', price: '$TBC' },
-        { code: 'VIP 3', price: '$TBC' },
-        { code: 'VIP 4', price: '$TBC' },
-        { code: 'VIP 5', price: '$TBC' },
-        { code: 'VIP 6', price: '$TBC' }
-      ]},
-      { name: 'Standard Tables', capacity: '4 pax', booths: [
-        { code: 'STD Table 1', price: '$TBC' },
-        { code: 'STD Table 2', price: '$TBC' },
-        { code: 'STD Table 3', price: '$TBC' },
-        { code: 'STD Table 4', price: '$TBC' }
+      { name: 'Standard Tables', capacity: '4 pax', selectionPrefix: 'Standard Table', booths: [
+        { code: '1', price: '$TBC' },
+        { code: '2', price: '$TBC' },
+        { code: '3', price: '$TBC' },
+        { code: '4', price: '$TBC' }
       ]}
     ],
 
@@ -127,72 +129,81 @@ const CONFIG = {
     ],
 
     'The Send-Off (17 Aug)': [
-      { name: 'VVIP XL', capacity: '12 pax', booths: [
-        { code: 'VVIP XL', price: '$TBC' }
+      { name: 'VVIP Lounges', groups: [
+        { name: 'XL', capacity: '12 pax', selectionPrefix: 'VVIP', booths: [
+          { code: 'XL', price: '$TBC' }
+        ]},
+        { name: 'Large (L)', capacity: '10 pax', selectionPrefix: 'VVIP', booths: [
+          { code: 'L1', price: '$TBC' },
+          { code: 'L2', price: '$TBC' }
+        ]},
+        { name: 'Medium (M)', capacity: '8 pax', selectionPrefix: 'VVIP', booths: [
+          { code: 'M1', price: '$TBC' },
+          { code: 'M2', price: '$TBC' },
+          { code: 'M3', price: '$TBC' },
+          { code: 'M4', price: '$TBC' },
+          { code: 'M5', price: '$TBC' }
+        ]}
       ]},
-      { name: 'VVIP L (Large)', capacity: '10 pax', booths: [
-        { code: 'VVIP L1', price: '$TBC' },
-        { code: 'VVIP L2', price: '$TBC' }
+      { name: 'VIP Private Lounges', capacity: '10 pax', selectionPrefix: 'VIP Private Lounge', booths: [
+        { code: '1', price: '$TBC' },
+        { code: '2', price: '$TBC' },
+        { code: '3', price: '$TBC' },
+        { code: '4', price: '$TBC' },
+        { code: '5', price: '$TBC' },
+        { code: '6', price: '$TBC' }
       ]},
-      { name: 'VIP Private Lounge', capacity: '10 pax', booths: [
-        { code: 'VIP Private Lounge 1', price: '$TBC' },
-        { code: 'VIP Private Lounge 2', price: '$TBC' },
-        { code: 'VIP Private Lounge 3', price: '$TBC' },
-        { code: 'VIP Private Lounge 4', price: '$TBC' },
-        { code: 'VIP Private Lounge 5', price: '$TBC' },
-        { code: 'VIP Private Lounge 6', price: '$TBC' }
+      { name: 'VIP Booths', capacity: '7 pax', selectionPrefix: 'VIP', booths: [
+        { code: '1', price: '$TBC' },
+        { code: '2', price: '$TBC' },
+        { code: '3', price: '$TBC' },
+        { code: '4', price: '$TBC' },
+        { code: '5', price: '$TBC' },
+        { code: '6', price: '$TBC' }
       ]},
-      { name: 'VVIP M (Medium)', capacity: '8 pax', booths: [
-        { code: 'VVIP M1', price: '$TBC' },
-        { code: 'VVIP M2', price: '$TBC' },
-        { code: 'VVIP M3', price: '$TBC' },
-        { code: 'VVIP M4', price: '$TBC' },
-        { code: 'VVIP M5', price: '$TBC' }
-      ]},
-      { name: 'VIP', capacity: '7 pax', booths: [
-        { code: 'VIP 1', price: '$TBC' },
-        { code: 'VIP 2', price: '$TBC' },
-        { code: 'VIP 3', price: '$TBC' },
-        { code: 'VIP 4', price: '$TBC' },
-        { code: 'VIP 5', price: '$TBC' },
-        { code: 'VIP 6', price: '$TBC' }
-      ]},
-      { name: 'High Tables', capacity: '4 pax', booths: [
-        { code: 'High Table 1', price: '$TBC' },
-        { code: 'High Table 2', price: '$TBC' },
-        { code: 'High Table 3', price: '$TBC' },
-        { code: 'High Table 4', price: '$TBC' }
+      { name: 'High Tables', capacity: '4 pax', selectionPrefix: 'High Table', booths: [
+        { code: '1', price: '$TBC' },
+        { code: '2', price: '$TBC' },
+        { code: '3', price: '$TBC' },
+        { code: '4', price: '$TBC' }
       ]}
     ]
   }
 };
 
-function buildMessage(eventName, boothName) {
-  return `Hi MTL! I'd like to enquire about a booth for MTL Bali 2026 ✨
+function buildEnquiryMessage(boothPlan) {
+  return `Hi MTL! I'd like to enquire about booths for MTL 2026 ✨
 
-Name:
-Event Name: ${eventName || ''}
-Booth Selection: ${boothName || ''}
-MTL Pass/Package Type:
-Number of people:
+Full Name:
+
+WhatsApp Number:
+
+Email:
+
+MTL Package: (All-Inclusive / Party Pass / Access Pass / Not booked yet):
+
+Group size:
+
+Booth Plan:
+${boothPlan || '-'}
+
+I'm ready to pay the 50% deposit today: (Yes / No)
 
 Thanks!`;
+}
+
+function buildMessage(eventName, boothName) {
+  const boothPlan = eventName
+    ? `- ${eventName}${boothName ? `: ${boothName}` : ''}`
+    : '-';
+  return buildEnquiryMessage(boothPlan);
 }
 
 function buildCombinedMessage(selections) {
   const boothPlan = selections
     .map(selection => `- ${selection.eventName}: ${selection.boothName}`)
     .join('\n');
-
-  return `Hi MTL! I'd like to enquire about booths for MTL Bali 2026 ✨
-
-Name:
-Booth Plan:
-${boothPlan}
-MTL Pass/Package Type:
-Number of people:
-
-Thanks!`;
+  return buildEnquiryMessage(boothPlan);
 }
 
 function getBoothButtonLabel(categoryName, boothCode) {
@@ -202,10 +213,34 @@ function getBoothButtonLabel(categoryName, boothCode) {
     : boothCode;
 }
 
-function getFullBoothName(categoryName, boothCode) {
+function getFullBoothName(categoryName, boothCode, selectionPrefix = '') {
+  if (selectionPrefix) {
+    return `${selectionPrefix} ${boothCode}`;
+  }
   return boothCode === categoryName || boothCode.startsWith(`${categoryName} `)
     ? boothCode
     : `${categoryName} \u2014 ${boothCode}`;
+}
+
+function getAvailabilityLabel(count) {
+  return `${count} ${count === 1 ? 'booth' : 'booths'} available`;
+}
+
+function appendBoothButton(boothsEl, panel, categoryName, booth, selectionPrefix = '') {
+  const button = document.createElement('button');
+  const priceDisplay = booth.price ? booth.price : 'Enquire';
+  const buttonLabel = booth.label || getBoothButtonLabel(categoryName, booth.code);
+  const fullBoothName = getFullBoothName(categoryName, booth.code, selectionPrefix);
+  const priceForMessage = booth.price ? ` (${booth.price})` : '';
+
+  button.className = 'booth';
+  button.type = 'button';
+  button.innerHTML = `<span class="code">${buttonLabel}</span><span class="price">${priceDisplay}</span>`;
+  button.dataset.booth = `${fullBoothName}${priceForMessage}`;
+  button.setAttribute('aria-label', `${fullBoothName}, ${priceDisplay}`);
+  button.setAttribute('aria-pressed', 'false');
+  button.addEventListener('click', () => selectBooth(panel, button));
+  boothsEl.appendChild(button);
 }
 
 document.querySelectorAll('.panel').forEach(panel => {
@@ -215,34 +250,56 @@ document.querySelectorAll('.panel').forEach(panel => {
   if (!cats) return;
 
   cats.forEach(cat => {
-    if (!cat.booths || cat.booths.length === 0) return;
+    const totalBooths = cat.groups
+      ? cat.groups.reduce((total, group) => total + group.booths.length, 0)
+      : cat.booths.length;
+    if (totalBooths === 0) return;
 
     const catEl = document.createElement('div');
+    const categoryMeta = cat.capacity
+      ? `${cat.capacity} · ${getAvailabilityLabel(totalBooths)}`
+      : getAvailabilityLabel(totalBooths);
     catEl.className = 'category';
     catEl.innerHTML = `
       <div class="cat-head">
         <span class="cat-name">${cat.name}</span>
-        <span class="cat-meta">${cat.capacity} · ${cat.booths.length} available</span>
+        <span class="cat-meta">${categoryMeta}</span>
       </div>
-      <div class="booths"></div>
     `;
 
-    const boothsEl = catEl.querySelector('.booths');
-    cat.booths.forEach(booth => {
-      const button = document.createElement('button');
-      button.className = 'booth';
-      button.type = 'button';
-      const priceDisplay = booth.price ? booth.price : 'Enquire';
-      const buttonLabel = getBoothButtonLabel(cat.name, booth.code);
-      const fullBoothName = getFullBoothName(cat.name, booth.code);
-      button.innerHTML = `<span class="code">${buttonLabel}</span><span class="price">${priceDisplay}</span>`;
-      const priceForMessage = booth.price ? ` (${booth.price})` : '';
-      button.dataset.booth = `${fullBoothName}${priceForMessage}`;
-      button.setAttribute('aria-label', `${fullBoothName}, ${priceDisplay}`);
-      button.setAttribute('aria-pressed', 'false');
-      button.addEventListener('click', () => selectBooth(panel, button));
-      boothsEl.appendChild(button);
-    });
+    if (cat.groups) {
+      const groupsEl = document.createElement('div');
+      groupsEl.className = 'booth-subgroups';
+
+      cat.groups.forEach(group => {
+        if (group.booths.length === 0) return;
+
+        const groupEl = document.createElement('div');
+        groupEl.className = 'booth-subgroup';
+        groupEl.innerHTML = `
+          <div class="booth-subgroup-head">
+            <span class="booth-subgroup-name">${group.name}</span>
+            <span class="booth-subgroup-meta">${group.capacity} · ${getAvailabilityLabel(group.booths.length)}</span>
+          </div>
+          <div class="booths"></div>
+        `;
+
+        const groupBoothsEl = groupEl.querySelector('.booths');
+        group.booths.forEach(booth => {
+          appendBoothButton(groupBoothsEl, panel, cat.name, booth, group.selectionPrefix);
+        });
+        groupsEl.appendChild(groupEl);
+      });
+
+      catEl.appendChild(groupsEl);
+    } else {
+      const boothsEl = document.createElement('div');
+      boothsEl.className = 'booths';
+      cat.booths.forEach(booth => {
+        appendBoothButton(boothsEl, panel, cat.name, booth, cat.selectionPrefix);
+      });
+      catEl.appendChild(boothsEl);
+    }
 
     catsContainer.appendChild(catEl);
   });
