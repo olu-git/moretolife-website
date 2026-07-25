@@ -112,8 +112,8 @@ const CONFIG = {
         { code: 'DJ3', price: '$3,660', sold: true }
       ]},
       { name: 'Backstage Sofas', capacity: 'Terrace', booths: [
-        { code: 'BS1', price: '$0' },
-        { code: 'BS2', price: '$0' }
+        { code: 'BS1', price: '$0', sold: true },
+        { code: 'BS2', price: '$0', sold: true }
       ]},
       { name: 'Backstage Terrace', capacity: '10 people', booths: [
         { code: 'T1', price: '$1,830' }, { code: 'T2', price: '$1,830' },
@@ -171,6 +171,25 @@ const CONFIG = {
     ]
   }
 };
+
+function roundPriceUp(price) {
+  const amount = Number(price.replace(/[^0-9.]/g, ''));
+  if (!Number.isFinite(amount)) return price;
+
+  const roundedAmount = Math.ceil(amount / 100) * 100;
+  return `$${roundedAmount.toLocaleString('en-AU')}`;
+}
+
+Object.values(CONFIG.events).forEach(categories => {
+  categories.forEach(category => {
+    const groups = category.groups || [category];
+    groups.forEach(group => {
+      group.booths.forEach(booth => {
+        booth.price = roundPriceUp(booth.price);
+      });
+    });
+  });
+});
 
 function buildEnquiryMessage(boothPlan) {
   return `Hi MTL! I'd like to enquire about booths for MTL 2026.
