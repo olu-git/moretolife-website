@@ -14,159 +14,159 @@ const CONFIG = {
   events: {
     'Welcome Party (12 Aug)': [
       { name: 'VIP Bottle Service', capacity: '12 people', booths: [
-        { code: '200', price: '$TBC' },
-        { code: '201', price: '$TBC' }
+        { code: '200', price: '$1,462' },
+        { code: '201', price: '$1,462' }
       ]},
       { name: 'Dance Floor Tables', capacity: '6–8 people', booths: [
-        { code: '40', price: '$TBC' },
-        { code: '50', price: '$TBC' },
-        { code: '600', price: '$TBC' },
-        { code: '700', price: '$TBC' },
-        { code: '500', price: '$TBC' }
+        { code: '40', price: '$854' },
+        { code: '50', price: '$854' },
+        { code: '600', price: '$854' },
+        { code: '700', price: '$854' },
+        { code: '500', price: '$854' }
       ]},
       { name: 'Lounge Booths', capacity: '4–6 people', booths: [
-        { code: '100', price: '$TBC' },
-        { code: '101', price: '$TBC' },
-        { code: '300', price: '$TBC' },
-        { code: '301', price: '$TBC' },
-        { code: '302', price: '$TBC' },
-        { code: '303', price: '$TBC' }
+        { code: '100', price: '$1,220' },
+        { code: '101', price: '$1,220' },
+        { code: '300', price: '$1,220' },
+        { code: '301', price: '$1,220' },
+        { code: '302', price: '$1,220' },
+        { code: '303', price: '$1,220' }
       ]},
       { name: 'Shisha Lounge', capacity: '4 people', booths: [
-        { code: '11', price: '$TBC' }, { code: '12', price: '$TBC' },
-        { code: '13', price: '$TBC' }, { code: '14', price: '$TBC' },
-        { code: '15', price: '$TBC' }, { code: '16', price: '$TBC' },
-        { code: '21', price: '$TBC' }, { code: '22', price: '$TBC' },
-        { code: '23', price: '$TBC' }, { code: '24', price: '$TBC' },
-        { code: '25', price: '$TBC' }, { code: '26', price: '$TBC' }
+        { code: '11', price: '$488' }, { code: '12', price: '$488' },
+        { code: '13', price: '$488' }, { code: '14', price: '$488' },
+        { code: '15', price: '$488' }, { code: '16', price: '$488' },
+        { code: '21', price: '$488' }, { code: '22', price: '$488' },
+        { code: '23', price: '$488' }, { code: '24', price: '$488' },
+        { code: '25', price: '$488' }, { code: '26', price: '$488' }
       ]},
       { name: 'Dining Tables', capacity: '2 people', booths: [
-        { code: '01', price: '$TBC' }, { code: '02', price: '$TBC' },
-        { code: '03', price: '$TBC' }, { code: '04', price: '$TBC' },
-        { code: '05', price: '$TBC' }, { code: '06', price: '$TBC' }
+        { code: '01', price: '$244' }, { code: '02', price: '$244' },
+        { code: '03', price: '$244' }, { code: '04', price: '$244' },
+        { code: '05', price: '$244' }, { code: '06', price: '$244' }
       ]}
     ],
 
     'No Signal (13 Aug)': [
       { name: 'VVIP Lounges', groups: [
         { name: 'XL', capacity: '12 people', booths: [
-          { code: 'VVIP XL', label: 'XL', price: '$TBC' }
+          { code: 'VVIP XL', label: 'XL', price: '$854' }
         ]},
         { name: 'Large (L)', capacity: '10 people', booths: [
-          { code: 'VVIP L1', label: 'L1', price: '$TBC' },
-          { code: 'VVIP L2', label: 'L2', price: '$TBC' }
+          { code: 'VVIP L1', label: 'L1', price: '$854' },
+          { code: 'VVIP L2', label: 'L2', price: '$854' }
         ]},
         { name: 'Medium (M)', capacity: '8 people', booths: [
-          { code: 'VVIP M1', label: 'M1', price: '$TBC' },
-          { code: 'VVIP M2', label: 'M2', price: '$TBC' },
-          { code: 'VVIP M3', label: 'M3', price: '$TBC' },
-          { code: 'VVIP M4', label: 'M4', price: '$TBC' },
-          { code: 'VVIP M5', label: 'M5', price: '$TBC' }
+          { code: 'VVIP M1', label: 'M1', price: '$610' },
+          { code: 'VVIP M2', label: 'M2', price: '$610' },
+          { code: 'VVIP M3', label: 'M3', price: '$854' },
+          { code: 'VVIP M4', label: 'M4', price: '$854' },
+          { code: 'VVIP M5', label: 'M5', price: '$610' }
         ]}
       ]},
       { name: 'VIP Private Lounges (VIP PL)', capacity: '10 people', booths: [
-        { code: 'VIP Private Lounge 1', label: '1', price: '$TBC' },
-        { code: 'VIP Private Lounge 2', label: '2', price: '$TBC' },
-        { code: 'VIP Private Lounge 3', label: '3', price: '$TBC' },
-        { code: 'VIP Private Lounge 4', label: '4', price: '$TBC' },
-        { code: 'VIP Private Lounge 5', label: '5', price: '$TBC' },
-        { code: 'VIP Private Lounge 6', label: '6', price: '$TBC' }
+        { code: 'VIP Private Lounge 1', label: '1', price: '$610' },
+        { code: 'VIP Private Lounge 2', label: '2', price: '$610' },
+        { code: 'VIP Private Lounge 3', label: '3', price: '$610' },
+        { code: 'VIP Private Lounge 4', label: '4', price: '$610' },
+        { code: 'VIP Private Lounge 5', label: '5', price: '$610' },
+        { code: 'VIP Private Lounge 6', label: '6', price: '$610' }
       ]},
       { name: 'VIP Booths', capacity: '7 people', booths: [
-        { code: 'VIP 1', label: '1', price: '$TBC' },
-        { code: 'VIP 2', label: '2', price: '$TBC' },
-        { code: 'VIP 3', label: '3', price: '$TBC' },
-        { code: 'VIP 4', label: '4', price: '$TBC' },
-        { code: 'VIP 5', label: '5', price: '$TBC' },
-        { code: 'VIP 6', label: '6', price: '$TBC' }
+        { code: 'VIP 1', label: '1', price: '$488' },
+        { code: 'VIP 2', label: '2', price: '$488' },
+        { code: 'VIP 3', label: '3', price: '$488' },
+        { code: 'VIP 4', label: '4', price: '$488' },
+        { code: 'VIP 5', label: '5', price: '$488' },
+        { code: 'VIP 6', label: '6', price: '$488' }
       ]},
       { name: 'Standard Tables', capacity: '4 people', booths: [
-        { code: 'STD Table 1', label: '1', price: '$TBC' },
-        { code: 'STD Table 2', label: '2', price: '$TBC' },
-        { code: 'STD Table 3', label: '3', price: '$TBC' },
-        { code: 'STD Table 4', label: '4', price: '$TBC' }
+        { code: 'STD Table 1', label: '1', price: '$305' },
+        { code: 'STD Table 2', label: '2', price: '$305' },
+        { code: 'STD Table 3', label: '3', price: '$305' },
+        { code: 'STD Table 4', label: '4', price: '$305' }
       ]}
     ],
 
     'Nights in Bali (15 Aug)': [
-      { name: 'Canopy Beds', capacity: 'Poolside', booths: [
-        { code: 'CB1', price: '$TBC' }, { code: 'CB2', price: '$TBC' },
-        { code: 'CB3', price: '$TBC' }, { code: 'CB5', price: '$TBC' },
-        { code: 'CB6', price: '$TBC' }
+      { name: 'Canopy Beds', capacity: '10 people', booths: [
+        { code: 'CB1', price: '$1,220' }, { code: 'CB2', price: '$1,220' },
+        { code: 'CB3', price: '$1,220' }, { code: 'CB5', price: '$1,220' },
+        { code: 'CB6', price: '$1,220' }
       ]},
-      { name: 'Cabanas', capacity: 'Private', booths: [
-        { code: 'C1', price: '$TBC' }, { code: 'C2', price: '$TBC' },
-        { code: 'C3', price: '$TBC' }, { code: 'C5', price: '$TBC' },
-        { code: 'C6', price: '$TBC' }, { code: 'C7', price: '$TBC' }
+      { name: 'Cabanas', capacity: '15 people', booths: [
+        { code: 'C1', price: '$3,050' }, { code: 'C2', price: '$3,050' },
+        { code: 'C3', price: '$3,050' }, { code: 'C5', price: '$3,050' },
+        { code: 'C6', price: '$3,050' }, { code: 'C7', price: '$3,050' }
       ]},
-      { name: 'Daybed Sofas', capacity: 'Poolside', booths: [
-        { code: 'D1', price: '$TBC' }, { code: 'D2', price: '$TBC' },
-        { code: 'D3', price: '$TBC' }, { code: 'D5', price: '$TBC' },
-        { code: 'D6', price: '$TBC' }, { code: 'D7', price: '$TBC' },
-        { code: 'D8', price: '$TBC' }, { code: 'D9', price: '$TBC' },
-        { code: 'D10', price: '$TBC' }
+      { name: 'Daybed Sofas', capacity: '6 people', booths: [
+        { code: 'D1', price: '$1,830' }, { code: 'D2', price: '$1,830' },
+        { code: 'D3', price: '$1,830' }, { code: 'D5', price: '$1,830' },
+        { code: 'D6', price: '$1,830' }, { code: 'D7', price: '$1,830' },
+        { code: 'D8', price: '$1,830' }, { code: 'D9', price: '$1,830' },
+        { code: 'D10', price: '$1,830' }
       ]},
-      { name: 'DJ Sofas', capacity: 'Booth-side', booths: [
-        { code: 'DJ1', price: '$TBC' },
-        { code: 'DJ2', price: '$TBC' },
-        { code: 'DJ3', price: '$TBC', sold: true }
+      { name: 'DJ Sofas', capacity: '10 people', booths: [
+        { code: 'DJ1', price: '$3,660' },
+        { code: 'DJ2', price: '$3,660' },
+        { code: 'DJ3', price: '$3,660', sold: true }
       ]},
       { name: 'Backstage Sofas', capacity: 'Terrace', booths: [
-        { code: 'BS1', price: '$TBC' },
-        { code: 'BS2', price: '$TBC' }
+        { code: 'BS1', price: '$0' },
+        { code: 'BS2', price: '$0' }
       ]},
-      { name: 'Backstage Tables', capacity: 'Terrace', booths: [
-        { code: 'T1', price: '$TBC' }, { code: 'T2', price: '$TBC' },
-        { code: 'T3', price: '$TBC' }, { code: 'T5', price: '$TBC' },
-        { code: 'T6', price: '$TBC' }, { code: 'T7', price: '$TBC' },
-        { code: 'T8', price: '$TBC' }, { code: 'T9', price: '$TBC' }
+      { name: 'Backstage Terrace', capacity: '10 people', booths: [
+        { code: 'T1', price: '$1,830' }, { code: 'T2', price: '$1,830' },
+        { code: 'T3', price: '$1,830' }, { code: 'T5', price: '$1,830' },
+        { code: 'T6', price: '$1,830' }, { code: 'T7', price: '$1,830' },
+        { code: 'T8', price: '$1,830' }, { code: 'T9', price: '$1,830' }
       ]},
-      { name: 'Dance Floor Sofas', capacity: 'Front', booths: [
-        { code: 'S1', price: '$TBC' }, { code: 'S2', price: '$TBC' },
-        { code: 'S3', price: '$TBC' }, { code: 'S5', price: '$TBC' },
-        { code: 'S6', price: '$TBC' }, { code: 'S7', price: '$TBC' },
-        { code: 'S9', price: '$TBC' }
+      { name: 'Dance Floor Sofas', capacity: '8 people', booths: [
+        { code: 'S1', price: '$2,440' }, { code: 'S2', price: '$2,440' },
+        { code: 'S3', price: '$2,440' }, { code: 'S5', price: '$2,440' },
+        { code: 'S6', price: '$2,440' }, { code: 'S7', price: '$2,440' },
+        { code: 'S9', price: '$2,440' }
       ]}
     ],
 
     'The Send-Off (17 Aug)': [
       { name: 'VVIP Lounges', groups: [
         { name: 'XL', capacity: '12 people', booths: [
-          { code: 'VVIP XL', label: 'XL', price: '$TBC' }
+          { code: 'VVIP XL', label: 'XL', price: '$854' }
         ]},
         { name: 'Large (L)', capacity: '10 people', booths: [
-          { code: 'VVIP L1', label: 'L1', price: '$TBC' },
-          { code: 'VVIP L2', label: 'L2', price: '$TBC' }
+          { code: 'VVIP L1', label: 'L1', price: '$854' },
+          { code: 'VVIP L2', label: 'L2', price: '$854' }
         ]},
         { name: 'Medium (M)', capacity: '8 people', booths: [
-          { code: 'VVIP M1', label: 'M1', price: '$TBC' },
-          { code: 'VVIP M2', label: 'M2', price: '$TBC' },
-          { code: 'VVIP M3', label: 'M3', price: '$TBC' },
-          { code: 'VVIP M4', label: 'M4', price: '$TBC' },
-          { code: 'VVIP M5', label: 'M5', price: '$TBC' }
+          { code: 'VVIP M1', label: 'M1', price: '$610' },
+          { code: 'VVIP M2', label: 'M2', price: '$610' },
+          { code: 'VVIP M3', label: 'M3', price: '$854' },
+          { code: 'VVIP M4', label: 'M4', price: '$854' },
+          { code: 'VVIP M5', label: 'M5', price: '$610' }
         ]}
       ]},
       { name: 'VIP Private Lounges (VIP PL)', capacity: '10 people', booths: [
-        { code: 'VIP Private Lounge 1', label: '1', price: '$TBC' },
-        { code: 'VIP Private Lounge 2', label: '2', price: '$TBC' },
-        { code: 'VIP Private Lounge 3', label: '3', price: '$TBC' },
-        { code: 'VIP Private Lounge 4', label: '4', price: '$TBC' },
-        { code: 'VIP Private Lounge 5', label: '5', price: '$TBC' },
-        { code: 'VIP Private Lounge 6', label: '6', price: '$TBC' }
+        { code: 'VIP Private Lounge 1', label: '1', price: '$610' },
+        { code: 'VIP Private Lounge 2', label: '2', price: '$610' },
+        { code: 'VIP Private Lounge 3', label: '3', price: '$610' },
+        { code: 'VIP Private Lounge 4', label: '4', price: '$610' },
+        { code: 'VIP Private Lounge 5', label: '5', price: '$610' },
+        { code: 'VIP Private Lounge 6', label: '6', price: '$610' }
       ]},
       { name: 'VIP Booths', capacity: '7 people', booths: [
-        { code: 'VIP 1', label: '1', price: '$TBC' },
-        { code: 'VIP 2', label: '2', price: '$TBC' },
-        { code: 'VIP 3', label: '3', price: '$TBC' },
-        { code: 'VIP 4', label: '4', price: '$TBC' },
-        { code: 'VIP 5', label: '5', price: '$TBC' },
-        { code: 'VIP 6', label: '6', price: '$TBC' }
+        { code: 'VIP 1', label: '1', price: '$488' },
+        { code: 'VIP 2', label: '2', price: '$488' },
+        { code: 'VIP 3', label: '3', price: '$488' },
+        { code: 'VIP 4', label: '4', price: '$488' },
+        { code: 'VIP 5', label: '5', price: '$488' },
+        { code: 'VIP 6', label: '6', price: '$488' }
       ]},
       { name: 'High Tables', capacity: '4 people', booths: [
-        { code: 'HIGH Table 1', label: '1', price: '$TBC' },
-        { code: 'HIGH Table 2', label: '2', price: '$TBC' },
-        { code: 'HIGH Table 3', label: '3', price: '$TBC' },
-        { code: 'HIGH Table 4', label: '4', price: '$TBC' }
+        { code: 'HIGH Table 1', label: '1', price: '$305' },
+        { code: 'HIGH Table 2', label: '2', price: '$305' },
+        { code: 'HIGH Table 3', label: '3', price: '$305' },
+        { code: 'HIGH Table 4', label: '4', price: '$305' }
       ]}
     ]
   }
