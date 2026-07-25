@@ -19,7 +19,6 @@
   --mtl-purple: #534ab7;
 
   --wa-green: #25d366;
-  --ig-grad: linear-gradient(135deg, #f58529 0%, #dd2a7b 50%, #8134af 100%);
 
   --event-1: #ea6a2a;
   --event-2: #8747b8;
@@ -85,10 +84,6 @@ body.booths-page {
 .booths-page .btn-wa {
   background: var(--wa-green);
   color: #05261a;
-}
-
-.booths-page .btn-ig {
-  background: var(--ig-grad);
 }
 
 /* Reset dimensions inherited from the site's homepage hero. */
@@ -747,7 +742,7 @@ body.booth-plan-dialog-open {
 
 .booth-plan-actions {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 10px;
 }
 
@@ -755,30 +750,30 @@ body.booth-plan-dialog-open {
   justify-content: center;
 }
 
-.instagram-handoff {
+.booking-rules-dialog {
   position: fixed;
   inset: 0;
   z-index: 300;
   display: grid;
   place-items: center;
   padding: 24px;
-  background: rgba(0, 0, 0, 0.82);
+  background: rgba(0, 0, 0, 0.84);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 }
 
-.instagram-handoff[hidden] {
+.booking-rules-dialog[hidden] {
   display: none;
 }
 
-body.instagram-handoff-open {
+body.booking-rules-dialog-open {
   overflow: hidden;
 }
 
-.instagram-handoff-card {
-  width: min(560px, 100%);
+.booking-rules-card {
+  width: min(590px, 100%);
   max-height: calc(100dvh - 48px);
-  padding: 34px;
+  padding: 32px;
   position: relative;
   overflow-y: auto;
   background: var(--bg-elev);
@@ -787,16 +782,16 @@ body.instagram-handoff-open {
   box-shadow: 0 28px 90px rgba(0, 0, 0, 0.72);
 }
 
-.instagram-handoff-card::before {
+.booking-rules-card::before {
   content: "";
   height: 5px;
   position: absolute;
   inset: 0 0 auto;
-  background: var(--ig-grad);
+  background: var(--mtl-orange-hi);
   border-radius: var(--radius-lg) var(--radius-lg) 0 0;
 }
 
-.instagram-handoff-close {
+.booking-rules-close {
   width: 34px;
   height: 34px;
   position: absolute;
@@ -814,109 +809,57 @@ body.instagram-handoff-open {
   line-height: 1;
 }
 
-.instagram-handoff-kicker {
-  margin-bottom: 8px;
-  color: #f5a6c5;
-  font-size: 13px;
+.booking-rules-kicker {
+  margin: 0 46px 8px 0;
+  color: var(--mtl-orange-hi);
+  font-size: 12px;
   font-weight: 800;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.16em;
 }
 
-.instagram-handoff-card h2 {
-  max-width: 420px;
-  margin-bottom: 14px;
-  font-size: clamp(36px, 7vw, 54px);
+.booking-rules-card h2 {
+  margin: 0 46px 18px 0;
+  font-size: clamp(34px, 6vw, 48px);
   font-weight: 800;
   letter-spacing: -0.02em;
-  line-height: 0.95;
+  line-height: 0.96;
 }
 
-.instagram-handoff-copy {
-  margin-bottom: 22px;
-  color: var(--text-dim);
-  font-size: 17px;
-  font-weight: 500;
-  line-height: 1.45;
-}
-
-.instagram-handoff-copy strong {
-  color: var(--text);
-}
-
-.instagram-handoff-steps {
-  margin-bottom: 22px;
+.booking-rules-list {
+  margin: 0 0 22px;
   display: grid;
   gap: 8px;
   list-style: none;
 }
 
-.instagram-handoff-steps li {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: var(--text);
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-}
-
-.instagram-handoff-steps span {
-  width: 26px;
-  height: 26px;
-  display: grid;
-  flex: 0 0 auto;
-  place-items: center;
-  background: #f5a6c5;
-  color: #050505;
-  border-radius: 50%;
-  font-size: 13px;
-  font-weight: 800;
-}
-
-.instagram-message-label {
-  display: block;
-  margin-bottom: 7px;
-  color: var(--text-mute);
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 0.14em;
-}
-
-.instagram-message-preview {
-  width: 100%;
-  margin-bottom: 10px;
-  padding: 12px;
-  resize: vertical;
-  background: #050505;
+.booking-rules-list li {
+  padding: 11px 13px;
+  background: var(--bg-card);
   color: var(--text-dim);
   border: 1px solid var(--line);
+  border-left: 3px solid var(--mtl-orange);
   border-radius: var(--radius);
-  font-family: inherit;
   font-size: 14px;
-  line-height: 1.35;
-  text-transform: none;
+  font-weight: 500;
+  line-height: 1.42;
 }
 
-.instagram-copy-status {
-  min-height: 20px;
-  margin-bottom: 14px;
-  color: var(--wa-green);
-  font-size: 12px;
+.booking-rules-list strong {
+  color: var(--text);
   font-weight: 800;
-  letter-spacing: 0.08em;
 }
 
-.instagram-handoff-actions {
+.booking-rules-actions {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 0.7fr 1.6fr;
   gap: 10px;
 }
 
-.instagram-handoff-actions .btn {
+.booking-rules-actions .btn {
   justify-content: center;
 }
 
-.instagram-copy-again {
+.booking-rules-back {
   background: transparent;
   color: var(--text);
   border: 1px solid var(--line-strong);
@@ -1018,29 +961,31 @@ body.instagram-handoff-open {
     padding: 12px;
   }
 
-  .booth-plan-actions {
-    grid-template-columns: 1fr;
-  }
-
-  .instagram-handoff {
+  .booking-rules-dialog {
     padding: 12px;
     place-items: end center;
   }
 
-  .instagram-handoff-card {
+  .booking-rules-card {
     width: 100%;
     max-height: calc(100dvh - 24px);
-    padding: 30px 20px 20px;
+    padding: 28px 18px 18px;
     border-radius: 14px 14px 6px 6px;
   }
 
-  .instagram-handoff-card h2 {
-    padding-right: 34px;
+  .booking-rules-card h2 {
+    font-size: 34px;
   }
 
-  .instagram-handoff-actions {
+  .booking-rules-list li {
+    padding: 9px 11px;
+    font-size: 13px;
+  }
+
+  .booking-rules-actions {
     grid-template-columns: 1fr;
   }
+
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1049,7 +994,7 @@ body.instagram-handoff-open {
   .booth,
   .booth-plan-bar,
   .booth-plan-dialog,
-  .instagram-handoff {
+  .booking-rules-dialog {
     transition: none;
   }
 

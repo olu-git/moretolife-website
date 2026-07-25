@@ -3,7 +3,6 @@
    ============================================================ */
 const CONFIG = {
   whatsappNumber: '61423939210',
-  instagramHandle: 'moretolife.au',
 
   /* Per-booth pricing.
      - To mark a booth as SOLD, add `sold: true` to its entry.
@@ -376,58 +375,16 @@ document.querySelectorAll('.selected-pill button').forEach(dismissButton => {
 });
 
 document.querySelectorAll('[data-enquire]').forEach(button => {
-  button.addEventListener('click', async event => {
+  button.addEventListener('click', event => {
     event.preventDefault();
-    const type = button.dataset.enquire;
     const eventName = button.dataset.event || '';
     const boothName = button.dataset.booth || '';
     const message = buildMessage(eventName, boothName);
-
-    if (type === 'whatsapp') {
-      const url = `https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(message)}`;
-      window.open(url, '_blank');
-    } else if (type === 'instagram') {
-      const copied = await copyToClipboard(message);
-      openInstagramHandoff(message, copied);
-    }
+    const url = `https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(message)}`;
+    openBookingRules(url);
   });
 });
 
-async function copyToClipboard(text) {
-  if (navigator.clipboard) {
-    try {
-      await navigator.clipboard.writeText(text);
-      return true;
-    } catch (error) {
-      return fallbackCopy(text);
-    }
-  }
-  return fallbackCopy(text);
-}
-
-function fallbackCopy(text) {
-  const textarea = document.createElement('textarea');
-  textarea.value = text;
-  textarea.style.position = 'fixed';
-  textarea.style.opacity = '0';
-  document.body.appendChild(textarea);
-  textarea.select();
-  let copied = false;
-  try {
-    copied = document.execCommand('copy');
-  } catch (error) {
-    copied = false;
-  }
-  document.body.removeChild(textarea);
-  return copied;
-}
-
-const instagramHandoff = document.getElementById('instagram-handoff');
-const instagramMessagePreview = document.getElementById('instagram-message-preview');
-const instagramCopyStatus = document.getElementById('instagram-copy-status');
-const instagramOpenButton = document.getElementById('instagram-open');
-const instagramCopyAgainButton = document.getElementById('instagram-copy-again');
-const instagramCloseButton = instagramHandoff.querySelector('.instagram-handoff-close');
 const boothPlanBar = document.getElementById('booth-plan-bar');
 const boothPlanBarCount = document.getElementById('booth-plan-bar-count');
 const boothPlanBarBadge = document.getElementById('booth-plan-bar-badge');
@@ -437,88 +394,31 @@ const boothPlanList = document.getElementById('booth-plan-list');
 const boothPlanCount = document.getElementById('booth-plan-count');
 const boothPlanCloseButton = boothPlanDialog.querySelector('.booth-plan-close');
 const boothPlanWhatsAppButton = document.getElementById('booth-plan-whatsapp');
-const boothPlanInstagramButton = document.getElementById('booth-plan-instagram');
-let pendingInstagramMessage = '';
-let instagramTrigger = null;
+const bookingRulesDialog = document.getElementById('booking-rules-dialog');
+const bookingRulesCloseButton = bookingRulesDialog.querySelector('.booking-rules-close');
+const bookingRulesBackButton = document.getElementById('booking-rules-back');
+const bookingRulesContinueButton = document.getElementById('booking-rules-continue');
 let boothPlanTrigger = null;
+let bookingRulesTrigger = null;
+let pendingWhatsAppUrl = '';
 
-function isMobileDevice() {
-  return navigator.userAgentData?.mobile === true
-    || /Android|iPhone|iPad|iPod/i.test(navigator.userAgent)
-    || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+function openBookingRules(url) {
+  pendingWhatsAppUrl = url;
+  bookingRulesTrigger = document.activeElement;
+  bookingRulesDialog.hidden = false;
+  document.body.classList.add('booking-rules-dialog-open');
+  bookingRulesContinueButton.focus();
 }
 
-function openInstagram() {
-  const handle = encodeURIComponent(CONFIG.instagramHandle);
-  const webUrl = `https://ig.me/m/${handle}`;
-
-  if (!isMobileDevice()) {
-    window.open(webUrl, '_blank', 'noopener,noreferrer');
-    return;
+function closeBookingRules({ restoreFocus = true } = {}) {
+  bookingRulesDialog.hidden = true;
+  document.body.classList.remove('booking-rules-dialog-open');
+  pendingWhatsAppUrl = '';
+  if (restoreFocus && bookingRulesTrigger instanceof HTMLElement) {
+    bookingRulesTrigger.focus();
   }
-
-  const appUrl = `instagram://direct/new?username=${handle}`;
-  let fallbackTimer;
-
-  const cancelFallback = () => {
-    if (!document.hidden) return;
-    window.clearTimeout(fallbackTimer);
-    document.removeEventListener('visibilitychange', cancelFallback);
-  };
-
-  document.addEventListener('visibilitychange', cancelFallback);
-  fallbackTimer = window.setTimeout(() => {
-    document.removeEventListener('visibilitychange', cancelFallback);
-    window.location.href = webUrl;
-  }, 1800);
-
-  window.location.href = appUrl;
+  bookingRulesTrigger = null;
 }
-
-function openInstagramHandoff(message, copied) {
-  pendingInstagramMessage = message;
-  instagramTrigger = document.activeElement;
-  instagramMessagePreview.value = message;
-  instagramOpenButton.textContent = isMobileDevice()
-    ? 'OPEN INSTAGRAM APP'
-    : 'OPEN INSTAGRAM';
-  instagramCopyStatus.textContent = copied
-    ? 'MESSAGE COPIED — READY TO PASTE.'
-    : 'COPYING WAS BLOCKED — USE COPY MESSAGE AGAIN.';
-  instagramHandoff.hidden = false;
-  document.body.classList.add('instagram-handoff-open');
-  instagramOpenButton.focus();
-}
-
-function closeInstagramHandoff() {
-  instagramHandoff.hidden = true;
-  document.body.classList.remove('instagram-handoff-open');
-  pendingInstagramMessage = '';
-  if (instagramTrigger instanceof HTMLElement) {
-    instagramTrigger.focus();
-  }
-  instagramTrigger = null;
-}
-
-instagramOpenButton.addEventListener('click', () => {
-  copyToClipboard(pendingInstagramMessage);
-  openInstagram();
-});
-
-instagramCopyAgainButton.addEventListener('click', async () => {
-  const copied = await copyToClipboard(pendingInstagramMessage);
-  instagramCopyStatus.textContent = copied
-    ? 'MESSAGE COPIED AGAIN — NOW OPEN INSTAGRAM AND PASTE.'
-    : 'COPYING WAS BLOCKED — SELECT THE MESSAGE ABOVE AND COPY IT.';
-});
-
-instagramCloseButton.addEventListener('click', closeInstagramHandoff);
-
-instagramHandoff.addEventListener('click', event => {
-  if (event.target === instagramHandoff) {
-    closeInstagramHandoff();
-  }
-});
 
 function getBoothPlan() {
   return Array.from(document.querySelectorAll('.panel')).map((panel, index) => {
@@ -624,22 +524,32 @@ boothPlanWhatsAppButton.addEventListener('click', () => {
   const selections = getSelectedBoothPlan();
   if (selections.length === 0) return;
   const message = buildCombinedMessage(selections);
-  window.open(`https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(message)}`, '_blank');
+  const url = `https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(message)}`;
+  closeBoothPlan();
+  openBookingRules(url);
 });
 
-boothPlanInstagramButton.addEventListener('click', async () => {
-  const selections = getSelectedBoothPlan();
-  if (selections.length === 0) return;
-  const message = buildCombinedMessage(selections);
-  closeBoothPlan();
-  const copied = await copyToClipboard(message);
-  openInstagramHandoff(message, copied);
+bookingRulesCloseButton.addEventListener('click', closeBookingRules);
+bookingRulesBackButton.addEventListener('click', closeBookingRules);
+
+bookingRulesDialog.addEventListener('click', event => {
+  if (event.target === bookingRulesDialog) {
+    closeBookingRules();
+  }
+});
+
+bookingRulesContinueButton.addEventListener('click', () => {
+  const url = pendingWhatsAppUrl;
+  closeBookingRules({ restoreFocus: false });
+  if (url) {
+    window.open(url, '_blank');
+  }
 });
 
 document.addEventListener('keydown', event => {
   if (event.key !== 'Escape') return;
-  if (!instagramHandoff.hidden) {
-    closeInstagramHandoff();
+  if (!bookingRulesDialog.hidden) {
+    closeBookingRules();
   } else if (!boothPlanDialog.hidden) {
     closeBoothPlan();
   }
