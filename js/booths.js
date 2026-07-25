@@ -13,18 +13,18 @@ const CONFIG = {
   */
   events: {
     'Welcome Party (12 Aug)': [
-      { name: 'VIP Bottle Service', capacity: '12 pax', booths: [
+      { name: 'VIP Bottle Service', capacity: '12 people', booths: [
         { code: '200', price: '$TBC' },
         { code: '201', price: '$TBC' }
       ]},
-      { name: 'Dance Floor Tables', capacity: '6–8 pax', booths: [
+      { name: 'Dance Floor Tables', capacity: '6–8 people', booths: [
         { code: '40', price: '$TBC' },
         { code: '50', price: '$TBC' },
         { code: '600', price: '$TBC' },
         { code: '700', price: '$TBC' },
         { code: '500', price: '$TBC' }
       ]},
-      { name: 'Lounge Booths', capacity: '4–6 pax', booths: [
+      { name: 'Lounge Booths', capacity: '4–6 people', booths: [
         { code: '100', price: '$TBC' },
         { code: '101', price: '$TBC' },
         { code: '300', price: '$TBC' },
@@ -32,7 +32,7 @@ const CONFIG = {
         { code: '302', price: '$TBC' },
         { code: '303', price: '$TBC' }
       ]},
-      { name: 'Shisha Lounge', capacity: '4 pax', booths: [
+      { name: 'Shisha Lounge', capacity: '4 people', booths: [
         { code: '11', price: '$TBC' }, { code: '12', price: '$TBC' },
         { code: '13', price: '$TBC' }, { code: '14', price: '$TBC' },
         { code: '15', price: '$TBC' }, { code: '16', price: '$TBC' },
@@ -40,7 +40,7 @@ const CONFIG = {
         { code: '23', price: '$TBC' }, { code: '24', price: '$TBC' },
         { code: '25', price: '$TBC' }, { code: '26', price: '$TBC' }
       ]},
-      { name: 'Dining Tables', capacity: '2 pax', booths: [
+      { name: 'Dining Tables', capacity: '2 people', booths: [
         { code: '01', price: '$TBC' }, { code: '02', price: '$TBC' },
         { code: '03', price: '$TBC' }, { code: '04', price: '$TBC' },
         { code: '05', price: '$TBC' }, { code: '06', price: '$TBC' }
@@ -49,14 +49,14 @@ const CONFIG = {
 
     'No Signal (13 Aug)': [
       { name: 'VVIP Lounges', groups: [
-        { name: 'XL', capacity: '12 pax', booths: [
+        { name: 'XL', capacity: '12 people', booths: [
           { code: 'VVIP XL', label: 'XL', price: '$TBC' }
         ]},
-        { name: 'Large (L)', capacity: '10 pax', booths: [
+        { name: 'Large (L)', capacity: '10 people', booths: [
           { code: 'VVIP L1', label: 'L1', price: '$TBC' },
           { code: 'VVIP L2', label: 'L2', price: '$TBC' }
         ]},
-        { name: 'Medium (M)', capacity: '8 pax', booths: [
+        { name: 'Medium (M)', capacity: '8 people', booths: [
           { code: 'VVIP M1', label: 'M1', price: '$TBC' },
           { code: 'VVIP M2', label: 'M2', price: '$TBC' },
           { code: 'VVIP M3', label: 'M3', price: '$TBC' },
@@ -64,7 +64,7 @@ const CONFIG = {
           { code: 'VVIP M5', label: 'M5', price: '$TBC' }
         ]}
       ]},
-      { name: 'VIP Private Lounges (VIP PL)', capacity: '10 pax', booths: [
+      { name: 'VIP Private Lounges (VIP PL)', capacity: '10 people', booths: [
         { code: 'VIP Private Lounge 1', label: '1', price: '$TBC' },
         { code: 'VIP Private Lounge 2', label: '2', price: '$TBC' },
         { code: 'VIP Private Lounge 3', label: '3', price: '$TBC' },
@@ -72,7 +72,7 @@ const CONFIG = {
         { code: 'VIP Private Lounge 5', label: '5', price: '$TBC' },
         { code: 'VIP Private Lounge 6', label: '6', price: '$TBC' }
       ]},
-      { name: 'VIP Booths', capacity: '7 pax', booths: [
+      { name: 'VIP Booths', capacity: '7 people', booths: [
         { code: 'VIP 1', label: '1', price: '$TBC' },
         { code: 'VIP 2', label: '2', price: '$TBC' },
         { code: 'VIP 3', label: '3', price: '$TBC' },
@@ -80,7 +80,7 @@ const CONFIG = {
         { code: 'VIP 5', label: '5', price: '$TBC' },
         { code: 'VIP 6', label: '6', price: '$TBC' }
       ]},
-      { name: 'Standard Tables', capacity: '4 pax', booths: [
+      { name: 'Standard Tables', capacity: '4 people', booths: [
         { code: 'STD Table 1', label: '1', price: '$TBC' },
         { code: 'STD Table 2', label: '2', price: '$TBC' },
         { code: 'STD Table 3', label: '3', price: '$TBC' },
@@ -131,14 +131,14 @@ const CONFIG = {
 
     'The Send-Off (17 Aug)': [
       { name: 'VVIP Lounges', groups: [
-        { name: 'XL', capacity: '12 pax', booths: [
+        { name: 'XL', capacity: '12 people', booths: [
           { code: 'VVIP XL', label: 'XL', price: '$TBC' }
         ]},
-        { name: 'Large (L)', capacity: '10 pax', booths: [
+        { name: 'Large (L)', capacity: '10 people', booths: [
           { code: 'VVIP L1', label: 'L1', price: '$TBC' },
           { code: 'VVIP L2', label: 'L2', price: '$TBC' }
         ]},
-        { name: 'Medium (M)', capacity: '8 pax', booths: [
+        { name: 'Medium (M)', capacity: '8 people', booths: [
           { code: 'VVIP M1', label: 'M1', price: '$TBC' },
           { code: 'VVIP M2', label: 'M2', price: '$TBC' },
           { code: 'VVIP M3', label: 'M3', price: '$TBC' },
@@ -146,7 +146,7 @@ const CONFIG = {
           { code: 'VVIP M5', label: 'M5', price: '$TBC' }
         ]}
       ]},
-      { name: 'VIP Private Lounges (VIP PL)', capacity: '10 pax', booths: [
+      { name: 'VIP Private Lounges (VIP PL)', capacity: '10 people', booths: [
         { code: 'VIP Private Lounge 1', label: '1', price: '$TBC' },
         { code: 'VIP Private Lounge 2', label: '2', price: '$TBC' },
         { code: 'VIP Private Lounge 3', label: '3', price: '$TBC' },
@@ -154,7 +154,7 @@ const CONFIG = {
         { code: 'VIP Private Lounge 5', label: '5', price: '$TBC' },
         { code: 'VIP Private Lounge 6', label: '6', price: '$TBC' }
       ]},
-      { name: 'VIP Booths', capacity: '7 pax', booths: [
+      { name: 'VIP Booths', capacity: '7 people', booths: [
         { code: 'VIP 1', label: '1', price: '$TBC' },
         { code: 'VIP 2', label: '2', price: '$TBC' },
         { code: 'VIP 3', label: '3', price: '$TBC' },
@@ -162,7 +162,7 @@ const CONFIG = {
         { code: 'VIP 5', label: '5', price: '$TBC' },
         { code: 'VIP 6', label: '6', price: '$TBC' }
       ]},
-      { name: 'High Tables', capacity: '4 pax', booths: [
+      { name: 'High Tables', capacity: '4 people', booths: [
         { code: 'HIGH Table 1', label: '1', price: '$TBC' },
         { code: 'HIGH Table 2', label: '2', price: '$TBC' },
         { code: 'HIGH Table 3', label: '3', price: '$TBC' },
@@ -173,7 +173,7 @@ const CONFIG = {
 };
 
 function buildEnquiryMessage(boothPlan) {
-  return `Hi MTL! I'd like to enquire about booths for MTL 2026 ✨
+  return `Hi MTL! I'd like to enquire about booths for MTL 2026.
 
 Full Name:
 
@@ -423,10 +423,46 @@ let pendingInstagramMessage = '';
 let instagramTrigger = null;
 let boothPlanTrigger = null;
 
+function isMobileDevice() {
+  return navigator.userAgentData?.mobile === true
+    || /Android|iPhone|iPad|iPod/i.test(navigator.userAgent)
+    || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+}
+
+function openInstagram() {
+  const handle = encodeURIComponent(CONFIG.instagramHandle);
+  const webUrl = `https://ig.me/m/${handle}`;
+
+  if (!isMobileDevice()) {
+    window.open(webUrl, '_blank', 'noopener,noreferrer');
+    return;
+  }
+
+  const appUrl = `instagram://direct/new?username=${handle}`;
+  let fallbackTimer;
+
+  const cancelFallback = () => {
+    if (!document.hidden) return;
+    window.clearTimeout(fallbackTimer);
+    document.removeEventListener('visibilitychange', cancelFallback);
+  };
+
+  document.addEventListener('visibilitychange', cancelFallback);
+  fallbackTimer = window.setTimeout(() => {
+    document.removeEventListener('visibilitychange', cancelFallback);
+    window.location.href = webUrl;
+  }, 1800);
+
+  window.location.href = appUrl;
+}
+
 function openInstagramHandoff(message, copied) {
   pendingInstagramMessage = message;
   instagramTrigger = document.activeElement;
   instagramMessagePreview.value = message;
+  instagramOpenButton.textContent = isMobileDevice()
+    ? 'OPEN INSTAGRAM APP'
+    : 'OPEN INSTAGRAM';
   instagramCopyStatus.textContent = copied
     ? 'MESSAGE COPIED — READY TO PASTE.'
     : 'COPYING WAS BLOCKED — USE COPY MESSAGE AGAIN.';
@@ -447,7 +483,7 @@ function closeInstagramHandoff() {
 
 instagramOpenButton.addEventListener('click', () => {
   copyToClipboard(pendingInstagramMessage);
-  window.open(`https://ig.me/m/${CONFIG.instagramHandle}`, '_blank');
+  openInstagram();
 });
 
 instagramCopyAgainButton.addEventListener('click', async () => {
