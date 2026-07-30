@@ -53,7 +53,7 @@ const CONFIG = {
         ]},
         { name: 'Large (L)', capacity: '10 people', booths: [
           { code: 'VVIP L1', label: 'L1', price: '$854', sold: true },
-          { code: 'VVIP L2', label: 'L2', price: '$854' }
+          { code: 'VVIP L2', label: 'L2', price: '$854', sold: true }
         ]},
         { name: 'Medium (M)', capacity: '8 people', booths: [
           { code: 'VVIP M1', label: 'M1', price: '$610' },
