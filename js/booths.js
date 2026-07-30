@@ -17,8 +17,8 @@ const CONFIG = {
         { code: '201', price: '$1,462' }
       ]},
       { name: 'Dance Floor Tables', capacity: '6–8 people', booths: [
-        { code: '40', price: '$854' },
-        { code: '50', price: '$854' },
+        { code: '40', price: '$854', sold: true },
+        { code: '50', price: '$854', sold: true },
         { code: '600', price: '$854' },
         { code: '700', price: '$854' },
         { code: '500', price: '$854' }
@@ -59,7 +59,7 @@ const CONFIG = {
           { code: 'VVIP M1', label: 'M1', price: '$610' },
           { code: 'VVIP M2', label: 'M2', price: '$610', sold: true },
           { code: 'VVIP M3', label: 'M3', price: '$854' },
-          { code: 'VVIP M4', label: 'M4', price: '$854' },
+          { code: 'VVIP M4', label: 'M4', price: '$854', sold: true },
           { code: 'VVIP M5', label: 'M5', price: '$610' }
         ]}
       ]},
