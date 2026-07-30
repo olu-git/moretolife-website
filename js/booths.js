@@ -49,15 +49,15 @@ const CONFIG = {
     'No Signal (13 Aug)': [
       { name: 'VVIP Lounges', groups: [
         { name: 'XL', capacity: '12 people', booths: [
-          { code: 'VVIP XL', label: 'XL', price: '$854' }
+          { code: 'VVIP XL', label: 'XL', price: '$854', sold: true }
         ]},
         { name: 'Large (L)', capacity: '10 people', booths: [
-          { code: 'VVIP L1', label: 'L1', price: '$854' },
+          { code: 'VVIP L1', label: 'L1', price: '$854', sold: true },
           { code: 'VVIP L2', label: 'L2', price: '$854' }
         ]},
         { name: 'Medium (M)', capacity: '8 people', booths: [
           { code: 'VVIP M1', label: 'M1', price: '$610' },
-          { code: 'VVIP M2', label: 'M2', price: '$610' },
+          { code: 'VVIP M2', label: 'M2', price: '$610', sold: true },
           { code: 'VVIP M3', label: 'M3', price: '$854' },
           { code: 'VVIP M4', label: 'M4', price: '$854' },
           { code: 'VVIP M5', label: 'M5', price: '$610' }
