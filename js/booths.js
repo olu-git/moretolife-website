@@ -14,7 +14,7 @@ const CONFIG = {
     'Welcome Party (12 Aug)': [
       { name: 'VIP Bottle Service', capacity: '12 people', booths: [
         { code: '200', price: '$1,462', sold: true },
-        { code: '201', price: '$1,462' }
+        { code: '201', price: '$1,462', sold: true }
       ]},
       { name: 'Dance Floor Tables', capacity: '6–8 people', booths: [
         { code: '40', price: '$854', sold: true },
