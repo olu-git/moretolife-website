@@ -519,6 +519,63 @@ body.booths-page {
   justify-content: center;
 }
 
+.terms-conditions {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px 72px;
+}
+
+.terms-conditions-inner {
+  padding: 28px 32px 30px;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+}
+
+.terms-kicker {
+  margin-bottom: 8px;
+  color: var(--mtl-orange);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.terms-conditions h2 {
+  margin-bottom: 18px;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.terms-list {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  color: var(--text-dim);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  list-style: none;
+}
+
+.terms-list li {
+  position: relative;
+  padding-left: 18px;
+}
+
+.terms-list li::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  position: absolute;
+  top: 0.55em;
+  left: 0;
+  background: var(--mtl-orange);
+  border-radius: 50%;
+}
+
 .booth-plan-bar {
   width: min(920px, calc(100vw - 32px));
   min-height: 82px;
@@ -907,6 +964,14 @@ body.booking-rules-dialog-open {
 
   .footer-cta {
     padding: 64px 20px 32px;
+  }
+
+  .terms-conditions {
+    padding: 0 20px 48px;
+  }
+
+  .terms-conditions-inner {
+    padding: 24px 20px 26px;
   }
 }
 
