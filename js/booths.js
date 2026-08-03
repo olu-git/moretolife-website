@@ -94,7 +94,7 @@ const CONFIG = {
         { code: 'CB6', price: '$1,220' }
       ]},
       { name: 'Cabanas', capacity: '15 people', booths: [
-        { code: 'C1', price: '$3,050' }, { code: 'C2', price: '$3,050' },
+        { code: 'C1', price: '$3,050', sold: true }, { code: 'C2', price: '$3,050' },
         { code: 'C3', price: '$3,050' }, { code: 'C5', price: '$3,050' },
         { code: 'C6', price: '$3,050' }, { code: 'C7', price: '$3,050' }
       ]},
@@ -135,7 +135,7 @@ const CONFIG = {
         ]},
         { name: 'Large (L)', capacity: '10 people', booths: [
           { code: 'VVIP L1', label: 'L1', price: '$854', sold: true },
-          { code: 'VVIP L2', label: 'L2', price: '$854' }
+          { code: 'VVIP L2', label: 'L2', price: '$854', sold: true }
         ]},
         { name: 'Medium (M)', capacity: '8 people', booths: [
           { code: 'VVIP M1', label: 'M1', price: '$610' },
