@@ -19,7 +19,7 @@ const CONFIG = {
       { name: 'Dance Floor Tables', capacity: '6–8 people', booths: [
         { code: '40', price: '$854', sold: true },
         { code: '50', price: '$854', sold: true },
-        { code: '600', price: '$854' },
+        { code: '600', price: '$854', sold: true },
         { code: '700', price: '$854', sold: true },
         { code: '500', price: '$854' }
       ]},
