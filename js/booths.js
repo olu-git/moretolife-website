@@ -25,7 +25,7 @@ const CONFIG = {
       ]},
       { name: 'Lounge Booths', capacity: '4–6 people', booths: [
         { code: '100', price: '$1,220' },
-        { code: '101', price: '$1,220' },
+        { code: '101', price: '$1,220', sold: true },
         { code: '300', price: '$1,220' },
         { code: '301', price: '$1,220' },
         { code: '302', price: '$1,220' },
@@ -68,7 +68,7 @@ const CONFIG = {
         { code: 'VIP Private Lounge 2', label: '2', price: '$610' },
         { code: 'VIP Private Lounge 3', label: '3', price: '$610' },
         { code: 'VIP Private Lounge 4', label: '4', price: '$610' },
-        { code: 'VIP Private Lounge 5', label: '5', price: '$610' },
+        { code: 'VIP Private Lounge 5', label: '5', price: '$610', sold: true },
         { code: 'VIP Private Lounge 6', label: '6', price: '$610' }
       ]},
       { name: 'VIP Booths', capacity: '7 people', booths: [
