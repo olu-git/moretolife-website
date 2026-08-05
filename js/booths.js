@@ -89,25 +89,25 @@ const CONFIG = {
 
     'Nights in Bali (15 Aug)': [
       { name: 'Canopy Beds', capacity: '10 people', booths: [
-        { code: 'CB1', price: '$1,220', sold: true }, { code: 'CB2', price: '$1,220' },
-        { code: 'CB3', price: '$1,220' }, { code: 'CB5', price: '$1,220' },
-        { code: 'CB6', price: '$1,220' }
+        { code: 'CB1', price: '$1,220', sold: true }, { code: 'CB2', price: '$1,220', sold: true },
+        { code: 'CB3', price: '$1,220', sold: true }, { code: 'CB5', price: '$1,220', sold: true },
+        { code: 'CB6', price: '$1,220', sold: true }
       ]},
       { name: 'Cabanas', capacity: '15 people', booths: [
         { code: 'C1', price: '$3,050', sold: true }, { code: 'C2', price: '$3,050' },
-        { code: 'C3', price: '$3,050' }, { code: 'C5', price: '$3,050' },
-        { code: 'C6', price: '$3,050' }, { code: 'C7', price: '$3,050' }
+        { code: 'C3', price: '$3,050', sold: true }, { code: 'C5', price: '$3,050', sold: true },
+        { code: 'C6', price: '$3,050', sold: true }, { code: 'C7', price: '$3,050', sold: true }
       ]},
       { name: 'Daybed Sofas', capacity: '6 people', booths: [
         { code: 'D1', price: '$1,830' }, { code: 'D2', price: '$1,830' },
-        { code: 'D3', price: '$1,830' }, { code: 'D5', price: '$1,830' },
-        { code: 'D6', price: '$1,830' }, { code: 'D7', price: '$1,830' },
-        { code: 'D8', price: '$1,830' }, { code: 'D9', price: '$1,830' },
-        { code: 'D10', price: '$1,830' }
+        { code: 'D3', price: '$1,830', sold: true }, { code: 'D5', price: '$1,830', sold: true },
+        { code: 'D6', price: '$1,830', sold: true }, { code: 'D7', price: '$1,830', sold: true },
+        { code: 'D8', price: '$1,830', sold: true }, { code: 'D9', price: '$1,830', sold: true },
+        { code: 'D10', price: '$1,830', sold: true }
       ]},
       { name: 'DJ Sofas', capacity: '10 people', booths: [
-        { code: 'DJ1', price: '$3,660' },
-        { code: 'DJ2', price: '$3,660' },
+        { code: 'DJ1', price: '$3,660', sold: true },
+        { code: 'DJ2', price: '$3,660', sold: true },
         { code: 'DJ3', price: '$3,660', sold: true }
       ]},
       { name: 'Backstage Sofas', capacity: 'Terrace', booths: [
@@ -115,16 +115,16 @@ const CONFIG = {
         { code: 'BS2', price: '$0', sold: true }
       ]},
       { name: 'Backstage Terrace', capacity: '10 people', booths: [
-        { code: 'T1', price: '$1,830' }, { code: 'T2', price: '$1,830' },
-        { code: 'T3', price: '$1,830' }, { code: 'T5', price: '$1,830' },
-        { code: 'T6', price: '$1,830' }, { code: 'T7', price: '$1,830' },
-        { code: 'T8', price: '$1,830' }, { code: 'T9', price: '$1,830' }
+        { code: 'T1', price: '$1,830', sold: true }, { code: 'T2', price: '$1,830', sold: true },
+        { code: 'T3', price: '$1,830', sold: true }, { code: 'T5', price: '$1,830', sold: true },
+        { code: 'T6', price: '$1,830', sold: true }, { code: 'T7', price: '$1,830', sold: true },
+        { code: 'T8', price: '$1,830', sold: true }, { code: 'T9', price: '$1,830', sold: true }
       ]},
       { name: 'Dance Floor Sofas', capacity: '8 people', booths: [
         { code: 'S1', price: '$2,440' }, { code: 'S2', price: '$2,440' },
-        { code: 'S3', price: '$2,440' }, { code: 'S5', price: '$2,440' },
-        { code: 'S6', price: '$2,440' }, { code: 'S7', price: '$2,440' },
-        { code: 'S9', price: '$2,440' }
+        { code: 'S3', price: '$2,440', sold: true }, { code: 'S5', price: '$2,440', sold: true },
+        { code: 'S6', price: '$2,440', sold: true }, { code: 'S7', price: '$2,440', sold: true },
+        { code: 'S9', price: '$2,440', sold: true }
       ]}
     ],
 
