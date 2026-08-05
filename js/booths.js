@@ -21,15 +21,15 @@ const CONFIG = {
         { code: '50', price: '$854', sold: true },
         { code: '600', price: '$854', sold: true },
         { code: '700', price: '$854', sold: true },
-        { code: '500', price: '$854' }
+        { code: '500', price: '$854', sold: true }
       ]},
       { name: 'Lounge Booths', capacity: '4–6 people', booths: [
-        { code: '100', price: '$1,220' },
-        { code: '101', price: '$1,220', sold: true },
+        { code: '100', price: '$1,220', sold: true },
+        { code: '101', price: '$1,220' },
         { code: '300', price: '$1,220' },
         { code: '301', price: '$1,220' },
         { code: '302', price: '$1,220' },
-        { code: '303', price: '$1,220' }
+        { code: '303', price: '$1,220', sold: true }
       ]},
       { name: 'Shisha Lounge', capacity: '4 people', booths: [
         { code: '11', price: '$488' }, { code: '12', price: '$488' },
@@ -74,7 +74,7 @@ const CONFIG = {
       { name: 'VIP Booths', capacity: '7 people', booths: [
         { code: 'VIP 1', label: '1', price: '$488' },
         { code: 'VIP 2', label: '2', price: '$488' },
-        { code: 'VIP 3', label: '3', price: '$488' },
+        { code: 'VIP 3', label: '3', price: '$488', sold: true },
         { code: 'VIP 4', label: '4', price: '$488' },
         { code: 'VIP 5', label: '5', price: '$488' },
         { code: 'VIP 6', label: '6', price: '$488' }
@@ -138,7 +138,7 @@ const CONFIG = {
           { code: 'VVIP L2', label: 'L2', price: '$854', sold: true }
         ]},
         { name: 'Medium (M)', capacity: '8 people', booths: [
-          { code: 'VVIP M1', label: 'M1', price: '$610' },
+          { code: 'VVIP M1', label: 'M1', price: '$610', sold: true },
           { code: 'VVIP M2', label: 'M2', price: '$610', sold: true },
           { code: 'VVIP M3', label: 'M3', price: '$854', sold: true },
           { code: 'VVIP M4', label: 'M4', price: '$854' },
