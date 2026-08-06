@@ -75,7 +75,7 @@ const CONFIG = {
         { code: 'VIP 1', label: '1', price: '$488' },
         { code: 'VIP 2', label: '2', price: '$488' },
         { code: 'VIP 3', label: '3', price: '$488', sold: true },
-        { code: 'VIP 4', label: '4', price: '$488' },
+        { code: 'VIP 4', label: '4', price: '$488', sold: true },
         { code: 'VIP 5', label: '5', price: '$488' },
         { code: 'VIP 6', label: '6', price: '$488' }
       ]},
