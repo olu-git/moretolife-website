@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&family=Ranchers&display=swap');
 
 * {
   box-sizing: border-box;
@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  font-family: "Barlow Condensed", "Arial Narrow", Arial, sans-serif;
+  font-family: "Barlow", Arial, sans-serif;
   line-height: 1.6;
   margin: 0;
   color: #1a1a1a;
@@ -102,13 +102,14 @@ textarea {
   justify-content: flex-start;
   text-align: left;
   width: 100%;
-  gap: 36px;
+  gap: clamp(18px, 1.6vw, 28px);
 }
 
 .home-nav a {
-  font-size: 1.18rem;
+  font-size: 1.08rem;
   font-weight: 700;
   letter-spacing: 0.5px;
+  white-space: nowrap;
 }
 
 .home-logo-link {
@@ -614,7 +615,7 @@ textarea {
   border: 1px solid #7b3fa6;
   background: #fff;
   color: #1a1a1a;
-  font-family: "Barlow Condensed", "Arial Narrow", Arial, sans-serif;
+  font-family: "Barlow", Arial, sans-serif;
   font-weight: 700;
   letter-spacing: 2px;
   font-size: 0.85rem;
@@ -1907,6 +1908,21 @@ textarea {
     font-size: 0.62rem;
     letter-spacing: 0.25px;
   }
+}
+
+/* Shared typography: display faces stay expressive; interface copy stays clear. */
+h1,
+h2,
+.recap-title,
+.hero-title,
+.event-title,
+.prog-name,
+.cat-name,
+.villa-group-divider,
+.map-caption,
+.sticker-caption strong {
+  font-family: "Ranchers", "Barlow", sans-serif;
+  font-weight: 400;
 }
 
 

@@ -1067,3 +1067,15 @@ body.booking-rules-dialog-open {
     animation: none;
   }
 }
+
+/* Keep booth display typography aligned with the shared MTL font system. */
+.booths-page h1,
+.booths-page h2,
+.booths-page .hero-title,
+.booths-page .event-title,
+.booths-page .prog-name,
+.booths-page .cat-name,
+.booths-page .map-caption {
+  font-family: "Ranchers", "Barlow", sans-serif;
+  font-weight: 400;
+}

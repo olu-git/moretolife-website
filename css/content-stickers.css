@@ -18,7 +18,7 @@
 .stickers-hero h1 {
   margin: 0;
   color: #fff;
-  font-family: "Ranchers", "Barlow Condensed", sans-serif;
+  font-family: "Ranchers", "Barlow", sans-serif;
   font-size: clamp(3.5rem, 6.1vw, 5rem);
   line-height: .95;
   letter-spacing: 1px;
@@ -101,7 +101,7 @@
 }
 
 .sticker-caption strong {
-  font-family: "Ranchers", "Barlow Condensed", sans-serif;
+  font-family: "Ranchers", "Barlow", sans-serif;
   font-size: 1.15rem;
   font-weight: 400;
   line-height: 1;
