@@ -1,0 +1,223 @@
+.content-stickers-page {
+  background: #6e2ea2;
+}
+
+.stickers-main {
+  background: #6e2ea2;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.stickers-hero {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 66px 20px 30px;
+  text-align: center;
+}
+
+.stickers-hero h1 {
+  margin: 0;
+  color: #fff;
+  font-family: "Ranchers", "Barlow Condensed", sans-serif;
+  font-size: clamp(3.5rem, 6.1vw, 5rem);
+  line-height: .95;
+  letter-spacing: 1px;
+}
+
+.stickers-hero p {
+  max-width: 620px;
+  margin: 18px auto 0;
+  color: rgba(255,255,255,.9);
+  font-family: "Barlow", sans-serif;
+  font-size: 1.18rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.stickers-hero a {
+  color: #ffcb47;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.stickers-hero a:hover,
+.stickers-hero a:focus-visible {
+  text-decoration: underline;
+}
+
+.sticker-list {
+  width: min(660px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 34px 0 80px;
+}
+
+.sticker-item {
+  margin: 0 0 56px;
+}
+
+.sticker-sheet {
+  min-height: 260px;
+  padding: 44px;
+  display: grid;
+  place-items: center;
+  background: #fff;
+  border: 3px dashed rgba(0,0,0,.18);
+  border-radius: 20px;
+  box-shadow: 0 14px 34px rgba(0,0,0,.25);
+}
+
+.sticker-item:nth-child(odd) .sticker-sheet {
+  transform: rotate(-1.6deg);
+}
+
+.sticker-item:nth-child(even) .sticker-sheet {
+  transform: rotate(1.4deg);
+}
+
+.sticker-sheet img {
+  display: block;
+  width: auto;
+  max-width: 74%;
+  max-height: 230px;
+  object-fit: contain;
+}
+
+.sticker-caption {
+  min-height: 58px;
+  margin: 16px 3px 0;
+  padding: 14px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  background: #ff6a00;
+  border-radius: 8px;
+}
+
+.sticker-caption strong,
+.sticker-caption span {
+  display: block;
+  color: #fff;
+}
+
+.sticker-caption strong {
+  font-family: "Ranchers", "Barlow Condensed", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.sticker-format,
+.sticker-touch-hint {
+  margin-top: 5px;
+  font-family: "Barlow", sans-serif;
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  opacity: .82;
+}
+
+.sticker-touch-hint {
+  display: none !important;
+}
+
+.sticker-download {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  padding: 11px 22px;
+  color: #6e2ea2;
+  background: #fff;
+  border-radius: 100px;
+  font-family: "Barlow", sans-serif;
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  text-decoration: none;
+}
+
+.sticker-download:hover,
+.sticker-download:focus-visible {
+  color: #24132f;
+  background: #ffcb47;
+}
+
+.stickers-more {
+  margin: 0;
+  color: rgba(255,255,255,.7);
+  font-family: "Barlow", sans-serif;
+  font-size: .88rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .sticker-format,
+  .sticker-download {
+    display: none !important;
+  }
+
+  .sticker-touch-hint {
+    display: block !important;
+  }
+}
+
+@media (max-width: 960px) {
+  .home-header-inner.has-mobile-menu .home-nav {
+    grid-column: 1 / -1;
+  }
+
+  .home-header-inner.has-mobile-menu .home-nav a {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .stickers-hero {
+    padding: 34px 20px 20px;
+  }
+
+  .stickers-hero h1 {
+    max-width: 330px;
+    margin: 0 auto;
+    font-size: 2.75rem;
+  }
+
+  .stickers-hero p {
+    margin-top: 12px;
+    font-size: .95rem;
+  }
+
+  .sticker-list {
+    width: calc(100% - 20px);
+    padding: 24px 0 56px;
+  }
+
+  .sticker-item {
+    margin-bottom: 30px;
+  }
+
+  .sticker-sheet {
+    min-height: 170px;
+    padding: 26px;
+    border-radius: 16px;
+    box-shadow: 0 10px 24px rgba(0,0,0,.25);
+  }
+
+  .sticker-sheet img {
+    max-width: 80%;
+    max-height: 150px;
+  }
+
+  .sticker-caption {
+    margin-top: 14px;
+    padding: 12px 16px;
+  }
+
+  .sticker-caption strong {
+    font-size: 1rem;
+  }
+}
