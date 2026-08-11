@@ -28,7 +28,7 @@ const CONFIG = {
         { code: '101', price: '$1,220' },
         { code: '300', price: '$1,220' },
         { code: '301', price: '$1,220' },
-        { code: '302', price: '$1,220' },
+        { code: '302', price: '$1,220', sold: true },
         { code: '303', price: '$1,220', sold: true }
       ]},
       { name: 'Shisha Lounge', capacity: '4 people', booths: [
