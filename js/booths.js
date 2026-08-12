@@ -25,7 +25,7 @@ const CONFIG = {
       ]},
       { name: 'Lounge Booths', capacity: '4–6 people', booths: [
         { code: '100', price: '$1,220', sold: true },
-        { code: '101', price: '$1,220' },
+        { code: '101', price: '$1,220', sold: true },
         { code: '300', price: '$1,220', sold: true },
         { code: '301', price: '$1,220', sold: true },
         { code: '302', price: '$1,220', sold: true },
