@@ -32,17 +32,17 @@ const CONFIG = {
         { code: '303', price: '$1,220', sold: true }
       ]},
       { name: 'Shisha Lounge', capacity: '4 people', booths: [
-        { code: '11', price: '$488' }, { code: '12', price: '$488' },
-        { code: '13', price: '$488' }, { code: '14', price: '$488' },
-        { code: '15', price: '$488' }, { code: '16', price: '$488' },
-        { code: '21', price: '$488' }, { code: '22', price: '$488' },
-        { code: '23', price: '$488' }, { code: '24', price: '$488' },
-        { code: '25', price: '$488' }, { code: '26', price: '$488' }
+        { code: '11', price: '$488', sold: true }, { code: '12', price: '$488', sold: true },
+        { code: '13', price: '$488', sold: true }, { code: '14', price: '$488', sold: true },
+        { code: '15', price: '$488', sold: true }, { code: '16', price: '$488', sold: true },
+        { code: '21', price: '$488', sold: true }, { code: '22', price: '$488', sold: true },
+        { code: '23', price: '$488', sold: true }, { code: '24', price: '$488', sold: true },
+        { code: '25', price: '$488', sold: true }, { code: '26', price: '$488', sold: true }
       ]},
       { name: 'Dining Tables', capacity: '2 people', booths: [
-        { code: '01', price: '$244' }, { code: '02', price: '$244' },
-        { code: '03', price: '$244' }, { code: '04', price: '$244' },
-        { code: '05', price: '$244' }, { code: '06', price: '$244' }
+        { code: '01', price: '$244', sold: true }, { code: '02', price: '$244', sold: true },
+        { code: '03', price: '$244', sold: true }, { code: '04', price: '$244', sold: true },
+        { code: '05', price: '$244', sold: true }, { code: '06', price: '$244', sold: true }
       ]}
     ],
 
