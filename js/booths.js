@@ -64,12 +64,12 @@ const CONFIG = {
         ]}
       ]},
       { name: 'VIP Private Lounges (VIP PL)', capacity: '10 people', booths: [
-        { code: 'VIP Private Lounge 1', label: '1', price: '$610' },
-        { code: 'VIP Private Lounge 2', label: '2', price: '$610' },
-        { code: 'VIP Private Lounge 3', label: '3', price: '$610' },
+        { code: 'VIP Private Lounge 1', label: '1', price: '$610', sold: true },
+        { code: 'VIP Private Lounge 2', label: '2', price: '$610', sold: true },
+        { code: 'VIP Private Lounge 3', label: '3', price: '$610', sold: true },
         { code: 'VIP Private Lounge 4', label: '4', price: '$610', sold: true },
         { code: 'VIP Private Lounge 5', label: '5', price: '$610', sold: true },
-        { code: 'VIP Private Lounge 6', label: '6', price: '$610' }
+        { code: 'VIP Private Lounge 6', label: '6', price: '$610', sold: true }
       ]},
       { name: 'VIP Booths', capacity: '7 people', booths: [
         { code: 'VIP 1', label: '1', price: '$488', sold: true },
@@ -77,13 +77,13 @@ const CONFIG = {
         { code: 'VIP 3', label: '3', price: '$488', sold: true },
         { code: 'VIP 4', label: '4', price: '$488', sold: true },
         { code: 'VIP 5', label: '5', price: '$488', sold: true },
-        { code: 'VIP 6', label: '6', price: '$488' }
+        { code: 'VIP 6', label: '6', price: '$488', sold: true }
       ]},
       { name: 'Standard Tables', capacity: '4 people', booths: [
-        { code: 'STD Table 1', label: '1', price: '$305' },
-        { code: 'STD Table 2', label: '2', price: '$305' },
-        { code: 'STD Table 3', label: '3', price: '$305' },
-        { code: 'STD Table 4', label: '4', price: '$305' }
+        { code: 'STD Table 1', label: '1', price: '$305', sold: true },
+        { code: 'STD Table 2', label: '2', price: '$305', sold: true },
+        { code: 'STD Table 3', label: '3', price: '$305', sold: true },
+        { code: 'STD Table 4', label: '4', price: '$305', sold: true }
       ]}
     ],
 
