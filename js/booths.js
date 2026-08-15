@@ -141,8 +141,8 @@ const CONFIG = {
           { code: 'VVIP M1', label: 'M1', price: '$610', sold: true },
           { code: 'VVIP M2', label: 'M2', price: '$610', sold: true },
           { code: 'VVIP M3', label: 'M3', price: '$854', sold: true },
-          { code: 'VVIP M4', label: 'M4', price: '$854' },
-          { code: 'VVIP M5', label: 'M5', price: '$610' }
+          { code: 'VVIP M4', label: 'M4', price: '$854', sold: true },
+          { code: 'VVIP M5', label: 'M5', price: '$610', sold: true }
         ]}
       ]},
       { name: 'VIP Private Lounges (VIP PL)', capacity: '10 people', booths: [
