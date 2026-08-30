@@ -1,0 +1,166 @@
+.privacy-page {
+  background:
+    radial-gradient(circle at 10% 4%, rgba(255, 106, 35, 0.14), transparent 28rem),
+    linear-gradient(180deg, #fff8f1 0%, #fffdf9 48%, #fff8f1 100%);
+  color: #24170f;
+}
+
+.privacy-main {
+  width: min(100%, 1040px);
+  margin: 0 auto;
+  padding: clamp(54px, 8vw, 100px) 24px clamp(76px, 10vw, 130px);
+  text-transform: none;
+}
+
+.privacy-hero {
+  position: relative;
+  padding: clamp(34px, 6vw, 64px);
+  overflow: hidden;
+  background: #ff6a23;
+  border-radius: 26px 26px 8px 8px;
+  box-shadow: 0 24px 60px rgba(74, 31, 104, 0.18);
+}
+
+.privacy-hero::after {
+  content: "";
+  position: absolute;
+  right: -72px;
+  bottom: -100px;
+  width: 300px;
+  height: 300px;
+  border: 42px solid rgba(110, 46, 162, 0.24);
+  border-radius: 50%;
+}
+
+.privacy-eyebrow,
+.privacy-hero h1,
+.privacy-updated {
+  position: relative;
+  z-index: 1;
+}
+
+.privacy-eyebrow {
+  margin: 0 0 10px;
+  color: #fff8f1;
+  font-size: 0.84rem;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.privacy-hero h1 {
+  margin: 0;
+  color: #6e2ea2;
+  font-family: "Ranchers", cursive;
+  font-size: clamp(3.4rem, 9vw, 6.8rem);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 0.92;
+  text-transform: uppercase;
+}
+
+.privacy-updated {
+  margin: 18px 0 0;
+  color: #3d1f15;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.privacy-content {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: clamp(38px, 7vw, 72px) clamp(4px, 4vw, 34px) 0;
+}
+
+.privacy-content h2 {
+  margin: 52px 0 14px;
+  color: #6e2ea2;
+  font-family: "Ranchers", cursive;
+  font-size: clamp(1.9rem, 4vw, 2.55rem);
+  font-weight: 400;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+.privacy-content h2:first-child {
+  margin-top: 0;
+}
+
+.privacy-content p,
+.privacy-content li {
+  color: #38271d;
+  font-size: clamp(1rem, 1.5vw, 1.08rem);
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.72;
+  text-transform: none;
+}
+
+.privacy-content p {
+  margin: 0 0 17px;
+}
+
+.privacy-content ul {
+  margin: 4px 0 22px;
+  padding-left: 26px;
+}
+
+.privacy-content li {
+  margin: 0 0 10px;
+  padding-left: 5px;
+}
+
+.privacy-content li::marker {
+  color: #ff6a23;
+}
+
+.privacy-content strong {
+  font-weight: 800;
+}
+
+.privacy-link {
+  color: #6e2ea2;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+}
+
+.privacy-link:hover,
+.privacy-link:focus-visible {
+  color: #e95919;
+}
+
+.privacy-content hr {
+  margin: 54px 0 34px;
+  border: 0;
+  border-top: 2px solid rgba(110, 46, 162, 0.18);
+}
+
+.privacy-content .privacy-closing {
+  margin: 0;
+  color: #ff6a23;
+  font-family: "Ranchers", cursive;
+  font-size: clamp(1.7rem, 4vw, 2.35rem);
+  line-height: 1.1;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media (max-width: 640px) {
+  .privacy-main {
+    padding: 36px 18px 74px;
+  }
+
+  .privacy-hero {
+    padding: 30px 24px 34px;
+    border-radius: 18px 18px 6px 6px;
+  }
+
+  .privacy-content {
+    padding-top: 38px;
+  }
+
+  .privacy-content h2 {
+    margin-top: 42px;
+  }
+}
