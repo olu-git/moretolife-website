@@ -1,0 +1,1 @@
+These sections were removed from index.html on 2026-09-02 after MTL 2026 wrapped. Their CSS remains in styles.css untouched. To restore, paste the snippet back into index.html at the location noted in the git history of this commit.

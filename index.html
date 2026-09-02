@@ -29,6 +29,7 @@
   <meta name="twitter:image" content="https://more2life.com.au/images/search-preview.jpg">
   <title>MORE TO LIFE 2026 - BALI</title>
   <link rel="stylesheet" href="css/styles.css?v=20260831-1">
+  <link rel="stylesheet" href="gallery.css">
   <link rel="icon" type="image/png" href="images/MTL-BW-2.png">
 </head>
 <body>
@@ -59,11 +60,8 @@
     <div class="wrap header-inner home-header-inner has-mobile-menu has-desktop-cta">
       <nav class="nav home-nav" id="home-nav-menu" aria-label="Primary">
         <a href="index.html" class="active">HOME</a>
-        <a href="#" data-booking-key="partyPassUrl">PASSES</a>
-        <a href="all-inclusive.html">ALL-INCLUSIVE</a>
-        <a href="#" data-booking-key="flightsUrl">FLIGHTS</a>
-        <a href="index.html">BOOTHS</a>
         <a href="stickers.html">STICKERS</a>
+        <a href="https://tally.so/r/81bGzz" target="_blank" rel="noopener">FEEDBACK</a>
       </nav>
       <button class="mobile-nav-toggle" type="button" aria-expanded="false" aria-controls="home-nav-menu" aria-label="Toggle navigation menu">
         <span></span>
@@ -74,7 +72,7 @@
         <img src="images/more2life-logo-date.png" alt="MORE TO LIFE 2026" class="logo home-logo-date">
       </a>
       <div class="header-actions">
-        <a class="btn-book-now header-book-now" href="#" data-booking-key="allInclusiveHubUrl">BOOK NOW</a>
+        <span class="btn-book-now header-book-now" aria-disabled="true">BOOK NOW</span>
       </div>
     </div>
   </header>
@@ -87,76 +85,15 @@
     </div>
   </section>
 
-  <section class="recap" aria-label="Bali 2025 recap gallery">
-    <div class="recap-head">
-      <div>
-        <h2 class="recap-title">Moments from <em>2025</em></h2>
-      </div>
-    </div>
-
-    <div class="recap-progress" aria-hidden="true">
-      <div class="recap-progress-rail">
-        <div class="recap-progress-fill" id="recap-progress-fill"></div>
-      </div>
-    </div>
-
-    <div class="recap-controls">
-      <button class="recap-arrow" id="recap-prev" type="button" aria-label="Previous recap photo">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-          <polyline points="15 18 9 12 15 6"></polyline>
-        </svg>
-      </button>
-      <div class="recap-counter" aria-live="polite">
-        <span id="recap-current">01</span><span>/</span><span id="recap-total">05</span>
-      </div>
-      <button class="recap-arrow" id="recap-next" type="button" aria-label="Next recap photo">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-          <polyline points="9 18 15 12 9 6"></polyline>
-        </svg>
-      </button>
-    </div>
-
-    <div class="recap-track-wrap">
-      <div class="recap-track" id="recap-track" tabindex="0" aria-label="Photo slider, use arrow keys to browse">
-        <div class="recap-card"><img src="images/recap-1.jpg" alt="MORE TO LIFE 2025 beach club moment"></div>
-        <div class="recap-card"><img src="images/recap-2.JPG" alt="MORE TO LIFE 2025 nightlife moment"></div>
-        <div class="recap-card"><img src="images/recap-3.jpg" alt="MORE TO LIFE 2025 crowd moment"></div>
-        <div class="recap-card"><img src="images/recap-4.jpg" alt="MORE TO LIFE 2025 day trip moment"></div>
-        <div class="recap-card"><img src="images/recap-5.jpg" alt="MORE TO LIFE 2025 welcome dinner moment"></div>
-      </div>
+  <!-- ===== MTL 2026 PHOTO GALLERY (replaces the 2025 recap section) ===== -->
+  <section class="gal" id="photos">
+    <div class="gal-inner">
+      <h2 class="gal-title">Relive it<br><span>day by day.</span></h2>
+      <p class="gal-lede">6 days, 12 events. Tap any tile to open the photo album.</p>
+      <div class="gal-days" id="gal-days"></div>
     </div>
   </section>
-
-  <section class="offer-cards" id="offers">
-    <div class="wrap">
-      <div class="offer-cards-grid">
-        <a class="offer-image-card" href="#" data-booking-key="partyPassUrl" aria-label="Book passes">
-          <img src="images/party-pass-page.jpg" alt="Passes">
-          <div class="offer-image-overlay">
-            <h2>PASSES</h2>
-            <span class="offer-image-cta">ALREADY SORTED YOUR STAY?<br>JOIN EVERY PARTY &amp; BEACH CLUB EVENT</span>
-            <p class="offer-image-deposit"><span class="offer-image-deposit-value">DEPOSIT FROM $49</span></p>
-          </div>
-        </a>
-        <a class="offer-image-card" href="all-inclusive.html" aria-label="Browse all inclusive packages">
-          <img src="images/all-inclusive-page.jpg" alt="All inclusive package">
-          <div class="offer-image-overlay">
-            <h2>ALL INCLUSIVE PACKAGE</h2>
-            <span class="offer-image-cta">VILLA, DAYTIME ACTIVITIES, NIGHT PARTIES, <br>BEACH CLUBS, PRIVATE DRIVER, BREAKFAST, DINNER &amp; MORE</span>
-            <p class="offer-image-deposit"><span class="offer-image-deposit-value">DEPOSIT FROM $99</span></p>
-          </div>
-        </a>
-        <a class="offer-image-card" href="#" data-booking-key="flightsUrl" aria-label="Book flights only">
-          <img src="images/flight-page.jpg" alt="Flights only">
-          <div class="offer-image-overlay">
-            <h2>FLIGHT PASS</h2>
-            <span class="offer-image-cta">FLY WITH US. <br> MELBOURNE ONLY.</span>
-            <p class="offer-image-deposit"><span class="offer-image-deposit-value">DEPOSIT FROM $49</span></p>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
+  <!-- ===== /MTL 2026 PHOTO GALLERY ===== -->
 
   <footer class="site-footer">
     <div class="wrap">
@@ -191,5 +128,6 @@
   </footer>
 
   <script src="js/index.js"></script>
+  <script src="gallery.js" defer></script>
 </body>
 </html>

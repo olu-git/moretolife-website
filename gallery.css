@@ -1,0 +1,40 @@
+/* ============================================================
+   MTL 2026 PHOTO GALLERY — section styles
+   Loads after styles.css. Inherits Barlow Condensed + uppercase
+   from the site's body rule; only section-specific rules here.
+   ============================================================ */
+.gal{background:#fff8f3;color:#1a1206;padding:44px 0 40px}
+.gal-inner{max-width:1100px;margin:0 auto;padding:0 20px}
+
+.gal-eyebrow{font-weight:800;font-size:13px;letter-spacing:.22em;color:#d85a30}
+.gal-title{font-weight:800;font-size:clamp(44px,9vw,80px);line-height:.9;letter-spacing:-.02em;margin:10px 0 10px}
+.gal-title span{color:#2e7d3e}
+.gal-lede{font-weight:500;font-size:17px;letter-spacing:.02em;color:#5a4a3a;margin-bottom:22px}
+
+.gal-days{display:flex;flex-direction:column;gap:12px}
+.gal-band{border-radius:14px;padding:14px;color:#fff;display:grid;grid-template-columns:1fr;gap:12px;box-shadow:0 6px 18px rgba(30,10,0,.14)}
+.gal-band--dark{color:#3a1020}
+.gal-daylbl{font-weight:800;font-size:34px;line-height:.9;letter-spacing:-.01em}
+.gal-daydate{font-weight:700;font-size:13px;letter-spacing:.16em;opacity:.9;margin-top:6px}
+
+.gal-tiles{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.gal-tile{display:block;position:relative;text-decoration:none;color:#fff;border-radius:10px;overflow:hidden;aspect-ratio:1/1;border:2px solid rgba(0,0,0,.25);transition:transform .2s ease}
+.gal-tile:hover,.gal-tile:focus-visible{transform:translateY(-3px);outline:none}
+.gal-tile--soon{pointer-events:none}
+.gal-tile--soon .gal-name{color:#aaa}
+.gal-tile--soon .gal-chip{background:#444;color:#ccc}
+
+.gal-ph{position:absolute;inset:0;background:#222}
+.gal-ph::before{content:"";position:absolute;inset:0;background:var(--g)}
+.gal-ph::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,rgba(255,255,255,.06) 0 2px,transparent 2px 14px)}
+.gal-ph--photo::before,.gal-ph--photo::after{display:none}
+.gal-ph--soon::before{background:#3a3a3a}
+
+.gal-shade{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.8),transparent 60%)}
+.gal-name{position:absolute;left:10px;right:10px;bottom:10px;font-weight:800;font-size:clamp(17px,4vw,21px);line-height:.95}
+.gal-chip{position:absolute;top:8px;right:8px;background:#ffcb47;color:#1a1206;font-weight:800;font-size:10px;letter-spacing:.12em;padding:3px 7px;border-radius:3px}
+
+@media (min-width:760px){
+  .gal-band{grid-template-columns:170px 1fr;align-items:center;padding:16px 18px}
+  .gal-tiles{grid-template-columns:repeat(auto-fit,minmax(150px,220px));justify-content:start}
+}
