@@ -5,19 +5,19 @@
    Leave img:"" to show the colour placeholder.
    ============================================================ */
 const GALLERY_EVENTS = [
-  {n:"Welcome Dinner",   d:"Wed 12 Aug", day:1, url:"https://photobook.live/photobook/aaf2ad2d-9a78-4731-aa6b-5caa3842ac22", img:"images/gallery/welcome-dinner.jpg", g:"linear-gradient(135deg,#d85a30,#7b2a10)"},
-  {n:"Welcome Party",    d:"Wed 12 Aug", day:1, url:"https://photobook.live/photobook/b9bcaae0-025f-4d1b-a50a-6064b8cf101a", img:"images/gallery/welcome-party.jpg", g:"linear-gradient(135deg,#ea6a2a,#4a1a5c)"},
-  {n:"Waterpark",        d:"Thu 13 Aug", day:2, url:"https://photobook.live/photobook/d3e27e69-06c1-4842-8c72-0f6a5f64809c", img:"images/gallery/waterpark.jpg", g:"linear-gradient(135deg,#2a8fd8,#0e3f66)"},
-  {n:"No Signal",        d:"Thu 13 Aug", day:2, url:"https://photobook.live/photobook/8563b943-63da-43ed-8159-c7a6aebe54a3", img:"images/gallery/no-signal.jpg", g:"linear-gradient(135deg,#8747b8,#1b0b2e)"},
+  {n:"Welcome Dinner",   d:"Wed 12 Aug", day:1, url:"https://photobook.live/photobook/aaf2ad2d-9a78-4731-aa6b-5caa3842ac22", img:"images/gallery/welcome-dinner.JPG", g:"linear-gradient(135deg,#d85a30,#7b2a10)"},
+  {n:"Welcome Party",    d:"Wed 12 Aug", day:1, url:"https://photobook.live/photobook/b9bcaae0-025f-4d1b-a50a-6064b8cf101a", img:"images/gallery/welcome-party.JPG", g:"linear-gradient(135deg,#ea6a2a,#4a1a5c)"},
+  {n:"Waterpark",        d:"Thu 13 Aug", day:2, url:"https://photobook.live/photobook/d3e27e69-06c1-4842-8c72-0f6a5f64809c", img:"images/gallery/waterpark.JPG", g:"linear-gradient(135deg,#2a8fd8,#0e3f66)"},
+  {n:"No Signal",        d:"Thu 13 Aug", day:2, url:"https://photobook.live/photobook/8563b943-63da-43ed-8159-c7a6aebe54a3", img:"images/gallery/no-signal.JPG", g:"linear-gradient(135deg,#8747b8,#1b0b2e)"},
   {n:"Beachfront Padel", d:"Fri 14 Aug", day:3, url:"https://photobook.live/photobook/ecadf068-1de9-4a90-9378-ab0c38e35cf4", img:"images/gallery/beachfront-padel.jpg", g:"linear-gradient(135deg,#3db1c8,#1b6d7d)"},
   {n:"Lost In Atlas",    d:"Fri 14 Aug", day:3, url:"https://photobook.live/photobook/8d5e7ea7-a8a6-476b-8323-6d8c08a3fc49", img:"images/gallery/lost-in-atlas.jpg", g:"linear-gradient(135deg,#e8449a,#5a1040)"},
-  {n:"ATV",              d:"Sat 15 Aug", day:4, url:"https://photobook.live/photobook/6b542383-4f9c-40c7-918c-c9c3b76ca533", img:"images/gallery/atv.jpg", g:"linear-gradient(135deg,#c1772d,#4b3016)"},
-  {n:"Nights In Bali",   d:"Sat 15 Aug", day:4, url:"https://photobook.live/photobook/869d63b6-9285-4de7-8997-b450a54c1b46", img:"images/gallery/nights-in-bali.jpg", g:"linear-gradient(135deg,#3d9b4a,#0f3a1a)"},
+  {n:"ATV",              d:"Sat 15 Aug", day:4, url:"https://photobook.live/photobook/6b542383-4f9c-40c7-918c-c9c3b76ca533", img:"images/gallery/atv.JPG", g:"linear-gradient(135deg,#c1772d,#4b3016)"},
+  {n:"Nights In Bali",   d:"Sat 15 Aug", day:4, url:"https://photobook.live/photobook/869d63b6-9285-4de7-8997-b450a54c1b46", img:"images/gallery/nights-in-bali.JPG", g:"linear-gradient(135deg,#3d9b4a,#0f3a1a)"},
   {n:"Riddim FC",        d:"Sun 16 Aug", day:5, url:"https://photobook.live/photobook/67660679-4bfd-449e-8317-b58f4f6104fd", img:"images/gallery/riddim-fc.jpg", g:"linear-gradient(135deg,#9bd23c,#2f5a10)"},
-  {n:"The Takeover",     d:"Sun 16 Aug", day:5, url:"https://photobook.live/photobook/086d6869-f653-4655-94c2-0521d783bb9e", img:"images/gallery/the-takeover.jpg", g:"linear-gradient(135deg,#f0a640,#7a4a10)"},
-  {n:"Breakfast",        d:"Mon 17 Aug", day:6, url:"https://photobook.live/photobook/dbdec9c3-c586-463e-bda6-e1942d63dfca", img:"images/gallery/breakfast.jpg", g:"linear-gradient(135deg,#ffcb47,#a86a00)"},
-  {n:"The Send-Off",     d:"Mon 17 Aug", day:6, url:"https://photobook.live/photobook/ecd7e47a-345f-4a9b-a0a6-7dd430f092ef", img:"images/gallery/the-send-off.jpg", g:"linear-gradient(135deg,#f5a6c5,#7a2a55)"},
-  {n:"Du Coeur",         d:"Mon 17 Aug", day:6, url:"https://photobook.live/photobook/e8022fea-8594-4b82-bd42-3734a278bfab", img:"images/gallery/du-coeur.jpg", g:"linear-gradient(135deg,#c94f8f,#4a1a3a)"},
+  {n:"The Takeover",     d:"Sun 16 Aug", day:5, url:"https://photobook.live/photobook/086d6869-f653-4655-94c2-0521d783bb9e", img:"images/gallery/the-takeover.JPG", g:"linear-gradient(135deg,#f0a640,#7a4a10)"},
+  {n:"Breakfast",        d:"Mon 17 Aug", day:6, url:"https://photobook.live/photobook/dbdec9c3-c586-463e-bda6-e1942d63dfca", img:"images/gallery/breakfast.JPG", g:"linear-gradient(135deg,#ffcb47,#a86a00)"},
+  {n:"The Send-Off",     d:"Mon 17 Aug", day:6, url:"https://photobook.live/photobook/ecd7e47a-345f-4a9b-a0a6-7dd430f092ef", img:"images/gallery/the-send-off.JPG", g:"linear-gradient(135deg,#f5a6c5,#7a2a55)"},
+  {n:"Du Coeur",         d:"Mon 17 Aug", day:6, url:"https://photobook.live/photobook/e8022fea-8594-4b82-bd42-3734a278bfab", img:"images/gallery/du-coeur.png", g:"linear-gradient(135deg,#c94f8f,#4a1a3a)"},
 ];
 
 const GALLERY_DAYS = [
