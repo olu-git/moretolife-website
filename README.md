@@ -1,32 +1,16 @@
-# More To Life Website
+# more2life.com.au helper
 
-Static website for MORE TO LIFE Bali 2026.
+The MTL website now lives on Easol at https://www.more2life.com.au.
 
-## Project Structure
+This repo only does two jobs on GitHub Pages:
 
-- Root HTML files: public pages deployed by GitHub Pages
-- `css/`: shared and page-specific styles
-- `js/`: shared and page-specific browser scripts
-- `data/`: structured site content, including villa availability
-- `images/` and `video/`: public media assets
-- `admin/`: ignored local operational files that must not be published
+1. Hosts the Easol home page's hero video: `video/start-of-recap.mp4`
+   (Easol can't host video files).
+2. Sends anyone visiting the bare domain `more2life.com.au` to `https://www.more2life.com.au`
+   (`index.html` and `404.html`).
 
-## Local Preview
+To change the hero video: replace the file in `video/`, push, and update the
+`<source src>` in the Easol hero block if the filename changed.
 
-```powershell
-cd C:\Users\olumi\Downloads\mtl_site
-py -m http.server 8080
-```
-
-Open `http://127.0.0.1:8080/`.
-
-## Common Updates
-
-- Villa availability and unit counts: edit `data/villas.json`.
-- Booth prices and availability: edit `js/booths.js`.
-- Mark a booth sold by keeping its entry and adding `sold: true`.
-- Live booth maps and booking panels are rendered by `booths.html`, `css/booth-maps.css`, and `js/booth-maps.js`.
-
-## Deployment
-
-The public site is served from the repository's `main` branch using the domain in `CNAME`.
+The old full site is in git history (commit 0a63aad on `main` before this change)
+and archived in OluOS: MTL/Resources/Website Archive/.
